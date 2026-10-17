@@ -2,6 +2,7 @@
 title: Linsensalat mit Zucchini, Avocado und Granatapfel
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Veggie Love]
+keywords: [Periode]
 duration: 20
 servings: 2
 nutrition: { kcal: 640, protein: 19, carbs: 36, fat: 45 }

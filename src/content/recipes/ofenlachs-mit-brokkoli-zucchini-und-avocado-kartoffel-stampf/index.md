@@ -2,6 +2,7 @@
 title: Ofenlachs mit Brokkoli, Zucchini und Avocado-Kartoffel-Stampf
 cover: ./cover.jpg
 tags: [Healthy, Dinner, Protein Power]
+keywords: [Periode]
 duration: 35
 servings: 2
 nutrition: { kcal: 835, protein: 45, carbs: 62, fat: 45 }

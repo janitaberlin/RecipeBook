@@ -2,6 +2,7 @@
 title: Rote-Bete-Kichererbsen-Salat mit Feta
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Veggie Love]
+keywords: [Periode]
 duration: 15
 servings: 2
 nutrition: { kcal: 530, protein: 20, carbs: 40, fat: 29 }

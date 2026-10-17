@@ -2,6 +2,7 @@
 title: Goldene Kurkuma-Hühnersuppe
 cover: ./cover.jpg
 tags: [Healthy, Dinner, Comfort Food, Meat Lover, Protein Power]
+keywords: [Periode]
 duration: 435
 servings: 6
 nutrition: { kcal: 440, protein: 55, carbs: 36, fat: 8 }

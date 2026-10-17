@@ -1,6 +1,7 @@
 ---
 title: Gefüllte Datteln mit Erdnussmus und Meersalz
 tags: [Dessert, Healthy, Veggie Love]
+keywords: [Periode]
 duration: 5
 servings: 6
 servingsLabel: Stück

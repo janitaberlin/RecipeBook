@@ -2,6 +2,7 @@
 title: Steak mit Ofenspargel und Kartoffeln
 cover: ./cover.jpg
 tags: [Dinner, Healthy, Meat Lover, Protein Power]
+keywords: [Periode]
 duration: 40
 servings: 2
 nutrition: { kcal: 780, protein: 58, carbs: 48, fat: 37 }
