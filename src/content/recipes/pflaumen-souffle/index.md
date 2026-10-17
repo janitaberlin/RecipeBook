@@ -1,7 +1,7 @@
 ---
 title: Pflaumen-Soufflé
 cover: ./cover.jpg
-tags: [Dessert]
+tags: [Dessert, Veggie Love]
 duration: 15
 servings: 4
 nutrition: { kcal: 500, protein: 5, carbs: 80, fat: 18 }

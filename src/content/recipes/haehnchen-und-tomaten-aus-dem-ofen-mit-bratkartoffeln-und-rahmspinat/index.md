@@ -1,7 +1,7 @@
 ---
 title: Hähnchen und Tomaten aus dem Ofen mit Bratkartoffeln und Rahmspinat
 cover: ./cover.jpg
-tags: [Dinner]
+tags: [Dinner, Meat Lover, Protein Power]
 duration: 30
 servings: 4
 nutrition: { kcal: 700, protein: 55, carbs: 46, fat: 33 }

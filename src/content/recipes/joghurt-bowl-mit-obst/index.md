@@ -1,7 +1,7 @@
 ---
 title: Joghurt-Bowl mit Obst
 cover: ./cover.jpg
-tags: [Healthy]
+tags: [Healthy, Veggie Love]
 duration: 5
 servings: 1
 nutrition: { kcal: 550, protein: 21, carbs: 30, fat: 38 }

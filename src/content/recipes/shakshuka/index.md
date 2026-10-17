@@ -1,7 +1,7 @@
 ---
 title: Shakshuka
 cover: ./cover.jpg
-tags: [Lunch, Healthy]
+tags: [Lunch, Healthy, Veggie Love]
 duration: 30
 servings: 2
 nutrition: { kcal: 565, protein: 24, carbs: 46, fat: 29 }

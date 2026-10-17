@@ -1,7 +1,7 @@
 ---
 title: Tomatensuppe mit Croutons
 cover: ./cover.jpg
-tags: [Dinner]
+tags: [Dinner, Veggie Love]
 duration: 30
 servings: 4
 nutrition: { kcal: 480, protein: 10, carbs: 57, fat: 24 }

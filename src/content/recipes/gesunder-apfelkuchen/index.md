@@ -1,7 +1,7 @@
 ---
 title: Gesunder Apfelkuchen
 cover: ./cover.jpg
-tags: [Dessert, Healthy]
+tags: [Dessert, Healthy, Veggie Love]
 duration: 60
 servings: 12
 servingsLabel: Stück

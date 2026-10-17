@@ -1,7 +1,7 @@
 ---
 title: Guacamole-Gemüse-Platte
 cover: ./cover.jpg
-tags: [Healthy]
+tags: [Healthy, Veggie Love]
 duration: 15
 servings: 4
 nutrition: { kcal: 290, protein: 5, carbs: 27, fat: 18 }

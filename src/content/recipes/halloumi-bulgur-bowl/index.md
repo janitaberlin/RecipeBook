@@ -1,7 +1,7 @@
 ---
 title: Halloumi-Bulgur-Bowl
 cover: ./cover.jpg
-tags: [Lunch, Healthy]
+tags: [Lunch, Healthy, Veggie Love, Protein Power]
 duration: 20
 servings: 2
 nutrition: { kcal: 965, protein: 42, carbs: 52, fat: 64 }

@@ -1,7 +1,7 @@
 ---
 title: Steak mit Trüffel-Kartoffelpüree, Pfannengemüse und Salat
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food]
+tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
 duration: 50
 servings: 4
 nutrition: { kcal: 990, protein: 57, carbs: 60, fat: 56 }

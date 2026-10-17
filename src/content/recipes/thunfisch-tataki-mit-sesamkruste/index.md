@@ -1,7 +1,7 @@
 ---
 title: Thunfisch-Tataki mit Sesamkruste
 cover: ./cover.jpg
-tags: [Healthy, Dinner]
+tags: [Healthy, Dinner, Protein Power]
 duration: 20
 servings: 2
 nutrition: { kcal: 600, protein: 41, carbs: 8, fat: 44 }
