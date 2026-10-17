@@ -26,6 +26,8 @@ added: 2026-10-17
 2. **Kartoffeln vorgaren:** Kartoffeln halbieren oder vierteln, Zwiebeln in Spalten schneiden. Mit Rotwein, Olivenöl, Kräutern, Salz und Pfeffer in der Auflaufform mischen und ca. 25 Min. im Ofen garen, da die Kartoffeln länger brauchen als das Fleisch.
 3. **Pilze dazugeben:** Pfifferlinge putzen, große Exemplare halbieren und unter die Kartoffeln mischen.
 4. **Fleisch garen:** Koteletts nur salzen und pfeffern, oben auf das Gemüse legen und höchstens ca. 20 Min. im Ofen garen.
+   ![Marinierte Koteletts auf Ofengemüse](./schritt-4.jpg)
+   ![Koteletts im Ofen](./schritt-4-2.jpg)
 5. **Kross werden lassen:** Zum Schluss die Form auf die oberste Schiene stellen und den Ofen kurz auf höchste Stufe schalten, bis das Fleisch leicht kross ist.
 6. **Servieren:** Koteletts mit Kartoffeln, Pilzen und dem Rotwein-Olivenöl-Sud aus der Form anrichten.
 
