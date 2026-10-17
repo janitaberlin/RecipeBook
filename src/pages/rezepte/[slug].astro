@@ -1,0 +1,102 @@
+---
+import { getImage, Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Placeholder from '../../components/Placeholder.astro';
+import Stars from '../../components/Stars.astro';
+import { getRecipes, type Recipe } from '../../lib/recipes';
+import { ingredientLines, ingredientText, stepTexts } from '../../lib/recipe-text';
+import { perServingLabel, servingsLabel } from '../../lib/servings-label';
+import { tagUrl, url } from '../../lib/url';
+import '../../styles/recipe.css';
+
+export async function getStaticPaths() {
+  const recipes = await getRecipes();
+  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe } }));
+}
+
+const { recipe } = Astro.props as { recipe: Recipe };
+const { Content } = await render(recipe);
+const d = recipe.data;
+const sourceIsLink = d.source?.startsWith('http') ?? false;
+const ogImage = d.cover ? await getImage({ src: d.cover, width: 1200, format: 'jpeg' }) : null;
+const ogImageUrl = ogImage ? new URL(ogImage.src, Astro.site).href : new URL(url('icon-512.png'), Astro.site).href;
+const summary = [d.duration ? `${d.duration} Min.` : null, `${d.servings} ${servingsLabel(d.servings, d.servingsLabel)}`].filter(Boolean).join(', ');
+const ingredients = ingredientText(recipe.body ?? '');
+const description = `Rezept für ${d.title}: ${summary}.${ingredients ? ` Zutaten: ${ingredients}` : ''}`;
+const nutrition = [
+  { label: 'kcal', value: `${d.nutrition.kcal}` },
+  { label: 'Eiweiß', value: `${d.nutrition.protein} g` },
+  { label: 'Kohlenhydrate', value: `${d.nutrition.carbs} g` },
+  { label: 'Fett', value: `${d.nutrition.fat} g` },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: d.title,
+  image: ogImage ? [ogImageUrl] : undefined,
+  totalTime: d.duration ? `PT${d.duration}M` : undefined,
+  recipeYield: `${d.servings} ${servingsLabel(d.servings, d.servingsLabel)}`,
+  recipeCategory: d.tags.join(', ') || undefined,
+  recipeIngredient: ingredientLines(recipe.body ?? ''),
+  recipeInstructions: stepTexts(recipe.body ?? '').map((text) => ({ '@type': 'HowToStep', text })),
+  nutrition: {
+    '@type': 'NutritionInformation',
+    servingSize: `1 ${perServingLabel(d.servingsLabel)}`,
+    calories: `${d.nutrition.kcal} kcal`,
+    proteinContent: `${d.nutrition.protein} g`,
+    carbohydrateContent: `${d.nutrition.carbs} g`,
+    fatContent: `${d.nutrition.fat} g`,
+  },
+  datePublished: d.added.toISOString().slice(0, 10),
+};
+---
+<Base title={d.title} description={description} image={ogImageUrl}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings} data-servings-label={d.servingsLabel}>
+    <div class="recipe-hero">
+      {d.cover ? <Image src={d.cover} alt="" widths={[480, 960, 1600]} sizes="(min-width: 1232px) 1232px, 100vw" priority /> : <Placeholder />}
+    </div>
+    <header class="recipe-header">
+      <h1>{d.title}</h1>
+      <ul class="recipe-meta">
+        {d.duration && <li>⏱ {d.duration} Min.</li>}
+        {d.rating && <li><Stars rating={d.rating} /></li>}
+        {d.rating && <li class="cooked">✓ Gekocht</li>}
+        {d.source && (
+          <li>
+            Quelle:{' '}
+            {sourceIsLink ? <a href={d.source} target="_blank" rel="noopener">{new URL(d.source).hostname}</a> : d.source}
+          </li>
+        )}
+      </ul>
+      <ul class="tag-list">
+        {d.tags.map((t) => <li><a class="tag" href={tagUrl(t)}>{t}</a></li>)}
+      </ul>
+      <section class="nutrition" aria-label="Nährwerte">
+        <p class="nutrition-title">Nährwerte pro {perServingLabel(d.servingsLabel)} <span class="nutrition-hint">(ca., geschätzt)</span></p>
+        <dl class="nutrition-list">
+          {nutrition.map((n) => <div><dt>{n.label}</dt><dd>{n.value}</dd></div>)}
+        </dl>
+      </section>
+    </header>
+    <div class="recipe-toolbar">
+      <div class="servings" role="group" aria-label="Portionen">
+        <button type="button" class="servings-btn" data-step="-1" aria-label="Eine Portion weniger">−</button>
+        <span class="servings-value"><output class="servings-count">{d.servings}</output> <span class="servings-label">{servingsLabel(d.servings, d.servingsLabel)}</span></span>
+        <button type="button" class="servings-btn" data-step="1" aria-label="Eine Portion mehr">+</button>
+        <button type="button" class="servings-reset" hidden>Zurücksetzen</button>
+      </div>
+      <label class="wake-lock" hidden><input type="checkbox" class="wake-lock-input" autocomplete="off" /> Bildschirm an</label>
+      <button type="button" class="checks-reset" hidden>Häkchen zurücksetzen</button>
+    </div>
+    <div class="recipe-body">
+      <Content />
+    </div>
+  </article>
+  <dialog class="lightbox" aria-label="Bild vergrößert"></dialog>
+</Base>
+
+<script>
+  import '../../scripts/recipe-page';
+</script>

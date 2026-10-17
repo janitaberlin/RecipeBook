@@ -10,7 +10,7 @@ interface Props {
   smallCard?: boolean;
 }
 const { title, description = 'Meine Rezeptsammlung', image, smallCard = false } = Astro.props;
-const pageTitle = title === 'RecipeBook' ? title : `${title} · RecipeBook`;
+const pageTitle = title === 'Janitas RecipeBook' ? title : `${title} · Janitas RecipeBook`;
 const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).href;
 ---
 <!doctype html>
@@ -30,7 +30,7 @@ const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).hre
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Rezepte" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="RecipeBook" />
+    <meta property="og:site_name" content="Janitas RecipeBook" />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -47,7 +47,7 @@ const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).hre
   </head>
   <body>
     <header class="site-header">
-      <a class="site-title" href={url('')}>RecipeBook</a>
+      <a class="site-title" href={url('')}>Janitas RecipeBook</a>
       <button class="theme-toggle" type="button" aria-label="Dunkles Design" aria-pressed="false">◐</button>
     </header>
     <main class="page">
