@@ -1,5 +1,5 @@
 ---
-title: Granola-Bowl mit Beeren, Banane und Zimt-Mandelmus
+title: Breakfast Granola
 cover: ./cover.jpg
 tags: [Healthy, Veggie Love]
 duration: 5
