@@ -2,7 +2,7 @@
 title: Kirsch-Skyr-Bowl mit Haferflocken und Walnüssen
 cover: ./cover.jpg
 tags: [Healthy, Vegetarisch, Protein Power]
-keywords: [Nach dem Training]
+keywords: [Nach dem Training, Leicht]
 duration: 5
 servings: 1
 nutrition: { kcal: 405, protein: 34, carbs: 45, fat: 9 }

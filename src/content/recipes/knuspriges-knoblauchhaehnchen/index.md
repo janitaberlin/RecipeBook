@@ -2,6 +2,7 @@
 title: Knuspriges Knoblauchhähnchen
 cover: ./cover.jpg
 tags: [Healthy, Dinner, Fleisch, Protein Power]
+keywords: [Leicht]
 duration: 25
 servings: 2
 nutrition: { kcal: 450, protein: 38, carbs: 35, fat: 14 }

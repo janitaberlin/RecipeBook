@@ -2,6 +2,7 @@
 title: Rotbarschfilet mit Himbeerdressing und Romanasalat
 cover: ./cover.jpg
 tags: [Healthy, Dinner, Protein Power, Fisch]
+keywords: [Leicht]
 duration: 20
 servings: 2
 nutrition: { kcal: 450, protein: 33, carbs: 12, fat: 29 }

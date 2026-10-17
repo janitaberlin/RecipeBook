@@ -2,7 +2,7 @@
 title: Brokkoli-Zucchini-Suppe mit gekörntem Frischkäse
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Dinner, Vegetarisch]
-keywords: [Detox]
+keywords: [Detox, Leicht]
 duration: 25
 servings: 2
 nutrition: { kcal: 290, protein: 21, carbs: 18, fat: 13 }
