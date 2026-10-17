@@ -26,6 +26,7 @@ added: 2026-10-17
 
 ## Zubereitung
 1. **Gemüse schneiden:** Rotkohl, Möhre und Gurke in feine Streifen schneiden, Avocado in Spalten schneiden und Kräuterblätter abzupfen.
+   ![Gemüse und Kräuter für die Füllung](./schritt-1.jpg)
 2. **Dip anrühren:** Erdnussbutter mit Sojasoße, Limettensaft und Wasser glatt rühren.
 3. **Rollen füllen:** Ein Reispapierblatt ca. 10 Sek. in warmes Wasser tauchen und auf ein feuchtes Brett legen. Gemüse, Avocado und Kräuter auf das untere Drittel legen, Seiten einschlagen und straff aufrollen. Auf diese Weise {{8}} Rollen formen.
 4. **Servieren:** Rollen halbieren und mit dem Dip servieren.
