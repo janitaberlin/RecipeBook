@@ -76,3 +76,4 @@ added: 2026-10-17
 10. **Servieren:** In jede Suppenschale 1–2 Croutons legen und Suppe daraufschöpfen, mit Crème fraîche, Basilikum und etwas Olivenöl garnieren. Die Soufflés mit einem Klecks Crème fraîche und etwas Sirup servieren.
    ![Pflaumen-Soufflé mit Crème fraîche](./schritt-10.jpg)
    ![Tomatensuppe angerichtet](./schritt-10-2.jpg)
+   ![Tomatensuppe am Tisch](./schritt-10-3.jpg)
