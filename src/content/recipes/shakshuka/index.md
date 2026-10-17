@@ -29,6 +29,7 @@ added: 2026-10-17
 1. **Gemüse anbraten:** Zwiebel und Paprika im Olivenöl bei mittlerer Hitze ca. 5 Min. anbraten. Knoblauch, Paprikapulver und Kreuzkümmel kurz mitrösten.
 2. **Sauce köcheln:** Tomaten dazugeben, salzen, pfeffern und ca. 10 Min. einköcheln lassen.
 3. **Eier stocken lassen:** Mit einem Löffel Mulden in die Sauce drücken, Eier hineinschlagen und zugedeckt ca. 6–8 Min. stocken lassen.
+   ![Eier stocken in der Tomatensauce](./schritt-3.jpg)
 4. **Brot rösten:** Brot in einer Pfanne oder im Toaster rösten.
 5. **Servieren:** Feta darüberbröseln, Koriander hacken und darüberstreuen. Mit dem Brot servieren.
    ![Shakshuka mit Sauerteigbrot](./schritt-5.jpg)
