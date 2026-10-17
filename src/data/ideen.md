@@ -22,7 +22,7 @@
 - Feldsalat mit Thunfisch, Granatapfel, Feta, Olivenöl und Balsamico
 - Spinatsalat mit Tomaten, Spaghetti mit Tomatensoße, Pilze
 - Bulgursalat mit Petersilie, Tomate, Zitrone und Gurke (Marienplatz Ali)
-- [Kale-Salat mit Roter Bete, Kichererbsen, Olivenöl, Zitrone, Feta und Quinoa](../rezepte/rote-bete-kichererbsen-salat-mit-feta/)
+- [Kale-Salat mit Roter Bete, Kichererbsen, Olivenöl, Zitrone, Feta und Quinoa](../rezepte/rote-bete-kichererbsen-salat-mit-gekoerntem-frischkaese/)
 - Freddo Cappuccino
 - Thunfisch México als Eiweiß-Snack
 - Vollkornbrot getoastet mit Hummus, Pesto, Gurke und Tomate

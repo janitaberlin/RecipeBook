@@ -4,7 +4,7 @@ cover: ./cover.jpg
 tags: [Lunch, Healthy, Veggie Love]
 duration: 30
 servings: 2
-nutrition: { kcal: 565, protein: 24, carbs: 46, fat: 29 }
+nutrition: { kcal: 550, protein: 26, carbs: 47, fat: 26 }
 added: 2026-10-17
 ---
 
@@ -16,7 +16,7 @@ added: 2026-10-17
 - {{1/2 TL}} Kreuzkümmel
 - {{1 Dose}} gehackte Tomaten (400 g)
 - {{4}} Eier
-- {{50 g}} Feta
+- {{100 g}} gekörnter Frischkäse
 - {{1/2 Bund}} Koriander
 - {{2}} Scheiben Sauerteigbrot
 - {{2 EL}} Olivenöl
@@ -31,7 +31,7 @@ added: 2026-10-17
 3. **Eier stocken lassen:** Mit einem Löffel Mulden in die Sauce drücken, Eier hineinschlagen und zugedeckt ca. 6–8 Min. stocken lassen.
    ![Eier stocken in der Tomatensauce](./schritt-3.jpg)
 4. **Brot rösten:** Brot in einer Pfanne oder im Toaster rösten.
-5. **Servieren:** Feta darüberbröseln, Koriander hacken und darüberstreuen. Mit dem Brot servieren.
+5. **Servieren:** Gekörnten Frischkäse daraufgeben, Koriander hacken und darüberstreuen. Mit dem Brot servieren.
    ![Shakshuka mit Sauerteigbrot](./schritt-5.jpg)
 
 ## Tipps
