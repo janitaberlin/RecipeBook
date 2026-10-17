@@ -42,7 +42,7 @@ added: 2026-10-17
 - einige Minzblätter
 - {{1/2}} Zitrone
 - Eiswürfel
-- Zucker nach Geschmack
+- Agavendicksaft nach Geschmack
 
 ### Grundzutaten
 - Olivenöl, Salz, Pfeffer

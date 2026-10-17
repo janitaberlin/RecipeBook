@@ -16,7 +16,7 @@ added: 2026-10-17
 ### Teig
 - {{100 g}} Kokosöl
 - {{70 g}} Nussmus
-- {{150 g}} Ahornsirup
+- {{150 g}} Agavendicksaft
 - {{270 g}} Sojajoghurt
 - {{1}} Banane, zerdrückt
 - {{1 EL}} Zitronensaft
@@ -31,7 +31,7 @@ added: 2026-10-17
 
 ### Belag
 - {{3}} Äpfel
-- {{4 EL}} Ahornsirup
+- {{4 EL}} Agavendicksaft
 - {{1 TL}} Zimt
 
 ## Equipment
@@ -40,12 +40,12 @@ added: 2026-10-17
 
 ## Zubereitung
 1. **Ofen vorheizen:** Backofen auf 180 °C vorheizen. Springform mit Backpapier auslegen.
-2. **Rührteig anrühren:** Kokosöl, Nussmus, {{150 g}} Ahornsirup, Sojajoghurt, Banane, Zitronensaft und Salz verrühren. Mehlmischung mit dem Backpulver dazugeben und zu einem glatten Rührteig verrühren.
+2. **Rührteig anrühren:** Kokosöl, Nussmus, {{150 g}} Agavendicksaft, Sojajoghurt, Banane, Zitronensaft und Salz verrühren. Mehlmischung mit dem Backpulver dazugeben und zu einem glatten Rührteig verrühren.
 3. **Äpfel unterheben:** Äpfel schälen, entkernen, in dünne Scheiben schneiden und unter den Teig heben.
    ![Apfelscheiben im Teig](./schritt-3.jpg)
 4. **In die Form geben:** Teig in die Springform füllen und glatt streichen.
    ![Teig in der Springform](./schritt-4.jpg)
-5. **Zimt-Swirl:** {{4 EL}} Ahornsirup mit dem Zimt mischen und als Swirl über den Teig geben.
+5. **Zimt-Swirl:** {{4 EL}} Agavendicksaft mit dem Zimt mischen und als Swirl über den Teig geben.
    ![Zimt-Swirl](./schritt-5.jpg)
 6. **Backen:** Ca. 45 Min. bei 180 °C backen. Mit der Stäbchenprobe prüfen, ob er durch ist; wird er zu dunkel, mit Backpapier abdecken.
    ![Fertig gebackener Apfelkuchen](./schritt-6.jpg)
