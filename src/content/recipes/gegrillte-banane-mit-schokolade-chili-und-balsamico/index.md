@@ -1,5 +1,6 @@
 ---
 title: Gegrillte Banane mit Schokolade, Chili und Balsamico
+cover: ./cover.jpg
 tags: [Dessert, Veggie Love]
 duration: 15
 servings: 2
