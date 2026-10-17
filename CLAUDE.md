@@ -53,6 +53,8 @@ servings: 4
 servingsLabel: Stück          # optional, Standard „Personen“
 book: mirco                   # nur bei Mircos Rezepten (aus esstobst/RecipeBook); Standard „janita“
 nutrition: { kcal: 650, protein: 40, carbs: 70, fat: 22 }  # Pflicht; pro Portion bzw. Stück, von Claude geschätzt
+health: ["Immunsystem: viel Vitamin C aus Paprika", "Darm: Ballaststoffe aus Kichererbsen"]  # bei Janitas Rezepten immer; 2–3 Einträge „Bereich: Grund“
+micros: [{ name: Eisen, amount: 4.5 }, { name: Vitamin C, amount: 60 }, { name: Magnesium, amount: 90 }]  # bei Janitas Rezepten immer; Top 3 pro Portion, Namen/Einheiten in src/lib/micros.ts
 source: TikTok                # optional; URLs vollständig
 added: 2026-10-08
 ---
