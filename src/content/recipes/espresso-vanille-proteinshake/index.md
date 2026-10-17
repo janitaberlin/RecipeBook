@@ -2,7 +2,7 @@
 title: Espresso-Vanille-Proteinshake
 cover: ./cover.jpg
 tags: [Healthy, Vegetarisch, Protein Power]
-keywords: [Shake]
+keywords: [Shake, Nach dem Training]
 duration: 5
 servings: 1
 servingsLabel: Glas

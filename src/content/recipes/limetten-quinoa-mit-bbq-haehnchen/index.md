@@ -2,6 +2,7 @@
 title: Limetten-Quinoa mit BBQ-Hähnchen
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Fleisch, Protein Power]
+keywords: [Nach dem Training]
 duration: 30
 servings: 2
 nutrition: { kcal: 580, protein: 46, carbs: 47, fat: 25 }

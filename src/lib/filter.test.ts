@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { filterAndSort, isHome, normalize, parseState, toSearch, type RecipeSummary } from './filter';
+import { filterAndSort, isHome, normalize, view, parseState, toSearch, type RecipeSummary } from './filter';
 
 const r = (id: string, title: string, extra: Partial<RecipeSummary> = {}): RecipeSummary => ({
   id,
@@ -21,13 +21,15 @@ const items = [
   r('mochis', 'Potato Mochis', { tags: ['Snack'], extra: 'Snack Periode Mit Kürbiskernen super zur Periode.' }),
 ];
 const withMirco = [...items, r('gulasch', 'Biergulasch', { book: 'mirco', ingredients: 'Rindergulasch · Babyspinat' })];
-const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added' | 'cooked'; uncooked: boolean; book: 'janita' | 'mirco'; all: boolean }> = {}) => ({
+const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added' | 'cooked'; uncooked: boolean; book: 'janita' | 'mirco'; all: boolean; zyklus: boolean; phase: 'Periode' | 'Follikelphase' | 'Eisprung' | 'Lutealphase' | null }> = {}) => ({
   tags: [],
   q: '',
   sort: 'name' as const,
   uncooked: false,
   book: 'janita' as const,
   all: false,
+  zyklus: false,
+  phase: null,
   ...over,
 });
 
@@ -91,7 +93,7 @@ describe('URL state', () => {
   const known = ['Hähnchen', 'Hauptspeise', 'Rind'];
 
   it('round-trips state through the query string', () => {
-    const s = { tags: ['Hähnchen', 'Rind'], q: 'orzo', sort: 'rating' as const, uncooked: true, book: 'mirco' as const, all: true };
+    const s = { tags: ['Hähnchen', 'Rind'], q: 'orzo', sort: 'rating' as const, uncooked: true, book: 'mirco' as const, all: true, zyklus: true, phase: 'Lutealphase' as const };
     expect(toSearch(s)).toContain('alle=1');
     expect(toSearch(s)).toContain('buch=mirco');
     expect(toSearch(s)).toContain('gekocht=nein');
@@ -103,7 +105,7 @@ describe('URL state', () => {
   });
 
   it('ignores unknown tags and invalid sort values', () => {
-    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name', uncooked: false, book: 'janita', all: false });
+    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name', uncooked: false, book: 'janita', all: false, zyklus: false, phase: null });
   });
 });
 
@@ -115,5 +117,29 @@ describe('isHome', () => {
     expect(isHome(state({ q: 'orzo' }))).toBe(false);
     expect(isHome(state({ q: '  ' }))).toBe(true);
     expect(isHome(state({ uncooked: true }))).toBe(false);
+  });
+});
+
+describe('Zyklus', () => {
+  const cycle = [
+    r('suppe', 'Kurkuma-Suppe', { phase: 'Periode' }),
+    r('kekse', 'Cookies', { phase: 'Lutealphase' }),
+    r('salat', 'Salat'),
+  ];
+  it('filters by phase', () => {
+    expect(filterAndSort(cycle, state({ zyklus: true, phase: 'Periode' }))).toEqual(['suppe']);
+    expect(filterAndSort(cycle, state({ zyklus: true, phase: 'Eisprung' }))).toEqual([]);
+  });
+  it('parses phase and zyklus params, ignoring unknown phases', () => {
+    expect(parseState('?zyklus=1&phase=Lutealphase', [])).toMatchObject({ zyklus: true, phase: 'Lutealphase' });
+    expect(parseState('?phase=Winter', [])).toMatchObject({ zyklus: false, phase: null });
+    expect(toSearch(state({ zyklus: true }))).toBe('?zyklus=1');
+  });
+  it('picks the view', () => {
+    expect(view(state())).toBe('home');
+    expect(view(state({ zyklus: true }))).toBe('zyklus');
+    expect(view(state({ zyklus: true, book: 'mirco' }))).toBe('home');
+    expect(view(state({ zyklus: true, phase: 'Periode' }))).toBe('list');
+    expect(view(state({ zyklus: true, q: 'suppe' }))).toBe('list');
   });
 });

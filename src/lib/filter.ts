@@ -1,6 +1,9 @@
 export type SortKey = 'name' | 'rating' | 'duration' | 'added' | 'cooked';
 export const SORT_KEYS: SortKey[] = ['name', 'rating', 'duration', 'added', 'cooked'];
 export type Book = 'janita' | 'mirco';
+/** Zyklusphasen in ihrer Reihenfolge (wie `zyklus.phase` in src/content.config.ts). */
+export const PHASES = ['Periode', 'Follikelphase', 'Eisprung', 'Lutealphase'] as const;
+export type Phase = (typeof PHASES)[number];
 
 export interface FilterState {
   tags: string[];
@@ -10,6 +13,10 @@ export interface FilterState {
   book: Book;
   /** Ordner „Alle“ geöffnet (sonst zeigt die Startseite die Kategorie-Ordner). */
   all: boolean;
+  /** Ordner „Zyklus“ geöffnet: zeigt die vier Phasen-Ordner. */
+  zyklus: boolean;
+  /** Gewählte Zyklusphase: zeigt deren Rezepte. */
+  phase: Phase | null;
 }
 
 export interface RecipeSummary {
@@ -27,6 +34,8 @@ export interface RecipeSummary {
   /** Wie oft gekocht („Heute gekocht“). */
   cookedCount?: number;
   book: Book;
+  /** Zyklusphase aus `zyklus.phase`, falls gesetzt. */
+  phase?: Phase | null;
 }
 
 export function normalize(text: string): string {
@@ -70,6 +79,7 @@ export function filterAndSort(items: RecipeSummary[], state: FilterState): strin
     .filter((r) => words.length > 0 || r.book === state.book)
     .filter((r) => !state.uncooked || !r.cooked)
     .filter((r) => state.tags.every((t) => r.tags.includes(t)))
+    .filter((r) => !state.phase || r.phase === state.phase)
     .filter((r) => {
       const haystack = normalize(`${r.title} ${r.ingredients} ${r.extra ?? ''}`);
       return words.every((w) => haystack.includes(w));
@@ -85,6 +95,7 @@ export function parseState(search: string, knownTags: string[]): FilterState {
     .map((t) => t.trim())
     .filter((t) => knownTags.includes(t));
   const sort = params.get('sort');
+  const phase = params.get('phase');
   return {
     tags: [...new Set(tags)],
     q: params.get('q') ?? '',
@@ -92,6 +103,8 @@ export function parseState(search: string, knownTags: string[]): FilterState {
     uncooked: params.get('gekocht') === 'nein',
     book: params.get('buch') === 'mirco' ? 'mirco' : 'janita',
     all: params.get('alle') === '1',
+    zyklus: params.get('zyklus') === '1',
+    phase: PHASES.includes(phase as Phase) ? (phase as Phase) : null,
   };
 }
 
@@ -103,11 +116,19 @@ export function toSearch(state: FilterState): string {
   if (state.uncooked) params.set('gekocht', 'nein');
   if (state.book !== 'janita') params.set('buch', state.book);
   if (state.all) params.set('alle', '1');
+  if (state.zyklus) params.set('zyklus', '1');
+  if (state.phase) params.set('phase', state.phase);
   const query = params.toString();
   return query ? `?${query}` : '';
 }
 
-/** Startseite mit Kategorie-Ordnern statt Rezeptliste: nichts gewählt, gesucht oder gefiltert. */
+/** Ordner statt Rezeptliste: nichts gewählt, gesucht oder gefiltert (Startseite oder Phasen-Ordner im Zyklus). */
 export function isHome(state: FilterState): boolean {
-  return !state.all && state.tags.length === 0 && !state.q.trim() && !state.uncooked;
+  return !state.all && !state.phase && state.tags.length === 0 && !state.q.trim() && !state.uncooked;
+}
+
+/** Welche Ansicht die Übersicht zeigt: Kategorie-Ordner, Phasen-Ordner des Zyklus oder Rezeptliste. */
+export function view(state: FilterState): 'home' | 'zyklus' | 'list' {
+  if (!isHome(state)) return 'list';
+  return state.zyklus && state.book === 'janita' ? 'zyklus' : 'home';
 }

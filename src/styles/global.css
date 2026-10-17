@@ -9,7 +9,7 @@
   --accent-soft: #f6e3d8;
   --star: #d9971a;
   --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-head: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-head: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
   --radius: 12px;
   color-scheme: light;
 }
@@ -54,7 +54,7 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
-h1, h2, h3 { font-family: var(--font-head); line-height: 1.2; }
+h1, h2, h3 { font-family: var(--font-head); font-optical-sizing: auto; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
 button { font: inherit; color: inherit; }
 [hidden] { display: none !important; }
 

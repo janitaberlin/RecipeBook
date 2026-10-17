@@ -2,7 +2,7 @@
 title: Ofenlachs mit Brokkoli, Zucchini und Avocado-Kartoffel-Stampf
 cover: ./cover.jpg
 tags: [Healthy, Dinner, Protein Power, Fisch]
-keywords: [Zyklus]
+keywords: [Zyklus, Nach dem Training]
 zyklus: { phase: Eisprung, grund: "Brokkoli unterstützt den Östrogenabbau, Omega-3 aus Lachs das Gleichgewicht." }
 duration: 35
 servings: 2

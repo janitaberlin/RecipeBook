@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import RecipeCard from '../components/RecipeCard.astro';
-import type { RecipeSummary } from '../lib/filter';
+import { PHASES, type RecipeSummary } from '../lib/filter';
 import { FAVORITE } from '../lib/keywords';
 import { ingredientText, tipsText } from '../lib/recipe-text';
 import { tagUrl, url } from '../lib/url';
@@ -26,6 +26,7 @@ const summaries: RecipeSummary[] = recipes.map((r) => ({
   cooked: r.data.rating !== undefined || r.data.cooked.length > 0,
   cookedCount: r.data.cooked.length,
   book: r.data.book,
+  phase: r.data.zyklus?.phase ?? null,
 }));
 const ownCount = recipes.filter((r) => r.data.book === 'janita').length;
 
@@ -42,6 +43,20 @@ const folders = (['janita', 'mirco'] as const).flatMap((book) =>
     return { book, tag, name: tag || 'Alle', count: inFolder.length, covers: inFolder.flatMap((r) => (r.data.cover ? [r.data.cover] : [])).slice(0, 4) };
   }),
 );
+// Ordner „Zyklus“ (nur Janitas Buch): enthält je einen Unterordner pro Phase in Zyklus-Reihenfolge.
+const coversOf = (list: typeof recipes) => list.flatMap((r) => (r.data.cover ? [r.data.cover] : [])).slice(0, 4);
+const cycleRecipes = newestFirst.filter((r) => r.data.book === 'janita' && r.data.zyklus);
+const cycleCovers = coversOf(cycleRecipes);
+const PHASE_CAPTIONS: Record<(typeof PHASES)[number], string> = {
+  Periode: 'Phase 1 · ca. Tag 1–5',
+  Follikelphase: 'Phase 2 · ca. Tag 6–13',
+  Eisprung: 'Phase 3 · ca. Tag 14',
+  Lutealphase: 'Phase 4 · ca. Tag 15–28',
+};
+const phaseFolders = PHASES.map((phase) => {
+  const inPhase = cycleRecipes.filter((r) => r.data.zyklus!.phase === phase);
+  return { phase, caption: PHASE_CAPTIONS[phase], count: inPhase.length, covers: coversOf(inPhase) };
+});
 // Stichwörter je Buch als Schnellsuche unter dem Suchfeld.
 // „Lieblingsessen“ (per Herz gesetzt) steht vorn; der Chip erscheint erst, wenn es mindestens ein Herz gibt.
 const keywordsOf = (book: 'janita' | 'mirco') =>
@@ -64,19 +79,55 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
       </div>
     )}
   </section>
-  <ul class="folder-grid">
+  <ul class="folder-grid home-grid">
     {folders.map((f) => (
       <li class="folder" data-book={f.book} data-tag={f.tag} hidden={f.book !== 'janita'}>
         <a href={f.tag ? tagUrl(f.tag, f.book) : url(`?alle=1${f.book === 'mirco' ? '&buch=mirco' : ''}`)}>
-          <div class="folder-art">
-            {[0, 1, 2, 3].map((i) => (f.covers[i] ? <Image src={f.covers[i]} alt="" widths={[160, 320]} sizes="(max-width: 600px) 22vw, 120px" /> : <span class="folder-empty" />))}
-          </div>
+          {f.tag ? (
+            <div class="folder-art">
+              {[0, 1, 2, 3].map((i) => (f.covers[i] ? <Image src={f.covers[i]} alt="" widths={[160, 320]} sizes="(max-width: 600px) 22vw, 120px" /> : <span class="folder-empty" />))}
+            </div>
+          ) : (
+            <div class="folder-art folder-art--text" aria-hidden="true">
+              <span class="folder-art-kicker">Das ganze Buch</span>
+              <span class="folder-art-title">Alle<br />Rezepte</span>
+            </div>
+          )}
           <span class="folder-name">{f.name}</span>
           <span class="folder-count">{countText(f.count)}</span>
         </a>
       </li>
     ))}
+    <li class="folder" data-book="janita" data-zyklus>
+      <a href={url('?zyklus=1')}>
+        <div class="folder-art">
+          {[0, 1, 2, 3].map((i) => (cycleCovers[i] ? <Image src={cycleCovers[i]} alt="" widths={[160, 320]} sizes="(max-width: 600px) 22vw, 120px" /> : <span class="folder-empty" />))}
+        </div>
+        <span class="folder-name">Zyklus</span>
+        <span class="folder-count">{countText(cycleRecipes.length)}</span>
+      </a>
+    </li>
   </ul>
+  <section class="phase-view" hidden>
+    <div class="list-head">
+      <button type="button" class="back-btn phase-back">‹ Kategorien</button>
+      <h2 class="list-title">Zyklus</h2>
+    </div>
+    <ul class="folder-grid">
+      {phaseFolders.map((f) => (
+        <li class:list={['folder', 'phase-folder', { 'folder--empty': f.count === 0 }]} data-phase={f.phase}>
+          <a href={url(`?zyklus=1&phase=${f.phase}`)}>
+            <div class="folder-art">
+              {[0, 1, 2, 3].map((i) => (f.covers[i] ? <Image src={f.covers[i]} alt="" widths={[160, 320]} sizes="(max-width: 600px) 22vw, 120px" /> : <span class="folder-empty" />))}
+            </div>
+            <span class="folder-name">{f.phase}</span>
+            <span class="folder-caption">{f.caption}</span>
+            <span class="folder-count">{countText(f.count)}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
   <section class="list-view" hidden>
     <div class="list-head">
       <button type="button" class="back-btn">‹ Kategorien</button>
