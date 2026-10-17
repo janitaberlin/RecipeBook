@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { MICRO_NAMES } from './lib/micros';
 
 const tag = z
   .string()
@@ -35,6 +36,10 @@ const recipes = defineCollection({
             fat: z.number().int().min(0),
           })
           .strict(),
+        /** Gesundheitsaspekte, je Eintrag „Bereich: Grund“, z. B. „Immunsystem: viel Vitamin C aus Paprika“. */
+        health: z.array(z.string().trim().min(1)).default([]),
+        /** Top-Vitamine und -Mineralstoffe pro Portion, Menge in der Einheit aus src/lib/micros.ts. */
+        micros: z.array(z.object({ name: z.enum(MICRO_NAMES), amount: z.number().positive() }).strict()).max(5).default([]),
         source: z
           .string()
           .min(1)

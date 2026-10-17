@@ -20,6 +20,22 @@
   color: var(--muted);
 }
 .nutrition { margin: 1rem 0 0; }
+.health {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.health-list { display: grid; gap: 0.3rem; margin: 0; padding-left: 1.1rem; font-size: 0.95rem; }
+.health-list strong { font-weight: 600; }
+.micros-title { margin-top: 0.8rem; }
+.micros-list { display: grid; gap: 0.35rem; margin: 0; padding: 0; list-style: none; font-size: 0.9rem; }
+.micros-list li { display: grid; grid-template-columns: 6.5rem 4.5rem 1fr 3rem; align-items: center; gap: 0.5rem; }
+.micro-name { font-weight: 600; }
+.micro-value, .micro-percent { font-variant-numeric: tabular-nums; }
+.micro-percent { text-align: right; }
+.micro-bar { height: 0.45rem; border-radius: 999px; background: var(--surface); overflow: hidden; }
+.micro-bar span { display: block; height: 100%; background: var(--accent); }
 .nutrition-title { margin: 0 0 0.4rem; font-weight: 600; }
 .nutrition-hint { font-weight: 400; color: var(--muted); font-size: 0.9em; }
 .nutrition-list {

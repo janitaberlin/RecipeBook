@@ -6,6 +6,8 @@ keywords: [Periode]
 duration: 45
 servings: 2
 nutrition: { kcal: 840, protein: 30, carbs: 79, fat: 46 }
+health: ["Periode: Magnesium und Eisen aus Kürbiskernen", "Augen: Beta-Carotin aus Süßkartoffel und Karotten", "Darm: Ballaststoffe aus Gemüse und Bohnen"]
+micros: [{ name: Vitamin A, amount: 1500 }, { name: Vitamin C, amount: 75 }, { name: Magnesium, amount: 140 }]
 added: 2026-10-17
 ---
 

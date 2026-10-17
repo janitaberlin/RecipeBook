@@ -1,5 +1,6 @@
 ---
 import { getImage, Image } from 'astro:assets';
+import { formatMicro } from '../../lib/micros';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Placeholder from '../../components/Placeholder.astro';
@@ -80,6 +81,32 @@ const jsonLd = {
           {nutrition.map((n) => <div><dt>{n.label}</dt><dd>{n.value}</dd></div>)}
         </dl>
       </section>
+      {d.health.length > 0 && (
+        <section class="health" aria-label="Gut für">
+          <p class="nutrition-title">Gut für</p>
+          <ul class="health-list">
+            {d.health.map((h) => {
+              const i = h.indexOf(':');
+              return i > 0 ? <li><strong>{h.slice(0, i)}:</strong>{h.slice(i + 1)}</li> : <li>{h}</li>;
+            })}
+          </ul>
+          {d.micros.length > 0 && (
+            <>
+              <p class="nutrition-title micros-title">Top-Vitalstoffe pro {perServingLabel(d.servingsLabel)} <span class="nutrition-hint">(ca., Anteil am Tagesbedarf einer Frau)</span></p>
+              <ul class="micros-list">
+                {d.micros.map(formatMicro).map((m) => (
+                  <li>
+                    <span class="micro-name">{m.label}</span>
+                    <span class="micro-value">{m.value}</span>
+                    <span class="micro-bar" aria-hidden="true"><span style={`width: ${Math.min(m.percent, 100)}%`} /></span>
+                    <span class="micro-percent">{m.percent} %</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </section>
+      )}
     </header>
     <div class="recipe-toolbar">
       <div class="servings" role="group" aria-label="Portionen">
