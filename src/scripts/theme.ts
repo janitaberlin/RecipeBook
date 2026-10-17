@@ -1,6 +1,6 @@
 const root = document.documentElement;
 const toggle = document.querySelector<HTMLButtonElement>('.theme-toggle');
-const THEME_COLORS = { light: '#faf8f5', dark: '#191817' } as const;
+const THEME_COLORS = { light: '#ffffff', dark: '#000000' } as const;
 
 function effectiveTheme(): 'light' | 'dark' {
   const chosen = root.dataset.theme;

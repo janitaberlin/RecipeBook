@@ -32,10 +32,10 @@
   aspect-ratio: 1;
   padding: 0.5rem;
   margin-bottom: 0.35rem;
-  border: 1px solid color-mix(in srgb, var(--tint) 28%, var(--border));
+  border: 1px solid var(--border);
   border-radius: 1.6rem;
-  background: color-mix(in srgb, var(--tint) 13%, var(--surface));
-  box-shadow: 0 10px 24px -16px color-mix(in srgb, var(--tint) 60%, rgb(0 0 0 / 0.5));
+  background: var(--surface-2);
+  box-shadow: 0 8px 20px -16px rgb(0 0 0 / 0.35);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .folder a:hover .folder-art { transform: scale(1.03); }
@@ -52,22 +52,6 @@
   background: var(--surface);
 }
 .folder-name { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-head); font-size: 1.1rem; font-weight: 600; text-align: center; }
-.folder-name::before { content: ''; flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--tint); }
-
-/* Warme Akzentfarbe je Kategorie, dezent als Tönung, Rand und Punkt am Namen */
-.folder { --tint: var(--accent); }
-.folder[data-tag='Healthy'] { --tint: #5e9b5a; }
-.folder[data-tag='Lunch'] { --tint: #d39a3a; }
-.folder[data-tag='Dinner'] { --tint: #a8613f; }
-.folder[data-tag='Dessert'] { --tint: #e8936b; }
-.folder[data-tag='Comfort Food'] { --tint: #b9824f; }
-.folder[data-tag='Fleisch'] { --tint: #b45a3c; }
-.folder[data-tag='Fisch'] { --tint: #4f86a8; }
-.folder[data-tag='Vegetarisch'] { --tint: #87a37a; }
-.folder[data-tag='Protein Power'] { --tint: #d4a017; }
-.folder[data-tag='Grillen'] { --tint: #d0621f; }
-.folder[data-tag='Platten'] { --tint: #8a8a3c; }
-.folder[data-zyklus], .phase-folder { --tint: #d27c8f; }
 
 /* Ordner „Alle Rezepte“: Schrift statt Fotocollage */
 .folder-art--text {
@@ -76,11 +60,9 @@
   justify-content: flex-end;
   gap: 0.35rem;
   padding: 1rem 1.1rem 1.15rem;
-  background:
-    radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--accent) 22%, transparent) 0 22%, transparent 23%),
-    linear-gradient(160deg, var(--accent-soft), color-mix(in srgb, var(--accent) 8%, var(--surface)));
+  background: var(--text);
 }
-.folder-art-title { font-family: var(--font-head); font-size: clamp(1.6rem, 8vw, 2.3rem); font-weight: 600; line-height: 1; letter-spacing: -0.02em; color: var(--text); }
+.folder-art-title { font-family: var(--font-head); font-size: clamp(1.6rem, 8vw, 2.3rem); font-weight: 600; line-height: 1; letter-spacing: -0.02em; color: var(--bg); }
 .folder-count { color: var(--muted); font-size: 0.85rem; }
 .folder-caption { color: var(--muted); font-size: 0.8rem; text-align: center; }
 /* Zyklusphase ohne Rezepte: ausgegraut, aber weiter antippbar */
