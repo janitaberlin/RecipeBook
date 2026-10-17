@@ -22,6 +22,12 @@ const { recipe } = Astro.props as { recipe: Recipe };
 const { Content } = await render(recipe);
 const d = recipe.data;
 const favorite = d.keywords.includes(FAVORITE);
+const ZYKLUS_INFO: Record<string, string> = {
+  Periode: 'Phase 1 von 4 · ca. Tag 1–5: die Blutung',
+  Follikelphase: 'Phase 2 von 4 · ca. Tag 6–13: nach der Periode bis zum Eisprung',
+  Eisprung: 'Phase 3 von 4 · ca. Tag 14: Mitte des Zyklus',
+  Lutealphase: 'Phase 4 von 4 · ca. Tag 15–28: die zwei Wochen vor der nächsten Periode',
+};
 const subtitle = d.keywords.filter((k) => k !== FAVORITE && !(k === 'Zyklus' && d.zyklus)).join(' · ');
 const cookedDays = d.cooked.map((day) => day.toISOString().slice(0, 10));
 const sourceIsLink = d.source?.startsWith('http') ?? false;
@@ -72,7 +78,7 @@ const jsonLd = {
       </div>
       {subtitle && <p class="recipe-keywords">{subtitle}</p>}
       {d.zyklus && (
-        <p class="recipe-zyklus"><strong>Zyklus · {d.zyklus.phase}:</strong> {d.zyklus.grund}</p>
+        <p class="recipe-zyklus"><strong>Zyklus · {d.zyklus.phase}</strong> <span class="recipe-zyklus-info">({ZYKLUS_INFO[d.zyklus.phase]})</span><br />{d.zyklus.grund}</p>
       )}
       <ul class="recipe-meta">
         {d.duration && <li>⏱ {d.duration} Min.</li>}
