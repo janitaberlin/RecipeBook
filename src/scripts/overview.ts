@@ -23,7 +23,12 @@ function init({ recipes, tags }: Data): void {
     const visible = new Set(ids);
     for (const [id, card] of cards) card.hidden = !visible.has(id);
     for (const id of ids) grid.appendChild(cards.get(id)!);
-    for (const chip of chips) chip.setAttribute('aria-pressed', String(state.tags.includes(chip.dataset.tag!)));
+    for (const chip of chips) {
+      chip.setAttribute('aria-pressed', String(state.tags.includes(chip.dataset.tag!)));
+      // Nur Kategorien des gewählten Buchs zeigen (bei einer Suche alle); ausgewählte bleiben sichtbar.
+      const inBook = (chip.dataset.books ?? '').split(' ').includes(state.book);
+      chip.hidden = !inBook && !state.q.trim() && !state.tags.includes(chip.dataset.tag!);
+    }
     uncookedChip.setAttribute('aria-pressed', String(state.uncooked));
     if (search.value !== state.q) search.value = state.q;
     sort.value = state.sort;
