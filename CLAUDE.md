@@ -33,6 +33,8 @@ Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. 
 
 Löschen und Teilen in der App: Karte in der Übersicht lange drücken (Computer: Rechtsklick) öffnet ein Menü. Löschen macht über die GitHub-API einen Commit „Rezept gelöscht: …“ auf `main` (Schlüssel = Fine-grained Token, liegt nur in Janitas Browser). Deshalb vor jeder Arbeit `git pull`. Gelöschte Rezepte lassen sich aus der Git-Historie wiederherstellen.
 
+**Keine gemalten Bilder:** Janita will nur echt aussehende Fotos. Keine Illustrationen oder gezeichneten Cover erstellen; ohne echtes Foto bleibt das Rezept ohne Cover, bis sie eins schickt.
+
 **Geschmack:** Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen).
 
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.

@@ -47,6 +47,7 @@ describe('deleteRecipe', () => {
     expect(JSON.parse(calls[4][1]!.body as string)).toEqual({ message: 'Rezept gelöscht: Shakshuka', tree: 'tree1', parents: ['head'] });
     expect(calls[5][1]!.method).toBe('PATCH');
     expect((calls[0][1]!.headers as Record<string, string>).Authorization).toBe('Bearer tok');
+    expect(calls.every((call) => call[1]?.cache === 'no-store')).toBe(true);
   });
 
   it('reports the HTTP status on errors', async () => {

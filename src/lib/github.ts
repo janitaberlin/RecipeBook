@@ -41,6 +41,9 @@ export async function deleteRecipe(id: string, title: string, token: string, fet
   async function call<T>(path: string, init?: { method: string; body: unknown }): Promise<T> {
     const response = await fetchFn(`${API}${path}`, {
       method: init?.method ?? 'GET',
+      // GitHub erlaubt dem Browser, Antworten 60 Sek. zu cachen; ein veralteter Stand von main
+      // lässt das nächste Löschen scheitern („not a fast forward“).
+      cache: 'no-store',
       headers: {
         Accept: 'application/vnd.github+json',
         Authorization: `Bearer ${token}`,
