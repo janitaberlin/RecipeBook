@@ -35,7 +35,7 @@ Löschen und Teilen in der App: Karte in der Übersicht lange drücken (Computer
 
 **Bilder:** Janita will kein Rezept ohne Bild. Echte Fotos haben immer Vorrang. Solange keins da ist, bekommt das Rezept ein gezeichnetes Cover (`npm run illustration`, siehe `scripts/illustration.mjs`, Janitas Entscheidung 17.10.2026); sobald sie ein Foto schickt, ersetzt es das gezeichnete Cover. Fotos mit erkennbaren Personen nur, wenn Janita es ausdrücklich will.
 
-**Geschmack:** Janita will wenige Zutaten und schnelle Rezepte; sie kocht gern mit Kokosöl, Olivenöl, Salz, Pfeffer, Zitrone und gekörntem Frischkäse (bei geschätzten Rezepten bevorzugen). Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen). Janita hasst Ziegenkäse und Schafskäse – nie verwenden; bei Vorlagen damit durch Mozzarella, Burrata oder gekörnten Frischkäse ersetzen und den Ersatz nicht kommentieren.
+**Geschmack:** Janita will wenige Zutaten und schnelle Rezepte; sie kocht gern mit Kokosöl, Olivenöl, Salz, Pfeffer, Zitrone und gekörntem Frischkäse (bei geschätzten Rezepten bevorzugen). Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen). Janita backt und süßt ohne Zucker: Agavendicksaft bevorzugt, Kokosblütenzucker nur wo trockener Zucker nötig ist; auch Güsse ohne Puderzucker (z. B. Skyr mit Agavendicksaft). Janita hasst Ziegenkäse und Schafskäse – nie verwenden; bei Vorlagen damit durch Mozzarella, Burrata oder gekörnten Frischkäse ersetzen und den Ersatz nicht kommentieren.
 
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.
 
