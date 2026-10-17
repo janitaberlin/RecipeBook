@@ -1,7 +1,7 @@
 ---
 title: Vollkornpasta mit Tomatensoße, Brokkoli und Mozzarella
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Veggie Love, Protein Power]
+tags: [Healthy, Dinner, Vegetarisch, Protein Power]
 duration: 20
 servings: 2
 nutrition: { kcal: 645, protein: 31, carbs: 73, fat: 21 }

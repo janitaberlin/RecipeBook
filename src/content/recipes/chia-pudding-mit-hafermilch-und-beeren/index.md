@@ -1,7 +1,7 @@
 ---
 title: Chia-Pudding mit Hafermilch und Beeren
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love]
+tags: [Healthy, Vegetarisch]
 duration: 10
 servings: 2
 nutrition: { kcal: 300, protein: 7, carbs: 29, fat: 12 }

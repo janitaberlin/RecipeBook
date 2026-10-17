@@ -1,7 +1,7 @@
 ---
 title: Thunfisch-Tataki auf Wakame mit Soja-Limetten-Vinaigrette
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Protein Power, Hosting]
+tags: [Healthy, Dinner, Protein Power, Fisch]
 duration: 20
 servings: 4
 nutrition: { kcal: 480, protein: 45, carbs: 18, fat: 22 }

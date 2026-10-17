@@ -1,7 +1,7 @@
 ---
 title: Beeren-Joghurt-Smoothie
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love]
+tags: [Healthy, Vegetarisch]
 keywords: [Shake]
 duration: 5
 servings: 2

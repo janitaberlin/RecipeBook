@@ -1,7 +1,7 @@
 ---
 title: Steak mit Ofenspargel und Kartoffeln
 cover: ./cover.jpg
-tags: [Dinner, Healthy, Meat Lover, Protein Power]
+tags: [Dinner, Healthy, Fleisch, Protein Power]
 keywords: [Periode]
 duration: 40
 servings: 2

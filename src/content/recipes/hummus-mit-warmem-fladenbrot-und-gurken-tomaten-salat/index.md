@@ -1,7 +1,7 @@
 ---
 title: Hummus mit warmem Fladenbrot und Gurken-Tomaten-Salat
 cover: ./cover.jpg
-tags: [Lunch, Veggie Love, Hosting]
+tags: [Lunch, Vegetarisch]
 duration: 20
 servings: 4
 nutrition: { kcal: 665, protein: 22, carbs: 73, fat: 28 }

@@ -1,7 +1,7 @@
 ---
 title: Walnussbrot mit getrockneten Tomaten
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love]
+tags: [Healthy, Vegetarisch]
 duration: 105
 servings: 12
 servingsLabel: Scheiben

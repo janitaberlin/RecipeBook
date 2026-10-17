@@ -1,7 +1,7 @@
 ---
 title: Bulgursalat mit Petersilie, Tomate, Gurke und Zitrone
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
+tags: [Healthy, Lunch, Vegetarisch]
 duration: 20
 servings: 2
 nutrition: { kcal: 445, protein: 11, carbs: 58, fat: 16 }

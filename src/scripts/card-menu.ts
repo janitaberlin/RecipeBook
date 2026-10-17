@@ -1,26 +1,9 @@
 import { deleteRecipe, GitHubError } from '../lib/github';
 import { recipeUrl } from '../lib/url';
+import { readStorage, TOKEN_KEY, writeStorage } from './storage';
 
-const TOKEN_KEY = 'github-token';
 const DELETED_KEY = 'deleted-recipes';
 const LONG_PRESS_MS = 550;
-
-function readStorage(key: string): string | null {
-  try {
-    return localStorage.getItem(key);
-  } catch {
-    return null;
-  }
-}
-
-function writeStorage(key: string, value: string | null): void {
-  try {
-    if (value === null) localStorage.removeItem(key);
-    else localStorage.setItem(key, value);
-  } catch {
-    // Speicher nicht verfügbar – dann muss der Schlüssel jedes Mal neu eingegeben werden.
-  }
-}
 
 /** Rezepte, die hier gelöscht wurden; bleiben ausgeblendet, bis die neue Version online ist. */
 export function deletedIds(): Set<string> {

@@ -1,7 +1,7 @@
 ---
 title: Hähnchen-Curry mit Kokosmilch
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Meat Lover, Protein Power]
+tags: [Healthy, Dinner, Fleisch, Protein Power]
 duration: 30
 servings: 4
 nutrition: { kcal: 655, protein: 44, carbs: 60, fat: 26 }

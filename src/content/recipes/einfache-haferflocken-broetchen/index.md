@@ -1,7 +1,7 @@
 ---
 title: Einfache Haferflocken-Brötchen
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love]
+tags: [Healthy, Vegetarisch]
 duration: 40
 servings: 8
 servingsLabel: Stück

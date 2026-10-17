@@ -1,7 +1,7 @@
 ---
 title: Feldsalat mit Thunfisch, Granatapfel und Mozzarella
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Protein Power]
+tags: [Healthy, Lunch, Protein Power, Fisch]
 duration: 15
 servings: 2
 nutrition: { kcal: 470, protein: 50, carbs: 12, fat: 24 }

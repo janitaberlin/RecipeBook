@@ -21,7 +21,7 @@ const items = [
   r('mochis', 'Potato Mochis', { tags: ['Snack'], extra: 'Snack Periode Mit Kürbiskernen super zur Periode.' }),
 ];
 const withMirco = [...items, r('gulasch', 'Biergulasch', { book: 'mirco', ingredients: 'Rindergulasch · Babyspinat' })];
-const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added'; uncooked: boolean; book: 'janita' | 'mirco'; all: boolean }> = {}) => ({
+const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added' | 'cooked'; uncooked: boolean; book: 'janita' | 'mirco'; all: boolean }> = {}) => ({
   tags: [],
   q: '',
   sort: 'name' as const,
@@ -75,6 +75,11 @@ describe('filterAndSort', () => {
 
   it('sorts by duration asc with missing values last', () => {
     expect(filterAndSort(items, state({ sort: 'duration' }))).toEqual(['steak', 'gnocchi', 'orzo', 'mochis']);
+  });
+
+  it('sorts by cooked count desc with name as tie-breaker', () => {
+    const counted = items.map((r) => ({ ...r, cookedCount: { steak: 2, mochis: 5 }[r.id] ?? 0 }));
+    expect(filterAndSort(counted, state({ sort: 'cooked' }))).toEqual(['mochis', 'steak', 'gnocchi', 'orzo']);
   });
 
   it('sorts by added desc with name as tie-breaker', () => {

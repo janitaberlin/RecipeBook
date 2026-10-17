@@ -1,7 +1,7 @@
 ---
 title: Zucchini-Puffer
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
+tags: [Healthy, Lunch, Vegetarisch]
 duration: 25
 servings: 3
 nutrition: { kcal: 320, protein: 14, carbs: 20, fat: 19 }

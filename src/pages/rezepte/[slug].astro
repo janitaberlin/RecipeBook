@@ -1,5 +1,7 @@
 ---
 import { getImage, Image } from 'astro:assets';
+import { cookedLabel } from '../../lib/cooked';
+import { FAVORITE } from '../../lib/keywords';
 import { formatMicro } from '../../lib/micros';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
@@ -19,6 +21,9 @@ export async function getStaticPaths() {
 const { recipe } = Astro.props as { recipe: Recipe };
 const { Content } = await render(recipe);
 const d = recipe.data;
+const favorite = d.keywords.includes(FAVORITE);
+const subtitle = d.keywords.filter((k) => k !== FAVORITE).join(' · ');
+const cookedDays = d.cooked.map((day) => day.toISOString().slice(0, 10));
 const sourceIsLink = d.source?.startsWith('http') ?? false;
 const ogImage = d.cover ? await getImage({ src: d.cover, width: 1200, format: 'jpeg' }) : null;
 const ogImageUrl = ogImage ? new URL(ogImage.src, Astro.site).href : new URL(url('icon-512.png'), Astro.site).href;
@@ -59,11 +64,17 @@ const jsonLd = {
       {d.cover ? <Image src={d.cover} alt="" widths={[480, 960, 1600]} sizes="(min-width: 1232px) 1232px, 100vw" priority /> : <Placeholder />}
     </div>
     <header class="recipe-header">
-      <h1>{d.title}</h1>
+      <div class="recipe-title-row">
+        <h1>{d.title}</h1>
+        <button type="button" class="favorite-btn" data-published={String(favorite)} aria-pressed={String(favorite)} aria-label={favorite ? 'Kein Lieblingsessen mehr' : 'Als Lieblingsessen merken'}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13a4.9 4.9 0 0 1 0-7 4.9 4.9 0 0 1 7 0l.4.4.4-.4a4.9 4.9 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z" /></svg>
+        </button>
+      </div>
+      {subtitle && <p class="recipe-keywords">{subtitle}</p>}
       <ul class="recipe-meta">
         {d.duration && <li>⏱ {d.duration} Min.</li>}
         {d.rating && <li><Stars rating={d.rating} /></li>}
-        {d.rating && <li class="cooked">✓ Gekocht</li>}
+        {(d.rating || cookedDays.length > 0) && <li class="cooked">✓ Gekocht</li>}
         {d.book === 'mirco' && <li>Aus Mircos Rezepten</li>}
         {d.source && (
           <li>
@@ -75,6 +86,12 @@ const jsonLd = {
       <ul class="tag-list">
         {d.tags.map((t) => <li><a class="tag" href={tagUrl(t, d.book)}>{t}</a></li>)}
       </ul>
+      <div class="cooked-box" data-published={JSON.stringify(cookedDays)}>
+        <button type="button" class="cooked-btn" aria-pressed="false">Heute gekocht</button>
+        <button type="button" class="cooked-undo" hidden>Rückgängig</button>
+        <span class="cooked-count">{cookedLabel(cookedDays.length)}</span>
+      </div>
+      <p class="action-status" role="status" hidden></p>
       <section class="nutrition" aria-label="Nährwerte">
         <p class="nutrition-title">Nährwerte pro {perServingLabel(d.servingsLabel)} <span class="nutrition-hint">(ca., geschätzt)</span></p>
         <dl class="nutrition-list">
@@ -123,6 +140,20 @@ const jsonLd = {
     </div>
   </article>
   <dialog class="lightbox" aria-label="Bild vergrößert"></dialog>
+  <dialog class="card-menu token-dialog" aria-labelledby="token-dialog-title">
+    <form method="dialog" class="card-menu-inner">
+      <p class="card-menu-title" id="token-dialog-title">{d.title}</p>
+      <div class="card-menu-view">
+        <label class="token-field">
+          <span>GitHub-Schlüssel (nur einmal nötig)</span>
+          <input type="password" class="token-input" autocomplete="off" spellcheck="false" />
+        </label>
+        <button type="button" class="menu-btn menu-btn--primary" data-action="confirm-token">Speichern</button>
+        <button value="cancel" class="menu-btn menu-btn--plain">Abbrechen</button>
+      </div>
+      <p class="card-menu-status" aria-live="polite"></p>
+    </form>
+  </dialog>
 </Base>
 
 <script>

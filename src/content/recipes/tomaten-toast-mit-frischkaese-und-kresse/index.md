@@ -1,7 +1,7 @@
 ---
 title: Tomaten-Toast mit Frischkäse und Kresse
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
+tags: [Healthy, Lunch, Vegetarisch]
 duration: 10
 servings: 2
 servingsLabel: Stück

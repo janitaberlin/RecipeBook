@@ -1,7 +1,7 @@
 ---
 title: Gnocchi in Tomaten-Frischkäse-Soße
 cover: ./cover.jpg
-tags: [Lunch, Dinner, Comfort Food, Veggie Love]
+tags: [Lunch, Dinner, Comfort Food, Vegetarisch]
 duration: 20
 servings: 2
 nutrition: { kcal: 685, protein: 26, carbs: 105, fat: 11 }

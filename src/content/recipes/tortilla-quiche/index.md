@@ -1,7 +1,7 @@
 ---
 title: Tortilla-Quiche
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love, Protein Power]
+tags: [Healthy, Lunch, Vegetarisch, Protein Power]
 duration: 35
 servings: 2
 nutrition: { kcal: 535, protein: 34, carbs: 22, fat: 33 }

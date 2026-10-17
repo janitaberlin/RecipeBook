@@ -1,7 +1,7 @@
 ---
 title: Zoodle-Bolognese
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Meat Lover, Protein Power]
+tags: [Healthy, Dinner, Fleisch, Protein Power]
 duration: 25
 servings: 2
 nutrition: { kcal: 500, protein: 36, carbs: 18, fat: 31 }

@@ -1,7 +1,7 @@
 ---
 title: Rotes Thai-Curry mit Gemüse und Tofu
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Veggie Love]
+tags: [Healthy, Dinner, Vegetarisch]
 duration: 35
 servings: 4
 nutrition: { kcal: 365, protein: 13, carbs: 18, fat: 27 }

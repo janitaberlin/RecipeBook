@@ -1,7 +1,7 @@
 ---
 title: Hähnchen-Teller mit Ei, Süßkartoffel und Brokkoli
 cover: ./cover.jpg
-tags: [Dinner, Healthy, Meat Lover, Protein Power]
+tags: [Dinner, Healthy, Fleisch, Protein Power]
 duration: 40
 servings: 2
 nutrition: { kcal: 760, protein: 52, carbs: 49, fat: 35 }

@@ -1,7 +1,7 @@
 ---
 title: Pflaumen-Zimt-Soufflé mit Skyr
 cover: ./cover.jpg
-tags: [Dessert, Healthy, Veggie Love]
+tags: [Dessert, Healthy, Vegetarisch]
 duration: 15
 servings: 4
 servingsLabel: Tassen

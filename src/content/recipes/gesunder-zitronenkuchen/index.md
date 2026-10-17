@@ -1,7 +1,7 @@
 ---
 title: Gesunder Zitronenkuchen
 cover: ./cover.jpg
-tags: [Healthy, Dessert, Veggie Love]
+tags: [Healthy, Dessert, Vegetarisch]
 duration: 50
 servings: 12
 servingsLabel: Stück

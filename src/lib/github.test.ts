@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { deleteRecipe, deletionEntries, GitHubError } from './github';
+import { deleteRecipe, deletionEntries, GitHubError, setCookedDay, setFavorite } from './github';
 
 const tree = [
   { path: 'src/content/recipes/shakshuka', type: 'tree' },
@@ -23,6 +23,9 @@ describe('deletionEntries', () => {
     expect(() => deletionEntries(tree, '')).toThrow();
   });
 });
+
+const toBase64 = (text: string) => btoa(String.fromCharCode(...new TextEncoder().encode(text)));
+const fromBase64 = (text: string) => new TextDecoder().decode(Uint8Array.from(atob(text), (c) => c.charCodeAt(0)));
 
 function json(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), { status });
@@ -54,5 +57,55 @@ describe('deleteRecipe', () => {
     const fetchFn = vi.fn(async () => json({}, 401));
     await expect(deleteRecipe('shakshuka', 'Shakshuka', 'bad', fetchFn as unknown as typeof fetch)).rejects.toMatchObject({ status: 401 });
     await expect(deleteRecipe('shakshuka', 'S', 'bad', fetchFn as unknown as typeof fetch)).rejects.toBeInstanceOf(GitHubError);
+  });
+});
+
+describe('setFavorite', () => {
+  const md = '---\ntitle: Grüne Soße\ntags: [Dinner]\nservings: 2\n---\n\n## Zutaten\n- Kräuter\n';
+
+  function mockFetch(content: string) {
+    return vi.fn(async (url: string, init?: RequestInit) => {
+      if (url.endsWith('/contents/src/content/recipes/gruene-sosse/index.md?ref=main')) return json({ content: toBase64(content), sha: 'blob1' });
+      if (url.endsWith('/contents/src/content/recipes/gruene-sosse/index.md') && init?.method === 'PUT') return json({});
+      throw new Error(url);
+    });
+  }
+
+  it('commits the keyword with UTF-8 content and the file sha', async () => {
+    const fetchFn = mockFetch(md);
+    await setFavorite('gruene-sosse', 'Grüne Soße', true, 'tok', fetchFn as unknown as typeof fetch);
+    const body = JSON.parse(fetchFn.mock.calls[1][1]!.body as string);
+    expect(body).toMatchObject({ message: 'Lieblingsessen: Grüne Soße', sha: 'blob1', branch: 'main' });
+    expect(fromBase64(body.content)).toBe(md.replace('tags: [Dinner]\n', 'tags: [Dinner]\nkeywords: [Lieblingsessen]\n'));
+    expect(fetchFn.mock.calls.every((call) => call[1]?.cache === 'no-store')).toBe(true);
+  });
+
+  it('removes the keyword with its own message', async () => {
+    const fetchFn = mockFetch(md.replace('tags: [Dinner]\n', 'tags: [Dinner]\nkeywords: [Lieblingsessen]\n'));
+    await setFavorite('gruene-sosse', 'Grüne Soße', false, 'tok', fetchFn as unknown as typeof fetch);
+    const body = JSON.parse(fetchFn.mock.calls[1][1]!.body as string);
+    expect(body.message).toBe('Kein Lieblingsessen mehr: Grüne Soße');
+    expect(fromBase64(body.content)).toBe(md);
+  });
+
+  it('does not commit when the state already matches', async () => {
+    const fetchFn = mockFetch(md);
+    await setFavorite('gruene-sosse', 'Grüne Soße', false, 'tok', fetchFn as unknown as typeof fetch);
+    expect(fetchFn).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('setCookedDay', () => {
+  it('commits the day with „Gekocht: <Titel>“', async () => {
+    const md = '---\ntitle: Shakshuka\nadded: 2026-10-01\n---\n';
+    const fetchFn = vi.fn(async (url: string, init?: RequestInit) => {
+      if (url.endsWith('?ref=main')) return json({ content: toBase64(md), sha: 'blob1' });
+      if (init?.method === 'PUT') return json({});
+      throw new Error(url);
+    });
+    await setCookedDay('shakshuka', 'Shakshuka', '2026-10-17', true, 'tok', fetchFn as unknown as typeof fetch);
+    const body = JSON.parse(fetchFn.mock.calls[1][1]!.body as string);
+    expect(body.message).toBe('Gekocht: Shakshuka');
+    expect(fromBase64(body.content)).toBe('---\ntitle: Shakshuka\nadded: 2026-10-01\ncooked: [2026-10-17]\n---\n');
   });
 });

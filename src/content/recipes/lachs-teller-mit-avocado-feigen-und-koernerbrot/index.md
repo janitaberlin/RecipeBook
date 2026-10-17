@@ -1,7 +1,7 @@
 ---
 title: Lachs-Teller mit Avocado, Feigen und Körnerbrot
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Protein Power]
+tags: [Healthy, Lunch, Protein Power, Fisch]
 keywords: [Periode]
 duration: 10
 servings: 1

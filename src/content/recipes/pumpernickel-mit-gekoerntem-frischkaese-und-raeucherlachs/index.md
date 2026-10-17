@@ -1,7 +1,7 @@
 ---
 title: Pumpernickel mit gekörntem Frischkäse und Räucherlachs
 cover: ./cover.jpg
-tags: [Healthy, Lunch]
+tags: [Healthy, Lunch, Fisch]
 duration: 5
 servings: 2
 nutrition: { kcal: 330, protein: 25, carbs: 33, fat: 10 }

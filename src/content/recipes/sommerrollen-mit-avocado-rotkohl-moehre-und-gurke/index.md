@@ -1,7 +1,7 @@
 ---
 title: Sommerrollen mit Avocado, Rotkohl, Möhre und Gurke
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
+tags: [Healthy, Lunch, Vegetarisch]
 duration: 25
 servings: 2
 nutrition: { kcal: 390, protein: 9, carbs: 44, fat: 19 }

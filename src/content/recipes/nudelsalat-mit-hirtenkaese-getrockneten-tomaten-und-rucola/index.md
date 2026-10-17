@@ -1,7 +1,7 @@
 ---
 title: Nudelsalat mit Hirtenkäse, getrockneten Tomaten und Rucola
 cover: ./cover.jpg
-tags: [Lunch, Veggie Love, Hosting]
+tags: [Lunch, Vegetarisch]
 duration: 30
 servings: 8
 nutrition: { kcal: 465, protein: 18, carbs: 52, fat: 20 }

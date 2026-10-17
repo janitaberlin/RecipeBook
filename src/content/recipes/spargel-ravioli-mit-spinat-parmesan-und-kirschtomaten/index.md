@@ -1,7 +1,7 @@
 ---
 title: Spargel-Ravioli mit Spinat, Parmesan und Kirschtomaten
 cover: ./cover.jpg
-tags: [Dinner, Veggie Love, Protein Power]
+tags: [Dinner, Vegetarisch, Protein Power]
 duration: 20
 servings: 2
 nutrition: { kcal: 980, protein: 35, carbs: 100, fat: 49 }

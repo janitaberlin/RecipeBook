@@ -1,7 +1,7 @@
 ---
 title: Duroc-Kotelett aus dem Ofen mit Rotwein-Kartoffeln
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
+tags: [Dinner, Comfort Food, Fleisch, Protein Power]
 duration: 60
 servings: 2
 nutrition: { kcal: 920, protein: 46, carbs: 48, fat: 52 }

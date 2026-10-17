@@ -1,7 +1,7 @@
 ---
 title: Fancy Rum-Lachs vom Grill mit Orangen und Petersilie
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Protein Power, Hosting]
+tags: [Healthy, Dinner, Protein Power, Fisch]
 keywords: [Grillen]
 duration: 45
 servings: 2

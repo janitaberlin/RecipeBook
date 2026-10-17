@@ -1,7 +1,7 @@
 ---
 title: Lachs-Teller mit Ei, Süßkartoffel und Brokkoli
 cover: ./cover.jpg
-tags: [Dinner, Lunch, Healthy, Protein Power]
+tags: [Dinner, Lunch, Healthy, Protein Power, Fisch]
 duration: 35
 servings: 2
 nutrition: { kcal: 930, protein: 48, carbs: 49, fat: 55 }

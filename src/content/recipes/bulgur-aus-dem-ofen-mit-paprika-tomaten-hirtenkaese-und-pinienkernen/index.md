@@ -1,7 +1,7 @@
 ---
 title: Bulgur aus dem Ofen mit Paprika, Tomaten, Hirtenkäse und Pinienkernen
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Veggie Love]
+tags: [Healthy, Dinner, Vegetarisch]
 duration: 40
 servings: 4
 nutrition: { kcal: 400, protein: 13, carbs: 43, fat: 18 }

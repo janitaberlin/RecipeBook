@@ -1,7 +1,7 @@
 ---
 title: Tomaten-Burrata-Salat mit Rucola
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
+tags: [Healthy, Lunch, Vegetarisch]
 duration: 10
 servings: 2
 nutrition: { kcal: 490, protein: 16, carbs: 13, fat: 40 }

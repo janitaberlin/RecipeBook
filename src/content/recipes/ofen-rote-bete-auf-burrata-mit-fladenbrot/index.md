@@ -1,7 +1,7 @@
 ---
 title: Ofen-Rote-Bete auf Burrata mit Fladenbrot
 cover: ./cover.jpg
-tags: [Lunch, Veggie Love, Protein Power]
+tags: [Lunch, Vegetarisch, Protein Power]
 keywords: [Periode]
 duration: 40
 servings: 2

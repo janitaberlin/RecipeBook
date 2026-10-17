@@ -1,7 +1,7 @@
 ---
 title: Schneller Nudelauflauf mit italienischem Gemüse
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food, Veggie Love, Protein Power]
+tags: [Dinner, Comfort Food, Vegetarisch, Protein Power]
 duration: 35
 servings: 4
 nutrition: { kcal: 820, protein: 34, carbs: 100, fat: 29 }

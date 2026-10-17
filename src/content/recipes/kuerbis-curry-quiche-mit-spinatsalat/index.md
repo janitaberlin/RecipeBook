@@ -1,7 +1,7 @@
 ---
 title: Kürbis-Curry-Quiche mit Spinatsalat
 cover: ./cover.jpg
-tags: [Lunch, Dinner, Comfort Food, Veggie Love]
+tags: [Lunch, Dinner, Comfort Food, Vegetarisch]
 duration: 50
 servings: 4
 nutrition: { kcal: 620, protein: 18, carbs: 40, fat: 41 }

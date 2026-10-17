@@ -1,4 +1,5 @@
 import { deletedIds, initCardMenu } from './card-menu';
+import { cookedState, favoriteState } from './recipe-actions';
 import { filterAndSort, isHome, parseState, toSearch, type FilterState, type RecipeSummary, type SortKey } from '../lib/filter';
 
 interface Data {
@@ -17,6 +18,19 @@ function init({ recipes: allRecipes, tags }: Data): void {
   for (const id of deleted) {
     cards.get(id)?.remove();
     cards.delete(id);
+  }
+  // Herz und „Heute gekocht“ aus der Rezeptseite sofort zeigen, auch solange die neue Version noch nicht online ist.
+  for (const [id, card] of cards) {
+    const heart = card.querySelector<HTMLElement>('.card-heart');
+    if (heart) heart.hidden = !favoriteState(id, card.dataset.favorite === 'true');
+    const count = card.querySelector<HTMLElement>('.cook-count');
+    if (count) {
+      const n = cookedState(id, JSON.parse(card.dataset.cooked ?? '[]') as string[]);
+      count.textContent = `${n}× gekocht`;
+      count.hidden = n === 0;
+      const summary = recipes.find((r) => r.id === id);
+      if (summary) Object.assign(summary, { cookedCount: n, cooked: summary.rating !== null || n > 0 });
+    }
   }
   const search = document.querySelector<HTMLInputElement>('.search')!;
   const sort = document.querySelector<HTMLSelectElement>('.sort')!;

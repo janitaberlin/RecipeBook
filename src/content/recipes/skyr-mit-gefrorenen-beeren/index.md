@@ -1,7 +1,7 @@
 ---
 title: Skyr mit gefrorenen Beeren
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love, Protein Power]
+tags: [Healthy, Vegetarisch, Protein Power]
 duration: 5
 servings: 2
 nutrition: { kcal: 285, protein: 35, carbs: 31, fat: 1 }

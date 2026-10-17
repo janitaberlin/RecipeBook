@@ -1,8 +1,8 @@
 ---
 title: Tansanisches Kokos-Curry-Hähnchen mit Kidneybohnen
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
-keywords: [Lieblingsessen, Periode]
+tags: [Dinner, Comfort Food, Fleisch, Protein Power]
+keywords: [Periode]
 duration: 45
 servings: 4
 nutrition: { kcal: 890, protein: 52, carbs: 76, fat: 42 }

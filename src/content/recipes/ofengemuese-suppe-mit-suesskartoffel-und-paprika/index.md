@@ -1,7 +1,8 @@
 ---
 title: Ofengemüse-Suppe mit Süßkartoffel und Paprika
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Veggie Love]
+tags: [Healthy, Dinner, Vegetarisch]
+keywords: [Detox]
 duration: 45
 servings: 4
 nutrition: { kcal: 315, protein: 5, carbs: 46, fat: 10 }

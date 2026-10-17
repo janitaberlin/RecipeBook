@@ -1,7 +1,7 @@
 ---
 title: Zitronenpasta vom Gardasee
 cover: ./cover.jpg
-tags: [Lunch, Dinner, Comfort Food, Veggie Love]
+tags: [Lunch, Dinner, Comfort Food, Vegetarisch]
 duration: 20
 servings: 4
 nutrition: { kcal: 700, protein: 23, carbs: 82, fat: 30 }

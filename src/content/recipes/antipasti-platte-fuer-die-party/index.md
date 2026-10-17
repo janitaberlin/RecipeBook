@@ -1,7 +1,7 @@
 ---
 title: Antipasti-Platte für die Party
 cover: ./cover.jpg
-tags: [Hosting, Meat Lover]
+tags: [Platten, Fleisch]
 keywords: [Party]
 duration: 60
 servings: 8

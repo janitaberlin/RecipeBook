@@ -1,7 +1,8 @@
 ---
 title: Rotkohl-Apfel-Salat mit Granatapfel
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
+tags: [Healthy, Lunch, Vegetarisch]
+keywords: [Detox]
 duration: 15
 servings: 6
 nutrition: { kcal: 270, protein: 7, carbs: 23, fat: 16 }

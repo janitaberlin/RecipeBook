@@ -1,7 +1,7 @@
 ---
 title: Curry-Ofengemüse auf Burrata
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love, Protein Power]
+tags: [Healthy, Lunch, Vegetarisch, Protein Power]
 keywords: [Periode]
 duration: 45
 servings: 2

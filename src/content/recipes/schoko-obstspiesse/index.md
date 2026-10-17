@@ -1,7 +1,7 @@
 ---
 title: Schoko-Obstspieße
 cover: ./cover.jpg
-tags: [Dessert, Veggie Love]
+tags: [Dessert, Vegetarisch]
 duration: 30
 servings: 8
 servingsLabel: Stück

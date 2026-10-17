@@ -1,7 +1,7 @@
 ---
 title: Lasagne vom Gardasee
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
+tags: [Dinner, Comfort Food, Fleisch, Protein Power]
 duration: 110
 servings: 6
 nutrition: { kcal: 840, protein: 48, carbs: 49, fat: 50 }

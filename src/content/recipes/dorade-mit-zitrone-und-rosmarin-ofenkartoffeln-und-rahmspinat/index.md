@@ -1,7 +1,7 @@
 ---
 title: Dorade mit Zitrone und Rosmarin, Ofenkartoffeln und Rahmspinat
 cover: ./cover.jpg
-tags: [Dinner, Healthy, Protein Power]
+tags: [Dinner, Healthy, Protein Power, Fisch]
 duration: 50
 servings: 2
 nutrition: { kcal: 840, protein: 54, carbs: 53, fat: 46 }

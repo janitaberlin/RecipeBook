@@ -1,5 +1,5 @@
-export type SortKey = 'name' | 'rating' | 'duration' | 'added';
-export const SORT_KEYS: SortKey[] = ['name', 'rating', 'duration', 'added'];
+export type SortKey = 'name' | 'rating' | 'duration' | 'added' | 'cooked';
+export const SORT_KEYS: SortKey[] = ['name', 'rating', 'duration', 'added', 'cooked'];
 export type Book = 'janita' | 'mirco';
 
 export interface FilterState {
@@ -22,7 +22,10 @@ export interface RecipeSummary {
   ingredients: string;
   /** Weiterer Suchtext: Kategorien, Stichwörter und Tipps. */
   extra?: string;
+  /** Schon gekocht: hat Sterne oder mindestens einen Koch-Tag. */
   cooked: boolean;
+  /** Wie oft gekocht („Heute gekocht“). */
+  cookedCount?: number;
   book: Book;
 }
 
@@ -55,6 +58,7 @@ const COMPARE: Record<SortKey, Compare> = {
   rating: missingLast((r) => r.rating, -1),
   duration: missingLast((r) => r.duration, 1),
   added: (a, b) => b.added.localeCompare(a.added),
+  cooked: (a, b) => (b.cookedCount ?? 0) - (a.cookedCount ?? 0),
 };
 
 export function filterAndSort(items: RecipeSummary[], state: FilterState): string[] {

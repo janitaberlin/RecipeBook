@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Placeholder from './Placeholder.astro';
 import Stars from './Stars.astro';
+import { FAVORITE } from '../lib/keywords';
 import type { Recipe } from '../lib/recipes';
 import { recipeUrl } from '../lib/url';
 
@@ -10,18 +11,26 @@ interface Props {
 }
 const { recipe } = Astro.props;
 const d = recipe.data;
+const favorite = d.keywords.includes(FAVORITE);
+const cookedDays = d.cooked.map((day) => day.toISOString().slice(0, 10));
+const subtitle = d.keywords.filter((k) => k !== FAVORITE).join(' · ');
 ---
-<li class="card" data-id={recipe.id} hidden={d.book !== 'janita'}>
+<li class="card" data-id={recipe.id} data-favorite={String(favorite)} data-cooked={JSON.stringify(cookedDays)} hidden={d.book !== 'janita'}>
   <a href={recipeUrl(recipe.id)}>
     <div class="card-image">
       {d.cover ? <Image src={d.cover} alt="" widths={[400, 800]} sizes="(max-width: 600px) 50vw, 400px" /> : <Placeholder />}
+      <span class="card-heart" role="img" aria-label="Lieblingsessen" hidden={!favorite}>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13a4.9 4.9 0 0 1 0-7 4.9 4.9 0 0 1 7 0l.4.4.4-.4a4.9 4.9 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z" /></svg>
+      </span>
     </div>
     <div class="card-body">
       <h2 class="card-title">{d.title}</h2>
+      {subtitle && <p class="card-keywords">{subtitle}</p>}
       <div class="card-meta">
         {d.rating && <Stars rating={d.rating} />}
         {d.duration && <span>⏱ {d.duration} Min.</span>}
-        {d.rating && <span class="cooked">✓ Gekocht</span>}
+        <span class="cook-count" hidden={cookedDays.length === 0}>{cookedDays.length}× gekocht</span>
+        {d.rating && cookedDays.length === 0 && <span class="cooked">✓ Gekocht</span>}
         {d.book === 'mirco' && <span class="book-badge">Mirco</span>}
       </div>
     </div>

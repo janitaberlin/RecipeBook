@@ -23,6 +23,8 @@ const recipes = defineCollection({
         tags: z.array(tag),
         /** Stichwörter für die Suche, z. B. Periode oder Weihnachten. */
         keywords: z.array(tag).default([]),
+        /** Tage, an denen das Rezept gekocht wurde („Heute gekocht“ auf der Rezeptseite), z. B. [2026-10-17]. */
+        cooked: z.array(z.coerce.date()).default([]),
         added: z.coerce.date(),
         cover: image().optional(),
         duration: z.number().int().positive().optional(),

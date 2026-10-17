@@ -1,7 +1,7 @@
 ---
 title: Rührei mit Avocado und Stremellachs
 cover: ./cover.jpg
-tags: [Healthy, Protein Power]
+tags: [Healthy, Protein Power, Fisch]
 duration: 10
 servings: 2
 nutrition: { kcal: 530, protein: 33, carbs: 21, fat: 34 }

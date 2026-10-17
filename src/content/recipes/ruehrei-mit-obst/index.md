@@ -1,7 +1,7 @@
 ---
 title: Rührei mit Obst
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love]
+tags: [Healthy, Vegetarisch]
 duration: 10
 servings: 1
 nutrition: { kcal: 385, protein: 21, carbs: 30, fat: 19 }

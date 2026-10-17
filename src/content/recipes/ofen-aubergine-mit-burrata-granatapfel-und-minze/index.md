@@ -1,7 +1,7 @@
 ---
 title: Ofen-Aubergine mit Burrata, Granatapfel und Minze
 cover: ./cover.jpg
-tags: [Lunch, Dinner, Veggie Love, Hosting]
+tags: [Lunch, Dinner, Vegetarisch]
 duration: 30
 servings: 2
 nutrition: { kcal: 555, protein: 21, carbs: 19, fat: 40 }

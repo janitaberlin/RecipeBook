@@ -1,7 +1,7 @@
 ---
 title: Quark-Bowl mit Datteln, Chia und Granola
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love, Protein Power]
+tags: [Healthy, Vegetarisch, Protein Power]
 duration: 5
 servings: 2
 nutrition: { kcal: 430, protein: 35, carbs: 48, fat: 8 }

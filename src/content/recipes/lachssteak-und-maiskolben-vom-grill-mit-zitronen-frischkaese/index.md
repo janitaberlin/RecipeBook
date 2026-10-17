@@ -1,7 +1,7 @@
 ---
 title: Lachssteak und Maiskolben vom Grill mit Zitronen-Frischkäse
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Protein Power]
+tags: [Healthy, Dinner, Protein Power, Fisch]
 keywords: [Grillen]
 duration: 25
 servings: 2

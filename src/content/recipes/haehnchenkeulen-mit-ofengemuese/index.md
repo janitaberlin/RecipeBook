@@ -1,7 +1,7 @@
 ---
 title: Hähnchenkeulen mit Ofengemüse
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Meat Lover, Protein Power]
+tags: [Healthy, Dinner, Fleisch, Protein Power]
 duration: 60
 servings: 2
 nutrition: { kcal: 815, protein: 48, carbs: 49, fat: 39 }

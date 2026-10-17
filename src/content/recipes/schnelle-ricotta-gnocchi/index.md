@@ -1,7 +1,7 @@
 ---
 title: Schnelle Ricotta-Gnocchi
 cover: ./cover.jpg
-tags: [Lunch, Dinner, Veggie Love]
+tags: [Lunch, Dinner, Vegetarisch]
 duration: 20
 servings: 2
 nutrition: { kcal: 480, protein: 24, carbs: 47, fat: 21 }

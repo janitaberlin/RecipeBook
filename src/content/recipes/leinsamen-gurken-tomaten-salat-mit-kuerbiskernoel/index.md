@@ -1,8 +1,8 @@
 ---
 title: Leinsamen-Gurken-Tomaten-Salat mit Kürbiskernöl
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
-keywords: [Periode]
+tags: [Healthy, Lunch, Vegetarisch]
+keywords: [Periode, Detox]
 duration: 10
 servings: 2
 nutrition: { kcal: 260, protein: 8, carbs: 11, fat: 19 }

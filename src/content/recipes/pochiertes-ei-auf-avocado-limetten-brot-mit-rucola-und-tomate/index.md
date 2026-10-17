@@ -1,7 +1,7 @@
 ---
 title: Pochiertes Ei auf Avocado-Limetten-Brot mit Rucola und Tomate
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love]
+tags: [Healthy, Vegetarisch]
 duration: 15
 servings: 2
 nutrition: { kcal: 390, protein: 20, carbs: 26, fat: 22 }

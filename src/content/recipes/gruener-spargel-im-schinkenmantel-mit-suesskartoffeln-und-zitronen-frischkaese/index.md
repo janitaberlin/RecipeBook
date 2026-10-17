@@ -1,7 +1,7 @@
 ---
 title: Grüner Spargel im Schinkenmantel mit Süßkartoffeln und Zitronen-Frischkäse
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Meat Lover, Protein Power]
+tags: [Healthy, Dinner, Fleisch, Protein Power]
 duration: 35
 servings: 2
 nutrition: { kcal: 645, protein: 34, carbs: 58, fat: 31 }

@@ -1,7 +1,7 @@
 ---
 title: Lachstatar mit Zucchini im Reispapier-Chip
 cover: ./cover.jpg
-tags: [Dinner, Healthy]
+tags: [Dinner, Healthy, Fisch]
 duration: 25
 servings: 4
 nutrition: { kcal: 365, protein: 21, carbs: 9, fat: 27 }

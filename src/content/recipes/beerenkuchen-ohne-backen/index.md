@@ -1,7 +1,7 @@
 ---
 title: Beerenkuchen ohne Backen
 cover: ./cover.jpg
-tags: [Healthy, Dessert, Veggie Love]
+tags: [Healthy, Dessert, Vegetarisch]
 keywords: [Periode]
 duration: 25
 servings: 12

@@ -1,7 +1,7 @@
 ---
 title: Hirtenkäse vom Blech mit Rosenkohl und Kartoffeln
 cover: ./cover.jpg
-tags: [Dinner, Healthy, Veggie Love, Protein Power]
+tags: [Dinner, Healthy, Vegetarisch, Protein Power]
 duration: 45
 servings: 4
 nutrition: { kcal: 770, protein: 36, carbs: 53, fat: 46 }

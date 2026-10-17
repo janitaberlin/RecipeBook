@@ -1,7 +1,7 @@
 ---
 title: Avocado-Matcha-Kuchen mit Limettenguss
 cover: ./cover.jpg
-tags: [Dessert, Veggie Love]
+tags: [Dessert, Vegetarisch]
 duration: 50
 servings: 12
 servingsLabel: Stück

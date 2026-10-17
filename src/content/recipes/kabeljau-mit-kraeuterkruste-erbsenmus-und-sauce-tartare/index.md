@@ -1,7 +1,7 @@
 ---
 title: Kabeljau mit Kräuterkruste, Erbsenmus und Sauce Tartare
 cover: ./cover.jpg
-tags: [Dinner, Protein Power]
+tags: [Dinner, Protein Power, Fisch]
 duration: 30
 servings: 6
 nutrition: { kcal: 925, protein: 54, carbs: 57, fat: 53 }

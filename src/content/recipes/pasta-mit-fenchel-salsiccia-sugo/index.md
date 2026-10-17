@@ -1,7 +1,7 @@
 ---
 title: Pasta mit Fenchel-Salsiccia-Sugo
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
+tags: [Dinner, Comfort Food, Fleisch, Protein Power]
 duration: 30
 servings: 4
 nutrition: { kcal: 845, protein: 32, carbs: 98, fat: 35 }

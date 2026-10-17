@@ -1,8 +1,8 @@
 ---
 title: Rote-Bete-Kichererbsen-Salat mit gekörntem Frischkäse
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
-keywords: [Periode]
+tags: [Healthy, Lunch, Vegetarisch]
+keywords: [Periode, Detox]
 duration: 15
 servings: 2
 nutrition: { kcal: 475, protein: 22, carbs: 40, fat: 22 }

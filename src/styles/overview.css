@@ -92,10 +92,27 @@
   .card a { transition: none; }
   .card a:hover { transform: none; }
 }
-.card-image { aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-2); }
+.card-image { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-2); }
 .card-image img, .card-image .placeholder { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
 .card-body { display: grid; gap: 0.35rem; padding: 0.75rem 0.9rem 0.9rem; }
 .card-title { margin: 0; font-size: 1.1rem; }
+.card-keywords { margin: -0.15rem 0 0; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.02em; }
+.card-heart {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.85);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+}
+.card-heart[hidden] { display: none; }
+.cook-count { color: var(--accent); font-weight: 600; }
+.cook-count[hidden] { display: none; }
+.card-heart svg { width: 1.1rem; height: 1.1rem; fill: #d6455d; }
 .card-meta { display: flex; gap: 0.75rem; color: var(--muted); font-size: 0.9rem; }
 .empty { padding: 2rem 0; color: var(--muted); text-align: center; }
 
@@ -106,6 +123,9 @@
   .card-title { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font-size: 0.95rem; line-height: 1.25; }
   .card-meta { flex-wrap: wrap; gap: 0.15rem 0.5rem; font-size: 0.78rem; }
   .card-meta .cooked { display: none; }
+  .card-keywords { margin: 0; font-size: 0.72rem; }
+  .card-heart { width: 1.6rem; height: 1.6rem; }
+  .card-heart svg { width: 0.95rem; height: 0.95rem; }
   .folder-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .uncooked-chip { border-style: dashed; }
@@ -121,39 +141,3 @@
 
 /* Menü nach langem Drücken auf eine Karte */
 .card a { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
-.card-menu {
-  width: min(22rem, calc(100vw - 2rem));
-  padding: 0;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--text);
-}
-.card-menu::backdrop { background: rgb(0 0 0 / 0.45); }
-.card-menu-inner { display: grid; gap: 0.75rem; padding: 1.1rem; }
-.card-menu-title { margin: 0; font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; }
-.card-menu-view { display: grid; gap: 0.5rem; }
-.card-menu-text { margin: 0; color: var(--muted); font-size: 0.95rem; }
-.card-menu-status { margin: 0; color: var(--muted); font-size: 0.9rem; }
-.card-menu-status:empty { display: none; }
-.token-field { display: grid; gap: 0.3rem; font-size: 0.9rem; }
-.token-field[hidden] { display: none; }
-.token-input {
-  padding: 0.55rem 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg);
-  color: var(--text);
-  font: inherit;
-}
-.menu-btn {
-  padding: 0.7rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface-2);
-  cursor: pointer;
-  text-align: center;
-}
-.menu-btn--danger { border-color: #c0392b; background: #c0392b; color: #fff; }
-.menu-btn--danger:disabled { opacity: 0.6; cursor: progress; }
-.menu-btn--plain { background: transparent; }

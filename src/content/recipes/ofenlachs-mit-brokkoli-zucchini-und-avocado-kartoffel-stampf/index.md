@@ -1,7 +1,7 @@
 ---
 title: Ofenlachs mit Brokkoli, Zucchini und Avocado-Kartoffel-Stampf
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Protein Power]
+tags: [Healthy, Dinner, Protein Power, Fisch]
 keywords: [Periode]
 duration: 35
 servings: 2

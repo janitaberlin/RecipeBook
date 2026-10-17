@@ -1,7 +1,7 @@
 ---
 title: Schnelle Focaccia mit Knoblauch und Rosmarin
 cover: ./cover.jpg
-tags: [Comfort Food, Veggie Love]
+tags: [Comfort Food, Vegetarisch]
 duration: 70
 servings: 4
 servingsLabel: Stück

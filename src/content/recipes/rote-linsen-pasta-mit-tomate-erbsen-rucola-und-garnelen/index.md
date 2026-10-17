@@ -1,7 +1,7 @@
 ---
 title: Rote-Linsen-Pasta mit Tomate, Erbsen, Rucola und Garnelen
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Protein Power]
+tags: [Healthy, Dinner, Protein Power, Fisch]
 duration: 20
 servings: 2
 nutrition: { kcal: 605, protein: 49, carbs: 61, fat: 14 }

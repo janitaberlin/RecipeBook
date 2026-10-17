@@ -27,15 +27,17 @@ Eingaben können sein: URL, PDF, Screenshot/Foto eines Rezepts, kopierter Text, 
 7. **Plausi-Check** (bei jedem neuen oder geänderten Rezept): Mengen pro Portion realistisch? Fehlen Mengen, die man zum Kochen braucht (z. B. Wasser für Reis, Nudelmenge)? Wird jede Zutat verwendet und jede verwendete Zutat aufgeführt? Garzeiten, Temperaturen und Reihenfolge stimmig? Passen Tags, Dauer und Nährwerte (auch nach Mengenänderungen neu schätzen)? Reine Stilfehler direkt korrigieren; inhaltliche Verbesserungsvorschläge dem Nutzer kurz auflisten und erst nach seinem OK umsetzen.
 8. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://janitaberlin.github.io/RecipeBook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
 
-**Zwei Rezeptbücher:** Startseite zeigt nur Janitas Rezepte; Umschalter „Mircos Rezepte“ zeigt seine (`book: mirco`); die Suche durchsucht beide. Neue Rezepte von Janita bekommen kein `book`-Feld. Janitas Kategorien (Tags): Healthy, Lunch, Dinner, Dessert, Comfort Food, Meat Lover (mit Fleisch, ohne Fisch), Veggie Love (vegetarisch), Protein Power (ab 30 g Eiweiß pro Portion), Hosting (für Gäste, Partys, Feste) (fest in `src/pages/index.astro`); Fischgerichte bekommen weder Meat Lover noch Veggie Love; Mircos Tags nicht für ihre Rezepte verwenden.
+**Zwei Rezeptbücher:** Startseite zeigt nur Janitas Rezepte; Umschalter „Mircos Rezepte“ zeigt seine (`book: mirco`); die Suche durchsucht beide. Neue Rezepte von Janita bekommen kein `book`-Feld. Janitas Kategorien (Tags): Healthy, Lunch, Dinner, Dessert, Comfort Food, Fleisch (mit Fleisch, ohne Fisch), Fisch (Fisch und Meeresfrüchte), Vegetarisch, Protein Power (ab 30 g Eiweiß pro Portion), Platten (nur echte Platten zum Teilen, z. B. Antipasti-Platte; Janitas Entscheidung 17.10.2026) (fest in `src/pages/index.astro`); Fischgerichte bekommen Fisch, nie Fleisch oder Vegetarisch; Mircos Tags nicht für ihre Rezepte verwenden.
 
-Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. Ein Rezept gilt als gekocht, sobald es Sterne hat (Filter „Noch nicht gekocht“). Ohne Sternangabe nachfragen.
+Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. Ein Rezept gilt als gekocht, sobald es Sterne oder einen `cooked`-Eintrag hat (Filter „Noch nicht gekocht“). Ohne Sternangabe nachfragen.
 
 Löschen und Teilen in der App: Karte in der Übersicht lange drücken (Computer: Rechtsklick) öffnet ein Menü. Löschen macht über die GitHub-API einen Commit „Rezept gelöscht: …“ auf `main` (Schlüssel = Fine-grained Token, liegt nur in Janitas Browser). Deshalb vor jeder Arbeit `git pull`. Gelöschte Rezepte lassen sich aus der Git-Historie wiederherstellen.
 
+Herz auf der Rezeptseite: setzt/entfernt das Stichwort `Lieblingsessen` per Commit „Lieblingsessen: …“ / „Kein Lieblingsessen mehr: …“ auf `main` (gleicher Schlüssel). Claude setzt oder entfernt `Lieblingsessen` nie selbst. Button „Heute gekocht“: trägt das heutige Datum in `cooked` ein (Commit „Gekocht: …“, pro Tag nur einmal, mit „Rückgängig“); Anzeige „Schon N× gekocht“, Sortierung „Am häufigsten gekocht“.
+
 **Bilder:** Janita will kein Rezept ohne Bild. Echte Fotos haben immer Vorrang. Solange keins da ist, bekommt das Rezept ein gezeichnetes Cover (`npm run illustration`, siehe `scripts/illustration.mjs`, Janitas Entscheidung 17.10.2026); sobald sie ein Foto schickt, ersetzt es das gezeichnete Cover. Fotos mit erkennbaren Personen nur, wenn Janita es ausdrücklich will.
 
-**Geschmack:** Janita will wenige Zutaten und schnelle Rezepte; sie kocht gern mit Kokosöl, Olivenöl, Salz, Pfeffer, Zitrone und gekörntem Frischkäse (bei geschätzten Rezepten bevorzugen). Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen). Janita backt und süßt ohne Zucker: Agavendicksaft bevorzugt, Kokosblütenzucker nur wo trockener Zucker nötig ist; auch Güsse ohne Puderzucker (z. B. Skyr mit Agavendicksaft). Honig ist in Ordnung. Janita hasst Ziegenkäse und Schafskäse – nie verwenden; bei Vorlagen damit durch Mozzarella, Burrata oder gekörnten Frischkäse ersetzen und den Ersatz nicht kommentieren. Wenn Janita „Feta“ sagt, meint sie Hirtenkäse aus Kuhmilch – den darf man verwenden.
+**Geschmack:** Janita will wenige Zutaten und schnelle Rezepte; sie kocht gern mit Kokosöl, Olivenöl, Salz, Pfeffer, Zitrone und gekörntem Frischkäse (bei geschätzten Rezepten bevorzugen). Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen). Janita backt und süßt ohne Zucker: Agavendicksaft bevorzugt, Kokosblütenzucker nur wo trockener Zucker nötig ist; auch Güsse ohne Puderzucker (z. B. Skyr mit Agavendicksaft). Honig ist in Ordnung. Kuchen und Gebäck ohne Butter: Kokosöl statt Butter, Böden und Streusel z. B. aus Haferflocken und Mandeln statt Butterkeksen. Janita hasst Ziegenkäse und Schafskäse – nie verwenden; bei Vorlagen damit durch Mozzarella, Burrata oder gekörnten Frischkäse ersetzen und den Ersatz nicht kommentieren. Wenn Janita „Feta“ sagt, meint sie Hirtenkäse aus Kuhmilch – den darf man verwenden.
 
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.
 
@@ -46,9 +48,10 @@ Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Reze
 title: Mediterrane Hähnchen-Orzo
 cover: ./cover.jpg            # optional
 tags: [Hähnchen, Hauptspeise, OnePot]
-keywords: [Weihnachten]       # optional; Stichwörter für die Suche (z. B. Periode, Party), erscheinen als Schnellsuche auf der Startseite
+keywords: [Weihnachten]       # optional; Stichwörter für die Suche (z. B. Periode, Party), erscheinen als Schnellsuche auf der Startseite und als Untertitel unter dem Rezepttitel (Rezeptseite und Karte); „Lieblingsessen“ setzt nur Janita per Herz, nie Claude
 duration: 60                  # Minuten, optional aber immer setzen
 rating: 4                     # 1–5, optional (nur der Nutzer vergibt Sterne; Rezept mit Sternen = schon gekocht)
+cooked: [2026-10-17]          # optional; Koch-Tage, setzt nur der Button „Heute gekocht“ (nie Claude)
 servings: 4
 servingsLabel: Stück          # optional, Standard „Personen“
 book: mirco                   # nur bei Mircos Rezepten (aus esstobst/RecipeBook); Standard „janita“
@@ -102,4 +105,4 @@ Nur `Zutaten` und `Zubereitung` sind Pflicht; erlaubte Abschnitte sind ausschlie
 ## Code-Überblick
 
 - `src/content.config.ts` – Schema; `src/lib/scale.ts` – Mengen parsen/runden; `src/lib/remark-quantities.ts`, `src/lib/rehype-sections.ts` – Markdown-Plugins
-- `src/pages/index.astro` + `src/scripts/overview.ts` – Übersicht; `src/scripts/card-menu.ts` + `src/lib/github.ts` – Teilen/Löschen per langem Drücken; `src/pages/rezepte/[slug].astro` + `src/scripts/recipe-page.ts` – Rezeptseite
+- `src/pages/index.astro` + `src/scripts/overview.ts` – Übersicht; `src/scripts/card-menu.ts` + `src/lib/github.ts` – Teilen/Löschen per langem Drücken; `src/scripts/recipe-actions.ts` + `src/lib/keywords.ts`/`cooked.ts` – Herz und „Heute gekocht“; `src/pages/rezepte/[slug].astro` + `src/scripts/recipe-page.ts` – Rezeptseite

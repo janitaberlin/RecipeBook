@@ -1,7 +1,7 @@
 ---
 title: Vollkorn-Wrap mit Avocado und Stremellachs
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Protein Power]
+tags: [Healthy, Lunch, Protein Power, Fisch]
 duration: 10
 servings: 2
 nutrition: { kcal: 535, protein: 31, carbs: 33, fat: 28 }

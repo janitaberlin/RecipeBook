@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import RecipeCard from '../components/RecipeCard.astro';
 import type { RecipeSummary } from '../lib/filter';
+import { FAVORITE } from '../lib/keywords';
 import { ingredientText, tipsText } from '../lib/recipe-text';
 import { tagUrl, url } from '../lib/url';
 import { getRecipes } from '../lib/recipes';
@@ -11,7 +12,7 @@ import '../styles/overview.css';
 
 const recipes = await getRecipes();
 // Janitas feste Kategorien erscheinen immer, auch solange noch kein Rezept dazu existiert.
-const JANITA_TAGS = ['Healthy', 'Lunch', 'Dinner', 'Dessert', 'Comfort Food', 'Meat Lover', 'Veggie Love', 'Protein Power', 'Hosting'];
+const JANITA_TAGS = ['Healthy', 'Lunch', 'Dinner', 'Dessert', 'Comfort Food', 'Fleisch', 'Fisch', 'Vegetarisch', 'Protein Power', 'Platten'];
 const tags = allTags([...recipes.map((r) => r.data.tags), JANITA_TAGS]);
 const summaries: RecipeSummary[] = recipes.map((r) => ({
   id: r.id,
@@ -22,7 +23,8 @@ const summaries: RecipeSummary[] = recipes.map((r) => ({
   added: r.data.added.toISOString().slice(0, 10),
   ingredients: ingredientText(r.body ?? ''),
   extra: [...r.data.tags, ...r.data.keywords, tipsText(r.body ?? '')].join(' '),
-  cooked: r.data.rating !== undefined,
+  cooked: r.data.rating !== undefined || r.data.cooked.length > 0,
+  cookedCount: r.data.cooked.length,
   book: r.data.book,
 }));
 const ownCount = recipes.filter((r) => r.data.book === 'janita').length;
@@ -41,8 +43,11 @@ const folders = (['janita', 'mirco'] as const).flatMap((book) =>
   }),
 );
 // Stichwörter je Buch als Schnellsuche unter dem Suchfeld.
+// „Lieblingsessen“ (per Herz gesetzt) steht vorn; der Chip erscheint erst, wenn es mindestens ein Herz gibt.
 const keywordsOf = (book: 'janita' | 'mirco') =>
-  allTags(recipes.filter((r) => r.data.book === book).map((r) => r.data.keywords)).map((keyword) => ({ book, keyword }));
+  allTags(recipes.filter((r) => r.data.book === book).map((r) => r.data.keywords))
+    .sort((a, b) => Number(b === FAVORITE) - Number(a === FAVORITE))
+    .map((keyword) => ({ book, keyword }));
 const keywordChips = [...keywordsOf('janita'), ...keywordsOf('mirco')];
 const countText = (n: number) => `${n} ${n === 1 ? 'Rezept' : 'Rezepte'}`;
 const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c');
@@ -55,7 +60,7 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
     </div>
     {keywordChips.length > 0 && (
       <div class="keyword-chips" aria-label="Stichwörter">
-        {keywordChips.map((k) => <button type="button" class="tag tag-chip keyword-chip" data-book={k.book} data-keyword={k.keyword} hidden={k.book !== 'janita'}>{k.keyword}</button>)}
+        {keywordChips.map((k) => <button type="button" class="tag tag-chip keyword-chip" data-book={k.book} data-keyword={k.keyword} hidden={k.book !== 'janita'}>{k.keyword === FAVORITE ? `♥ ${k.keyword}` : k.keyword}</button>)}
       </div>
     )}
   </section>
@@ -84,6 +89,7 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
         <option value="rating">Bewertung</option>
         <option value="duration">Dauer</option>
         <option value="added">Zuletzt hinzugefügt</option>
+        <option value="cooked">Am häufigsten gekocht</option>
       </select>
     </div>
     <p class="result-count" aria-live="polite">{countText(ownCount)}</p>

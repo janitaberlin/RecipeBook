@@ -1,7 +1,7 @@
 ---
 title: Thunfisch-Buletten mit gekörntem Frischkäse
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Dinner, Protein Power]
+tags: [Healthy, Lunch, Dinner, Protein Power, Fisch]
 duration: 20
 servings: 2
 nutrition: { kcal: 400, protein: 53, carbs: 12, fat: 15 }

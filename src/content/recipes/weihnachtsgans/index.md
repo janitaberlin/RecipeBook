@@ -1,7 +1,7 @@
 ---
 title: Weihnachtsgans
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food, Hosting, Meat Lover, Protein Power]
+tags: [Dinner, Comfort Food, Fleisch, Protein Power]
 keywords: [Weihnachten]
 duration: 300
 servings: 6

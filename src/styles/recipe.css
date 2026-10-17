@@ -9,7 +9,46 @@
   .recipe-hero { aspect-ratio: 16 / 7; }
 }
 .recipe-hero img, .recipe-hero .placeholder { width: 100%; height: 100%; object-fit: cover; }
-.recipe-header h1 { font-size: clamp(1.75rem, 5vw, 2.75rem); margin: 1.25rem 0 0.5rem; }
+.recipe-title-row { display: flex; align-items: flex-start; gap: 0.5rem; margin: 1.25rem 0 0.5rem; }
+.recipe-header h1 { flex: 1; min-width: 0; font-size: clamp(1.75rem, 5vw, 2.75rem); margin: 0; }
+.recipe-keywords { margin: -0.3rem 0 0.6rem; color: var(--muted); font-size: 0.95rem; letter-spacing: 0.02em; }
+.favorite-btn {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-top: 0.1rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.favorite-btn svg { width: 1.45rem; height: 1.45rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; transition: transform 0.15s ease; }
+.favorite-btn[aria-pressed='true'] { color: #d6455d; border-color: color-mix(in srgb, #d6455d 35%, var(--border)); }
+.favorite-btn[aria-pressed='true'] svg { fill: currentColor; }
+.favorite-btn:active svg { transform: scale(0.85); }
+@media (prefers-reduced-motion: reduce) {
+  .favorite-btn svg { transition: none; }
+}
+.action-status { margin: 0.5rem 0 0; color: #c0392b; font-size: 0.9rem; }
+.cooked-box { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.75rem; margin: 0.9rem 0 0; }
+.cooked-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cooked-btn[aria-pressed='true'] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-soft); cursor: default; }
+.cooked-undo { padding: 0.25rem; border: none; background: none; color: var(--accent); font: inherit; font-size: 0.9rem; text-decoration: underline; cursor: pointer; }
+.cooked-count { color: var(--muted); font-size: 0.95rem; }
 .recipe-meta {
   display: flex;
   flex-wrap: wrap;

@@ -1,7 +1,7 @@
 ---
 title: Garnelen-Avocado-Salat
 cover: ./cover.jpg
-tags: [Healthy, Lunch]
+tags: [Healthy, Lunch, Fisch]
 duration: 25
 servings: 2
 nutrition: { kcal: 560, protein: 28, carbs: 33, fat: 35 }

@@ -1,7 +1,7 @@
 ---
 title: Zucchini-Schiffchen mit Tomatenreis und Hirtenkäse
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Veggie Love]
+tags: [Healthy, Dinner, Vegetarisch]
 duration: 30
 servings: 2
 nutrition: { kcal: 470, protein: 19, carbs: 45, fat: 23 }

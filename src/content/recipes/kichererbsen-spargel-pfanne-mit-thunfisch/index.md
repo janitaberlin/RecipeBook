@@ -1,7 +1,7 @@
 ---
 title: Kichererbsen-Spargel-Pfanne mit Thunfisch
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Dinner, Protein Power]
+tags: [Healthy, Lunch, Dinner, Protein Power, Fisch]
 duration: 15
 servings: 2
 nutrition: { kcal: 420, protein: 34, carbs: 33, fat: 15 }

@@ -1,7 +1,7 @@
 ---
 title: Gnocchi mit Paprika-Hirtenkäse-Soße und Rucola
 cover: ./cover.jpg
-tags: [Lunch, Dinner, Comfort Food, Veggie Love]
+tags: [Lunch, Dinner, Comfort Food, Vegetarisch]
 duration: 15
 servings: 2
 nutrition: { kcal: 610, protein: 16, carbs: 93, fat: 18 }

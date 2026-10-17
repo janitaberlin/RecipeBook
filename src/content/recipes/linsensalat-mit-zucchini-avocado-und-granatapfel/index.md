@@ -1,7 +1,7 @@
 ---
 title: Linsensalat mit Zucchini, Avocado und Granatapfel
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
+tags: [Healthy, Lunch, Vegetarisch]
 keywords: [Periode]
 duration: 20
 servings: 2

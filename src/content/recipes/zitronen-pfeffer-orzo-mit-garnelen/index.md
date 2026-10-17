@@ -1,7 +1,7 @@
 ---
 title: Zitronen-Pfeffer-Orzo mit Garnelen
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Dinner, Protein Power]
+tags: [Healthy, Lunch, Dinner, Protein Power, Fisch]
 duration: 30
 servings: 4
 nutrition: { kcal: 530, protein: 38, carbs: 60, fat: 13 }

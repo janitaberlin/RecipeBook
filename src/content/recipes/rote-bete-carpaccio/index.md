@@ -1,7 +1,7 @@
 ---
 title: Rote-Bete-Carpaccio
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love, Hosting]
+tags: [Healthy, Lunch, Vegetarisch]
 duration: 15
 servings: 2
 nutrition: { kcal: 300, protein: 13, carbs: 16, fat: 20 }

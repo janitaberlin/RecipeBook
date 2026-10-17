@@ -1,25 +1,10 @@
 import { parseChecked, serializeChecked } from '../lib/checklist';
 import { formatQuantity, scaleQuantity, type Quantity } from '../lib/scale';
 import { servingsLabel } from '../lib/servings-label';
+import { initRecipeActions } from './recipe-actions';
+import { readStorage, writeStorage } from './storage';
 
 const CHECKABLE = '.recipe-section--zutaten li, .recipe-section--zubereitung ol > li';
-
-function readStorage(key: string): string | null {
-  try {
-    return localStorage.getItem(key);
-  } catch {
-    return null;
-  }
-}
-
-function writeStorage(key: string, value: string | null): void {
-  try {
-    if (value === null) localStorage.removeItem(key);
-    else localStorage.setItem(key, value);
-  } catch {
-    // Speicher nicht verfügbar – Zustand gilt nur bis zum Neuladen.
-  }
-}
 
 function initServings(article: HTMLElement): void {
   const original = Number(article.dataset.servings);
@@ -192,4 +177,5 @@ if (article) {
   initChecklist(article);
   initWakeLock(article);
   initLightbox(article);
+  initRecipeActions(article);
 }

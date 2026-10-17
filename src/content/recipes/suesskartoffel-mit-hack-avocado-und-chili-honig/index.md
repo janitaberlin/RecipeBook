@@ -1,7 +1,7 @@
 ---
 title: Süßkartoffel mit Hack, Avocado und Chili-Honig
 cover: ./cover.jpg
-tags: [Dinner, Healthy, Meat Lover, Protein Power]
+tags: [Dinner, Healthy, Fleisch, Protein Power]
 duration: 60
 servings: 2
 nutrition: { kcal: 865, protein: 44, carbs: 71, fat: 45 }

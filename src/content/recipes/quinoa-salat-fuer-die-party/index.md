@@ -1,7 +1,7 @@
 ---
 title: Quinoa-Salat für die Party
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love, Hosting]
+tags: [Healthy, Lunch, Vegetarisch]
 keywords: [Party]
 duration: 30
 servings: 8

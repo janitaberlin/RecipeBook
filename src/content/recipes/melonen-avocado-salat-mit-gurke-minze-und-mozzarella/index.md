@@ -1,7 +1,7 @@
 ---
 title: Melonen-Avocado-Salat mit Gurke, Minze und Mozzarella
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Veggie Love]
+tags: [Healthy, Lunch, Vegetarisch]
 duration: 10
 servings: 2
 nutrition: { kcal: 395, protein: 15, carbs: 20, fat: 28 }

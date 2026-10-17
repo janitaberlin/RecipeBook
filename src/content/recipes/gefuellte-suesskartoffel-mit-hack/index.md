@@ -1,7 +1,7 @@
 ---
 title: Gefüllte Süßkartoffel mit Hack
 cover: ./cover.jpg
-tags: [Dinner, Healthy, Meat Lover, Protein Power]
+tags: [Dinner, Healthy, Fleisch, Protein Power]
 duration: 60
 servings: 2
 nutrition: { kcal: 770, protein: 39, carbs: 64, fat: 37 }

@@ -1,7 +1,7 @@
 ---
 title: Breakfast Granola
 cover: ./cover.jpg
-tags: [Healthy, Veggie Love]
+tags: [Healthy, Vegetarisch]
 duration: 5
 servings: 1
 nutrition: { kcal: 640, protein: 17, carbs: 63, fat: 35 }

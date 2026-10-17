@@ -1,7 +1,7 @@
 ---
 title: Quinoa-Bowl mit Lachs, Avocado, Sesam und Limette
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Dinner, Protein Power]
+tags: [Healthy, Lunch, Dinner, Protein Power, Fisch]
 keywords: [Periode]
 duration: 25
 servings: 2

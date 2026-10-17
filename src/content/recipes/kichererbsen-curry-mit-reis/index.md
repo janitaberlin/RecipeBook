@@ -1,7 +1,7 @@
 ---
 title: Kichererbsen-Curry mit Reis
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food, Veggie Love]
+tags: [Dinner, Comfort Food, Vegetarisch]
 keywords: [Periode]
 duration: 25
 servings: 2

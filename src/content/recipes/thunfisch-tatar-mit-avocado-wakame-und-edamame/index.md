@@ -1,7 +1,7 @@
 ---
 title: Thunfisch-Tatar mit Avocado, Wakame und Edamame
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Protein Power]
+tags: [Healthy, Lunch, Protein Power, Fisch]
 duration: 20
 servings: 2
 nutrition: { kcal: 410, protein: 41, carbs: 9, fat: 21 }
