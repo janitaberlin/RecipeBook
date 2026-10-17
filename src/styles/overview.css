@@ -80,7 +80,6 @@
     radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--accent) 22%, transparent) 0 22%, transparent 23%),
     linear-gradient(160deg, var(--accent-soft), color-mix(in srgb, var(--accent) 8%, var(--surface)));
 }
-.folder-art-kicker { color: var(--accent); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
 .folder-art-title { font-family: var(--font-head); font-size: clamp(1.6rem, 8vw, 2.3rem); font-weight: 600; line-height: 1; letter-spacing: -0.02em; color: var(--text); }
 .folder-count { color: var(--muted); font-size: 0.85rem; }
 .folder-caption { color: var(--muted); font-size: 0.8rem; text-align: center; }
