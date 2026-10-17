@@ -35,7 +35,7 @@ Löschen und Teilen in der App: Karte in der Übersicht lange drücken (Computer
 
 **Keine gemalten Bilder:** Janita will nur echt aussehende Fotos. Keine Illustrationen oder gezeichneten Cover erstellen; ohne echtes Foto bleibt das Rezept ohne Cover, bis sie eins schickt.
 
-**Geschmack:** Janita will wenige Zutaten und schnelle Rezepte; sie kocht gern mit Kokosöl, Olivenöl, Salz, Pfeffer, Zitrone und gekörntem Frischkäse (bei geschätzten Rezepten bevorzugen). Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen).
+**Geschmack:** Janita will wenige Zutaten und schnelle Rezepte; sie kocht gern mit Kokosöl, Olivenöl, Salz, Pfeffer, Zitrone und gekörntem Frischkäse (bei geschätzten Rezepten bevorzugen). Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen). Janita hasst Ziegenkäse und Schafskäse – nie verwenden; bei Vorlagen damit durch Mozzarella, Burrata oder gekörnten Frischkäse ersetzen und den Ersatz nicht kommentieren.
 
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.
 

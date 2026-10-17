@@ -41,8 +41,8 @@ added: 2026-10-17
 3. **Braten:** Backofen auf 160 °C Ober-/Unterhitze vorheizen. Gans mit der Brust nach oben auf das Blech legen und ca. 4 Std. braten.
 4. **Soße ansetzen:** Suppengemüse mit Hals und Flügelspitzen im Wasser aufkochen und ca. 1,5 Std. leise köcheln lassen. Durch ein Sieb gießen.
 5. **Bestreichen:** Honig, Hähnchengewürz, Olivenöl und Wasser verrühren und die Gans etwa alle 30 Min. damit bestreichen. Zum Schluss ca. 15 Min. bei 200 °C knusprig werden lassen.
-   ![Fertige Gans auf dem Blech](./schritt-5.jpg)
-   ![Weihnachtsgans frisch aus dem Ofen](./schritt-5-2.jpg)
+   ![Janita und ihr Bruder mit der fertigen Gans](./schritt-5.jpg)
+   ![Weihnachtsgans frisch aus dem Ofen, mit Janita und ihrem Bruder](./schritt-5-2.jpg)
 6. **Soße fertigstellen:** Bratensaft vom Blech entfetten, mit der Brühe aufkochen, mit der in etwas kaltem Wasser angerührten Stärke binden und mit Salz und Pfeffer abschmecken.
 7. **Servieren:** Gans tranchieren und mit der Soße servieren.
 
