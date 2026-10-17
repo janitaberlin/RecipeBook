@@ -22,7 +22,7 @@ added: 2026-10-17
 - Auflaufform
 
 ## Zubereitung
-1. **Ofen vorheizen:** Backofen auf 200 °C Ober-/Unterhitze vorheizen.
+1. **Ofen vorheizen:** Backofen auf 180 °C Ober-/Unterhitze vorheizen.
 2. **Kartoffeln vorgaren:** Kartoffeln halbieren oder vierteln, Zwiebeln in Spalten schneiden. Mit Rotwein, Olivenöl, Kräutern, Salz und Pfeffer in der Auflaufform mischen und ca. 25 Min. im Ofen garen, da die Kartoffeln länger brauchen als das Fleisch.
 3. **Pilze dazugeben:** Pfifferlinge putzen, große Exemplare halbieren und unter die Kartoffeln mischen.
 4. **Fleisch garen:** Koteletts nur salzen und pfeffern, oben auf das Gemüse legen und höchstens ca. 20 Min. im Ofen garen.
