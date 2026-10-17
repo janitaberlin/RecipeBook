@@ -1,5 +1,6 @@
 ---
 title: Tansanisches Kokos-Curry-Hähnchen mit Kidneybohnen
+cover: ./cover.jpg
 tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
 keywords: [Lieblingsessen, Periode]
 duration: 45

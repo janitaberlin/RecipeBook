@@ -26,6 +26,7 @@ const g = (x, y, rot, s, body) => `<g transform="translate(${x.toFixed(1)} ${y.t
 const pick = (r, list) => list[Math.floor(r() * list.length)];
 
 // Jede Form ist um (0,0) gezeichnet, Größe ca. 40–80 px bei scale 1.
+const SHAPES_ASPARAGUS = `<rect x="-60" y="-6" width="110" height="12" rx="6" fill="#7fb24a"/><path d="M50 -9 C66 -9 70 0 66 0 C70 0 66 9 50 9Z" fill="#5e8f36"/>`;
 const SHAPES = {
   leaf: (r) => {
     const c = pick(r, ['#4f8a3c', '#3f7a32', '#5e9b45', '#6aa84f']);
@@ -130,8 +131,18 @@ const SHAPES = {
   falafel: () => `<circle r="20" fill="#7a4f22"/><circle r="17" fill="#98652e"/><g fill="#5e8f36">${[[-6, -4], [5, 3], [-2, 8]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="2"/>`).join('')}</g>`,
   bulette: () => `<ellipse rx="34" ry="28" fill="#c98a4a"/><ellipse rx="28" ry="22" fill="#d9a060"/><g fill="#f6efd9" opacity=".8">${[[-8, -6], [8, 4], [0, 10]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3"/>`).join('')}</g>`,
   wakame: (r) => `<path d="M-20 0 C-10 -10 10 10 20 0" stroke="${pick(r, ['#2f7a3c', '#3c8a46'])}" stroke-width="6" fill="none" stroke-linecap="round"/>`,
+  lambslettuce: (r) => {
+    const c = pick(r, ['#3f7a32', '#4f8a3c', '#2f6b28']);
+    return `<g fill="${c}">${[0, 72, 144, 216, 288].map((a) => `<ellipse rx="9" ry="16" transform="rotate(${a}) translate(0 -15)"/>`).join('')}</g><circle r="5" fill="#2f5f25"/>`;
+  },
+  springonion: () => `<circle r="8" fill="none" stroke="#6aa84f" stroke-width="4"/>`,
+  stuffeddate: () => `<ellipse rx="40" ry="22" fill="#5a2f17"/><ellipse rx="34" ry="11" fill="#c98a3c"/><path d="M-30 -2 C-10 -8 10 -8 30 -2" stroke="#e0a95a" stroke-width="3" fill="none"/><g fill="#fff">${[[-14, -4], [4, 2], [18, -3]].map(([x, y]) => `<rect x="${x}" y="${y}" width="4" height="4" transform="rotate(30 ${x} ${y})"/>`).join('')}</g>`,
+  zucchiniboat: () => `<path d="M-120 0 C-110 -40 110 -40 120 0 C110 40 -110 40 -120 0Z" fill="#3f7a32"/><path d="M-108 0 C-98 -28 98 -28 108 0 C98 28 -98 28 -108 0Z" fill="#f5efe0"/><g fill="#d9412f">${[[-70, -6], [-30, 8], [20, -10], [60, 6]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="8"/>`).join('')}</g><g fill="#fbfaf4" stroke="#e2c27c" stroke-width="2">${[[-50, 0], [0, 0], [50, 0]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="24" ry="16"/>`).join('')}</g><g fill="#e3b04a" opacity=".6">${[[-50, 0], [0, 0], [50, 0]].map(([x, y]) => `<circle cx="${x + 4}" cy="${y - 3}" r="6"/>`).join('')}</g>`,
+  ice: () => `<rect x="-14" y="-14" width="28" height="28" rx="5" fill="#eef6fb" opacity=".85" stroke="#cfe3ee" stroke-width="2"/>`,
+  asparagusham: () => `<g transform="translate(0 -14)">${SHAPES_ASPARAGUS}</g><g transform="translate(6 0)">${SHAPES_ASPARAGUS}</g><g transform="translate(-4 14)">${SHAPES_ASPARAGUS}</g><path d="M-26 -26 C-10 -30 10 -30 26 -26 L30 26 C10 30 -10 30 -30 26Z" fill="#e79a9a"/><path d="M-18 -22 L-20 22 M6 -24 L4 24" stroke="#fff" stroke-width="4" opacity=".55"/>`,
+  dip: (r, color = '#c98a3c') => `<circle r="62" fill="#3d5a80"/><circle r="54" fill="#f6f3ec"/><circle r="44" fill="${color}"/><ellipse cx="-14" cy="-14" rx="12" ry="7" fill="#fff" opacity=".25"/>`,
   oil: () => `<circle r="10" fill="#d9c34a" opacity=".55"/>`,
-  pepper: () => `<circle r="2" fill="#2a2a2a"/>`,
+  pepper: (r, color = '#2a2a2a') => `<circle r="2" fill="${color}"/>`,
   cinnamon: () => `<circle r="2.5" fill="#9b5a2a"/>`,
 };
 
@@ -173,8 +184,11 @@ export function render(spec, seedText) {
   <pattern id="linen" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 0 L8 8 M8 0 L0 8" stroke="#000" stroke-width=".6" opacity=".05"/></pattern></defs>
   <rect width="${W}" height="${H}" fill="${bg}"/><rect width="${W}" height="${H}" fill="url(#linen)"/>`;
   if (spec.vessel === 'glass') {
-    svg += glass(spec.layers ?? [{ color: '#c9a27a', height: 500 }]);
-    for (const item of spec.items ?? []) svg += placeItems(item, r, 140, CY - 330);
+    const layers = spec.layers ?? [{ color: '#c9a27a', height: 500 }];
+    svg += glass(layers);
+    // Toppings liegen auf der Oberfläche des Inhalts, flach in Seitenansicht
+    const surface = CY + 300 - layers.reduce((sum, l) => sum + l.height, 0);
+    for (const item of spec.items ?? []) svg += placeItems({ flat: 0.15, ...item }, r, 120, surface);
   } else {
     svg += vessel(spec.vessel ?? 'plate');
     for (const item of spec.items ?? []) svg += placeItems(item, r, spec.vessel === 'board' ? 380 : 250, CY);

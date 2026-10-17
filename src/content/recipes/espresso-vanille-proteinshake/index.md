@@ -1,5 +1,6 @@
 ---
 title: Espresso-Vanille-Proteinshake
+cover: ./cover.jpg
 tags: [Healthy, Veggie Love, Protein Power]
 keywords: [Shake, Lieblingsessen]
 duration: 5
