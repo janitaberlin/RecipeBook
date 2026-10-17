@@ -36,9 +36,11 @@ added: 2026-10-17
 ## Zubereitung
 1. **Hähnchen anbraten:** Hähnchenbrust in einer Pfanne von beiden Seiten goldbraun anbraten.
 2. **Slow Cooker befüllen:** Hähnchen mit allen übrigen Zutaten außer Kokosjoghurt und Petersilie in den Slow Cooker geben. Mit Salz, Pfeffer, Oregano, Rosmarin und Thymian würzen.
+   ![Hähnchen im Slow Cooker](./schritt-2.jpg)
 3. **Auf hoher Stufe garen:** Ca. 4 Std. auf hoher Stufe garen.
 4. **Hähnchen zerpflücken:** Hähnchen herausnehmen, mit zwei Gabeln zerpflücken und zurück in die Suppe geben.
 5. **Auf niedriger Stufe garen:** Weitere ca. 3 Std. auf niedriger Stufe garen.
+   ![Fertige Suppe im Slow Cooker](./schritt-5.jpg)
 6. **Kokosjoghurt einrühren:** Slow Cooker ausschalten und die Suppe einige Minuten stehen lassen. Dann den Kokosjoghurt einrühren *(nicht in die kochende Suppe geben, sonst flockt er aus!)*.
 7. **Servieren:** Mit frischer Petersilie bestreut servieren.
 
