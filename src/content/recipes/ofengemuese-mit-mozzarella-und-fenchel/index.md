@@ -2,7 +2,6 @@
 title: Ofengemüse mit Mozzarella und Fenchel
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Veggie Love]
-keywords: [Grillen]
 duration: 45
 servings: 4
 nutrition: { kcal: 470, protein: 17, carbs: 43, fat: 25 }

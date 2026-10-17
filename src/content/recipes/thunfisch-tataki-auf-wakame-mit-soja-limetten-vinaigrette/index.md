@@ -39,6 +39,7 @@ added: 2026-10-17
 3. **Thunfisch anbraten:** Thunfisch rundum im Sesam wälzen und im heißen Kokosöl von jeder Seite ca. 30 Sek. scharf anbraten. *(Innen soll er roh bleiben!)*
 4. **Aufschneiden:** Thunfisch kurz ruhen lassen und mit einem scharfen Messer in dünne Scheiben schneiden.
 5. **Servieren:** Wakame-Salat auf dem Brett verteilen, Thunfisch darauflegen und mit der Vinaigrette beträufeln. Mit Limettenspalten und halbierten Maracujas servieren.
+   ![Thunfisch-Tataki mit Wakame-Salat auf dem Holzbrett](./schritt-5.jpg)
 
 ## Tipps
 - Nur Thunfisch in Sushi-Qualität verwenden.
