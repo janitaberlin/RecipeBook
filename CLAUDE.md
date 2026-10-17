@@ -31,6 +31,10 @@ Eingaben können sein: URL, PDF, Screenshot/Foto eines Rezepts, kopierter Text, 
 
 Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. Ein Rezept gilt als gekocht, sobald es Sterne hat (Filter „Noch nicht gekocht“). Ohne Sternangabe nachfragen.
 
+Löschen und Teilen in der App: Karte in der Übersicht lange drücken (Computer: Rechtsklick) öffnet ein Menü. Löschen macht über die GitHub-API einen Commit „Rezept gelöscht: …“ auf `main` (Schlüssel = Fine-grained Token, liegt nur in Janitas Browser). Deshalb vor jeder Arbeit `git pull`. Gelöschte Rezepte lassen sich aus der Git-Historie wiederherstellen.
+
+**Geschmack:** Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen).
+
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.
 
 ## Format
@@ -93,4 +97,4 @@ Nur `Zutaten` und `Zubereitung` sind Pflicht; erlaubte Abschnitte sind ausschlie
 ## Code-Überblick
 
 - `src/content.config.ts` – Schema; `src/lib/scale.ts` – Mengen parsen/runden; `src/lib/remark-quantities.ts`, `src/lib/rehype-sections.ts` – Markdown-Plugins
-- `src/pages/index.astro` + `src/scripts/overview.ts` – Übersicht; `src/pages/rezepte/[slug].astro` + `src/scripts/recipe-page.ts` – Rezeptseite
+- `src/pages/index.astro` + `src/scripts/overview.ts` – Übersicht; `src/scripts/card-menu.ts` + `src/lib/github.ts` – Teilen/Löschen per langem Drücken; `src/pages/rezepte/[slug].astro` + `src/scripts/recipe-page.ts` – Rezeptseite

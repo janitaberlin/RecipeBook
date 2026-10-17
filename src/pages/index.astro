@@ -51,6 +51,26 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
   </ul>
   <p class="empty" hidden>Keine Rezepte gefunden.</p>
   <p class="empty empty-own" hidden>Noch keine eigenen Rezepte. Schick Claude einfach ein Rezept als Link, Foto oder Text.</p>
+  <dialog class="card-menu" aria-labelledby="card-menu-title">
+    <form method="dialog" class="card-menu-inner">
+      <p class="card-menu-title" id="card-menu-title"></p>
+      <div class="card-menu-view" data-view="actions">
+        <button type="button" class="menu-btn" data-action="share">Teilen</button>
+        <button type="button" class="menu-btn menu-btn--danger" data-action="delete">Löschen</button>
+        <button value="cancel" class="menu-btn menu-btn--plain">Abbrechen</button>
+      </div>
+      <div class="card-menu-view" data-view="confirm" hidden>
+        <p class="card-menu-text">Rezept wirklich löschen? Es verschwindet für alle, sobald die Seite neu veröffentlicht ist (ca. 2 Min.).</p>
+        <label class="token-field" hidden>
+          <span>GitHub-Schlüssel (nur einmal nötig)</span>
+          <input type="password" class="token-input" autocomplete="off" spellcheck="false" />
+        </label>
+        <button type="button" class="menu-btn menu-btn--danger" data-action="confirm-delete">Endgültig löschen</button>
+        <button value="cancel" class="menu-btn menu-btn--plain">Abbrechen</button>
+      </div>
+      <p class="card-menu-status" aria-live="polite"></p>
+    </form>
+  </dialog>
   <script type="application/json" id="recipe-data" set:html={data} />
 </Base>
 <script>

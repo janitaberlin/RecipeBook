@@ -1,3 +1,4 @@
+import { deletedIds, initCardMenu } from './card-menu';
 import { filterAndSort, parseState, toSearch, type FilterState, type RecipeSummary, type SortKey } from '../lib/filter';
 
 interface Data {
@@ -5,9 +6,16 @@ interface Data {
   tags: string[];
 }
 
-function init({ recipes, tags }: Data): void {
+function init({ recipes: allRecipes, tags }: Data): void {
   const grid = document.querySelector<HTMLElement>('.card-grid')!;
   const cards = new Map([...grid.querySelectorAll<HTMLElement>('.card')].map((card) => [card.dataset.id!, card]));
+  // In der App gelöschte Rezepte sofort ausblenden, auch solange die alte Version noch online ist.
+  const deleted = deletedIds();
+  let recipes = allRecipes.filter((r) => !deleted.has(r.id));
+  for (const id of deleted) {
+    cards.get(id)?.remove();
+    cards.delete(id);
+  }
   const search = document.querySelector<HTMLInputElement>('.search')!;
   const sort = document.querySelector<HTMLSelectElement>('.sort')!;
   const chips = [...document.querySelectorAll<HTMLButtonElement>('.tag-chip[data-tag]')];
@@ -75,6 +83,12 @@ function init({ recipes, tags }: Data): void {
   });
   window.addEventListener('popstate', () => {
     state = parseState(location.search, tags);
+    render();
+  });
+  initCardMenu(grid, (id) => {
+    recipes = recipes.filter((r) => r.id !== id);
+    cards.get(id)?.remove();
+    cards.delete(id);
     render();
   });
   render();
