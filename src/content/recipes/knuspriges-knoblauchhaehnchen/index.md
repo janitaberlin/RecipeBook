@@ -9,6 +9,7 @@ health: ["Knochen: Vitamin K aus Spinat und Rucola", "Energie: Niacin und Vitami
 micros: [{ name: Vitamin K, amount: 220 }, { name: Niacin, amount: 15 }, { name: Vitamin B6, amount: 0.8 }]
 source: Jamie Oliver – 5 Zutaten Küche
 added: 2026-10-17
+cooked: [2026-10-17]
 ---
 
 ## Zutaten

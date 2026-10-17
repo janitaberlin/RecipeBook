@@ -9,6 +9,7 @@ health: ["Immunsystem: Vitamin C aus Tomaten und Chili", "Herz: Lycopin und Kali
 micros: [{ name: Vitamin K, amount: 55 }, { name: Vitamin C, amount: 60 }, { name: Vitamin E, amount: 4 }]
 source: Jamies 30-Minuten-Menüs, S. 78
 added: 2026-10-17
+cooked: [2026-10-17]
 ---
 
 ## Zutaten

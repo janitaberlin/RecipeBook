@@ -1,7 +1,7 @@
 ---
 title: Apfel mit Erdnussbutter und Zimt
 cover: ./cover.jpg
-tags: [Healthy, Dessert, Veggie Love]
+tags: [Healthy, Dessert, Vegetarisch]
 duration: 3
 servings: 1
 servingsLabel: Portion
@@ -23,3 +23,4 @@ added: 2026-10-17
 ## Tipps
 - Mengen geschätzt.
 - Erdnussbutter ein paar Sekunden in der Mikrowelle erwärmen, dann lässt sie sich gut träufeln.
+- Ceylon-Zimt hilft, den Blutzucker stabil zu halten.
