@@ -66,8 +66,13 @@ added: 2026-10-17
 6. **Guacamole hacken:** Kirschtomaten auf einem großen Brett zerdrücken. Den oberen Teil des Korianders mit den Chilis (ohne Stiel) fein hacken. Avocados halbieren, entsteinen und das Fruchtfleisch dazudrücken. Salzen, Limettensaft darüberpressen, alles sehr fein hacken und abschmecken.
    ![Limettensaft über die Guacamole pressen](./schritt-6.jpg)
 7. **Gemüsesticks schneiden:** Fenchel in Spalten schneiden. Möhre schälen, längs vierteln und in Sticks schneiden, Gurke ebenso. Leicht salzen, neben der Guacamole anrichten und die Grissini in einem Glas dazustellen.
+   ![Guacamole-Gemüse-Platte](./schritt-7.jpg)
 8. **Suppe mixen:** Tomaten aus dem Ofen zu den Zwiebeln geben. Mit dem Großteil des Basilikums in zwei Durchgängen im Standmixer zu einer stückigen Suppe mixen *(Deckel mit einem Küchentuch abdecken, die Suppe ist heiß!)*. In eine Schüssel gießen und abschmecken.
-   ![Suppe im Mixer](./schritt-8.jpg)
+   ![Geröstete Tomaten in den Topf geben](./schritt-8.jpg)
+   ![Tomaten und Zwiebeln im Topf](./schritt-8-2.jpg)
+   ![Suppe im Mixer](./schritt-8-3.jpg)
+   ![Fertig gemixte Suppe im Topf](./schritt-8-4.jpg)
 9. **Soufflés garen:** Kurz vor dem Essen die Tassen ca. 6 Min. auf höchster Stufe in der Mikrowelle garen.
 10. **Servieren:** In jede Suppenschale 1–2 Croutons legen und Suppe daraufschöpfen, mit Crème fraîche, Basilikum und etwas Olivenöl garnieren. Die Soufflés mit einem Klecks Crème fraîche und etwas Sirup servieren.
    ![Pflaumen-Soufflé mit Crème fraîche](./schritt-10.jpg)
+   ![Tomatensuppe angerichtet](./schritt-10-2.jpg)
