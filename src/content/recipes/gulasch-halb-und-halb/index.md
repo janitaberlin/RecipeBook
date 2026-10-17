@@ -1,5 +1,6 @@
 ---
 title: Gulasch Halb und Halb
+cover: ./cover.jpg
 book: mirco
 tags: [Hauptspeise, Nudeln, Rind, Schwein]
 duration: 120
