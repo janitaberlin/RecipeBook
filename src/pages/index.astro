@@ -60,12 +60,11 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
         <button value="cancel" class="menu-btn menu-btn--plain">Abbrechen</button>
       </div>
       <div class="card-menu-view" data-view="confirm" hidden>
-        <p class="card-menu-text">Rezept wirklich löschen? Es verschwindet für alle, sobald die Seite neu veröffentlicht ist (ca. 2 Min.).</p>
-        <label class="token-field" hidden>
+        <label class="token-field">
           <span>GitHub-Schlüssel (nur einmal nötig)</span>
           <input type="password" class="token-input" autocomplete="off" spellcheck="false" />
         </label>
-        <button type="button" class="menu-btn menu-btn--danger" data-action="confirm-delete">Endgültig löschen</button>
+        <button type="button" class="menu-btn menu-btn--danger" data-action="confirm-delete">Löschen</button>
         <button value="cancel" class="menu-btn menu-btn--plain">Abbrechen</button>
       </div>
       <p class="card-menu-status" aria-live="polite"></p>

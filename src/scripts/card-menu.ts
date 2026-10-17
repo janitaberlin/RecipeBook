@@ -36,7 +36,6 @@ export function initCardMenu(grid: HTMLElement, onDeleted: (id: string) => void)
   const title = dialog.querySelector<HTMLElement>('.card-menu-title')!;
   const actions = dialog.querySelector<HTMLElement>('[data-view="actions"]')!;
   const confirm = dialog.querySelector<HTMLElement>('[data-view="confirm"]')!;
-  const tokenField = dialog.querySelector<HTMLElement>('.token-field')!;
   const tokenInput = dialog.querySelector<HTMLInputElement>('.token-input')!;
   const status = dialog.querySelector<HTMLElement>('.card-menu-status')!;
   const confirmButton = dialog.querySelector<HTMLButtonElement>('[data-action="confirm-delete"]')!;
@@ -118,21 +117,9 @@ export function initCardMenu(grid: HTMLElement, onDeleted: (id: string) => void)
     }
   });
 
-  dialog.querySelector('[data-action="delete"]')!.addEventListener('click', () => {
-    actions.hidden = true;
-    confirm.hidden = false;
-    tokenField.hidden = Boolean(readStorage(TOKEN_KEY));
-  });
-
-  confirmButton.addEventListener('click', async () => {
+  async function remove(token: string): Promise<void> {
     if (!current) return;
-    const token = readStorage(TOKEN_KEY) ?? tokenInput.value.trim();
-    if (!token) {
-      tokenField.hidden = false;
-      status.textContent = 'Bitte zuerst den GitHub-Schlüssel eingeben.';
-      tokenInput.focus();
-      return;
-    }
+    actions.hidden = true;
     confirmButton.disabled = true;
     status.textContent = 'Wird gelöscht …';
     try {
@@ -146,11 +133,35 @@ export function initCardMenu(grid: HTMLElement, onDeleted: (id: string) => void)
       confirmButton.disabled = false;
       if (error instanceof GitHubError && (error.status === 401 || error.status === 403 || error.status === 404)) {
         writeStorage(TOKEN_KEY, null);
-        tokenField.hidden = false;
+        confirm.hidden = false;
         status.textContent = 'Der GitHub-Schlüssel passt nicht. Bitte neu eingeben.';
+        tokenInput.focus();
       } else {
+        actions.hidden = false;
         status.textContent = 'Löschen hat nicht geklappt. Bitte später nochmal versuchen.';
       }
     }
+  }
+
+  // Mit gespeichertem Schlüssel wird sofort gelöscht, sonst einmalig den Schlüssel abfragen.
+  dialog.querySelector('[data-action="delete"]')!.addEventListener('click', () => {
+    const token = readStorage(TOKEN_KEY);
+    if (token) {
+      void remove(token);
+      return;
+    }
+    actions.hidden = true;
+    confirm.hidden = false;
+    tokenInput.focus();
+  });
+
+  confirmButton.addEventListener('click', () => {
+    const token = tokenInput.value.trim();
+    if (!token) {
+      status.textContent = 'Bitte zuerst den GitHub-Schlüssel eingeben.';
+      tokenInput.focus();
+      return;
+    }
+    void remove(token);
   });
 }
