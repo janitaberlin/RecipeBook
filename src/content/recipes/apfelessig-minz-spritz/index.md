@@ -1,5 +1,5 @@
 ---
-title: Apfelessig-Minz-Spritz mit Zitrone
+title: Apfelessig-Minz-Spritz
 cover: ./cover.jpg
 tags: [Healthy, Vegetarisch]
 keywords: [Detox]
