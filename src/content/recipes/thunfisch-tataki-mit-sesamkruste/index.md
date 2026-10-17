@@ -5,6 +5,8 @@ tags: [Healthy, Dinner, Protein Power]
 duration: 20
 servings: 2
 nutrition: { kcal: 600, protein: 41, carbs: 8, fat: 44 }
+health: ["Immunsystem: Selen aus Thunfisch", "Energie: Niacin und Vitamin B6 aus Thunfisch", "Muskeln: Eiweiß aus Thunfisch und Joghurt"]
+micros: [{ name: Niacin, amount: 27 }, { name: Selen, amount: 135 }, { name: Vitamin B6, amount: 1.4 }]
 added: 2026-10-17
 ---
 

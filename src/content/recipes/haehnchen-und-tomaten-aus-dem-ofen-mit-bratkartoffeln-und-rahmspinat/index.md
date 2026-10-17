@@ -5,6 +5,8 @@ tags: [Dinner, Meat Lover, Protein Power]
 duration: 30
 servings: 4
 nutrition: { kcal: 700, protein: 55, carbs: 46, fat: 33 }
+health: ["Knochen: Vitamin K aus Spinat", "Immunsystem: Vitamin C aus Erdbeeren, Tomaten und Zitrone", "Energie: Niacin aus Hähnchen"]
+micros: [{ name: Vitamin K, amount: 480 }, { name: Niacin, amount: 20 }, { name: Vitamin C, amount: 100 }]
 source: Jamies 30-Minuten-Menüs, S. 104
 added: 2026-10-17
 ---

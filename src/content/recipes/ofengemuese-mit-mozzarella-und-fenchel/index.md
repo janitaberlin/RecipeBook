@@ -6,6 +6,8 @@ keywords: [Grillen]
 duration: 45
 servings: 4
 nutrition: { kcal: 470, protein: 17, carbs: 43, fat: 25 }
+health: ["Augen: Beta-Carotin aus Kürbis", "Blutbildung: Folat aus Roter Bete", "Knochen: Calcium aus Mozzarella"]
+micros: [{ name: Vitamin A, amount: 400 }, { name: Vitamin C, amount: 50 }, { name: Folat, amount: 130 }]
 source: Instagram @mama_undmeer
 added: 2026-10-17
 ---

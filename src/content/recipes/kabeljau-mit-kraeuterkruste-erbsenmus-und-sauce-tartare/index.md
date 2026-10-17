@@ -5,6 +5,8 @@ tags: [Dinner, Protein Power]
 duration: 30
 servings: 6
 nutrition: { kcal: 925, protein: 54, carbs: 57, fat: 53 }
+health: ["Energie: Jod aus Kabeljau für die Schilddrüse", "Immunsystem: Selen aus Kabeljau", "Knochen: Vitamin K aus Brokkoli, Kresse und Petersilie"]
+micros: [{ name: Vitamin K, amount: 200 }, { name: Jod, amount: 300 }, { name: Selen, amount: 60 }]
 source: Jamies 30-Minuten-Menüs, S. 142
 added: 2026-10-17
 ---

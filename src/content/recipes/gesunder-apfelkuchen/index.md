@@ -6,6 +6,8 @@ duration: 60
 servings: 12
 servingsLabel: Stück
 nutrition: { kcal: 290, protein: 5, carbs: 38, fat: 13 }
+health: ["Darm: Ballaststoffe aus Hafermehl und Äpfeln", "Stress & Nerven: Magnesium aus Hafer und Nussmus"]
+micros: [{ name: Magnesium, amount: 40 }, { name: Vitamin E, amount: 1.5 }, { name: Vitamin B1, amount: 0.1 }]
 source: Instagram @katharina.nicolardi
 added: 2026-10-17
 ---

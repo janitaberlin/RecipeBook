@@ -6,6 +6,8 @@ duration: 400
 servings: 12
 servingsLabel: Stück
 nutrition: { kcal: 490, protein: 7, carbs: 45, fat: 31 }
+health: ["Augen: Vitamin A aus Frischkäse, Butter und Eiern", "Haut & Haare: Vitamin B2 aus Frischkäse und Eiern"]
+micros: [{ name: Vitamin A, amount: 300 }, { name: Vitamin B2, amount: 0.2 }, { name: Vitamin B12, amount: 0.4 }]
 source: Instagram @juliemarieeats
 added: 2026-10-17
 ---

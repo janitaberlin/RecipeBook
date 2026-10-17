@@ -5,6 +5,8 @@ tags: [Dinner, Healthy, Meat Lover, Protein Power]
 duration: 60
 servings: 2
 nutrition: { kcal: 770, protein: 39, carbs: 64, fat: 37 }
+health: ["Augen: Beta-Carotin aus Süßkartoffel", "Blutbildung: Vitamin B12 und Eisen aus Rinderhack", "Immunsystem: Zink aus Rinderhack"]
+micros: [{ name: Vitamin A, amount: 2100 }, { name: Vitamin B12, amount: 3.5 }, { name: Zink, amount: 6.5 }]
 added: 2026-10-17
 ---
 

@@ -6,6 +6,8 @@ duration: 5
 servings: 6
 servingsLabel: Stück
 nutrition: { kcal: 100, protein: 2, carbs: 19, fat: 3 }
+health: ["Energie: natürlicher Zucker und Kalium aus Datteln", "Stress & Nerven: Magnesium aus Datteln und Erdnussmus"]
+micros: [{ name: Magnesium, amount: 22 }, { name: Niacin, amount: 0.8 }, { name: Kalium, amount: 190 }]
 added: 2026-10-17
 ---
 

@@ -6,6 +6,8 @@ keywords: [Weihnachten]
 duration: 300
 servings: 6
 nutrition: { kcal: 830, protein: 63, carbs: 12, fat: 57 }
+health: ["Blutbildung: Eisen aus Gänsefleisch", "Energie: Niacin und B-Vitamine aus Gänsefleisch", "Immunsystem: Zink aus Gänsefleisch"]
+micros: [{ name: Vitamin B6, amount: 1.2 }, { name: Niacin, amount: 10 }, { name: Vitamin B2, amount: 0.9 }]
 added: 2026-10-17
 ---
 

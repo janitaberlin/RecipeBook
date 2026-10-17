@@ -6,6 +6,8 @@ duration: 70
 servings: 4
 servingsLabel: Stück
 nutrition: { kcal: 630, protein: 13, carbs: 92, fat: 22 }
+health: ["Herz: einfach ungesättigte Fette und Vitamin E aus Olivenöl", "Energie: Kohlenhydrate und Niacin aus dem Mehl"]
+micros: [{ name: Vitamin E, amount: 3 }, { name: Folat, amount: 55 }, { name: Niacin, amount: 1.7 }]
 added: 2026-10-17
 ---
 

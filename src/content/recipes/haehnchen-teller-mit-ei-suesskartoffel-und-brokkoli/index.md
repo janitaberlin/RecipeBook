@@ -5,6 +5,8 @@ tags: [Dinner, Healthy, Meat Lover, Protein Power]
 duration: 40
 servings: 2
 nutrition: { kcal: 760, protein: 52, carbs: 49, fat: 35 }
+health: ["Immunsystem: viel Vitamin C aus Brokkoli", "Augen: Beta-Carotin aus Süßkartoffel", "Knochen: Vitamin K aus Brokkoli"]
+micros: [{ name: Vitamin K, amount: 200 }, { name: Vitamin A, amount: 1400 }, { name: Vitamin C, amount: 180 }]
 added: 2026-10-17
 ---
 

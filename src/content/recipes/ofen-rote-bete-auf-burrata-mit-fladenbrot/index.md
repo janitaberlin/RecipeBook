@@ -6,6 +6,8 @@ keywords: [Periode]
 duration: 40
 servings: 2
 nutrition: { kcal: 830, protein: 30, carbs: 75, fat: 46 }
+health: ["Periode: Magnesium und Eisen aus Kürbiskernen und Roter Bete", "Blutbildung: Folat aus Roter Bete", "Knochen: Vitamin K aus Petersilie und Calcium aus Burrata"]
+micros: [{ name: Vitamin K, amount: 250 }, { name: Folat, amount: 220 }, { name: Magnesium, amount: 155 }]
 added: 2026-10-17
 ---
 

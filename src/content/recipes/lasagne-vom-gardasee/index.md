@@ -5,6 +5,9 @@ tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
 duration: 110
 servings: 6
 nutrition: { kcal: 840, protein: 48, carbs: 49, fat: 50 }
+health: ["Blutbildung: Vitamin B12 und Eisen aus Rinderhack", "Immunsystem: Zink aus Rinderhack", "Knochen: Calcium aus Milch, Mozzarella und Parmesan"]
+micros: [{ name: Vitamin B12, amount: 3.5 }, { name: Zink, amount: 6.5 }, { name: Calcium, amount: 450 }]
+source: Vincent
 added: 2026-10-17
 ---
 

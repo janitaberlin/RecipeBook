@@ -5,6 +5,8 @@ tags: [Dinner, Healthy]
 duration: 25
 servings: 4
 nutrition: { kcal: 365, protein: 21, carbs: 9, fat: 27 }
+health: ["Herz: Omega-3-Fettsäuren aus Lachs", "Blutbildung: Vitamin B12 aus Lachs", "Knochen: Vitamin D aus Lachs"]
+micros: [{ name: Omega-3, amount: 2 }, { name: Vitamin B12, amount: 3 }, { name: Vitamin D, amount: 7 }]
 added: 2026-10-17
 ---
 

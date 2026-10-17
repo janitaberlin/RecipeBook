@@ -6,6 +6,8 @@ duration: 30
 servings: 8
 servingsLabel: Stück
 nutrition: { kcal: 250, protein: 3, carbs: 25, fat: 15 }
+health: ["Immunsystem: Vitamin C aus Erdbeeren", "Stress & Nerven: Magnesium aus Zartbitterschokolade"]
+micros: [{ name: Vitamin C, amount: 37 }, { name: Eisen, amount: 2.5 }, { name: Magnesium, amount: 40 }]
 added: 2026-10-17
 ---
 

@@ -5,6 +5,8 @@ tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
 duration: 30
 servings: 4
 nutrition: { kcal: 845, protein: 32, carbs: 98, fat: 35 }
+health: ["Energie: Vitamin B1 aus der Salsiccia und Niacin aus Pasta und Wurst", "Herz: Kalium aus Tomaten"]
+micros: [{ name: Vitamin B1, amount: 0.8 }, { name: Niacin, amount: 9 }, { name: Selen, amount: 35 }]
 added: 2026-10-17
 ---
 

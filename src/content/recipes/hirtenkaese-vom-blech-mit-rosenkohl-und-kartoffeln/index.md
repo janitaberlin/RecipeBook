@@ -5,6 +5,8 @@ tags: [Dinner, Healthy, Veggie Love, Protein Power]
 duration: 45
 servings: 4
 nutrition: { kcal: 770, protein: 36, carbs: 53, fat: 46 }
+health: ["Immunsystem: viel Vitamin C aus Rosenkohl und Kartoffeln", "Knochen: Vitamin K aus Rosenkohl und Calcium aus Hirtenkäse", "Blutbildung: Folat aus Rosenkohl"]
+micros: [{ name: Vitamin K, amount: 300 }, { name: Vitamin C, amount: 190 }, { name: Folat, amount: 200 }]
 added: 2026-10-17
 ---
 

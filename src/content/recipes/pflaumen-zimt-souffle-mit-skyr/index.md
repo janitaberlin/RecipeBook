@@ -6,6 +6,8 @@ duration: 15
 servings: 4
 servingsLabel: Tassen
 nutrition: { kcal: 395, protein: 14, carbs: 62, fat: 12 }
+health: ["Darm: Ballaststoffe und Sorbit aus Trockenpflaumen", "Knochen: Vitamin K aus Trockenpflaumen und Calcium aus Skyr"]
+micros: [{ name: Vitamin K, amount: 30 }, { name: Magnesium, amount: 58 }, { name: Kalium, amount: 500 }]
 source: Jamies 30-Minuten-Menüs, S. 78
 added: 2026-10-17
 ---

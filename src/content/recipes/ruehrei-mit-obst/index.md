@@ -5,6 +5,8 @@ tags: [Healthy, Veggie Love]
 duration: 10
 servings: 1
 nutrition: { kcal: 385, protein: 21, carbs: 30, fat: 19 }
+health: ["Immunsystem: viel Vitamin C aus Kiwi und Himbeeren", "Haut & Haare: Biotin und Vitamin B2 aus Eiern", "Muskeln: Eiweiß aus Eiern"]
+micros: [{ name: Vitamin C, amount: 90 }, { name: Biotin, amount: 30 }, { name: Vitamin B2, amount: 0.7 }]
 added: 2026-10-17
 ---
 

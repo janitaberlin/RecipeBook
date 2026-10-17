@@ -5,6 +5,8 @@ tags: [Healthy, Lunch, Veggie Love]
 duration: 10
 servings: 2
 nutrition: { kcal: 490, protein: 16, carbs: 13, fat: 40 }
+health: ["Knochen: Vitamin K aus Rucola und Calcium aus Burrata", "Immunsystem: Vitamin C aus Tomaten", "Herz: Kalium aus Tomaten und ungesättigte Fette aus Olivenöl"]
+micros: [{ name: Vitamin K, amount: 75 }, { name: Vitamin C, amount: 42 }, { name: Vitamin A, amount: 310 }]
 added: 2026-10-17
 ---
 

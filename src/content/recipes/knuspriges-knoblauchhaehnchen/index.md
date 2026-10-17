@@ -5,6 +5,8 @@ tags: [Healthy, Dinner, Meat Lover, Protein Power]
 duration: 25
 servings: 2
 nutrition: { kcal: 450, protein: 38, carbs: 35, fat: 14 }
+health: ["Knochen: Vitamin K aus Spinat und Rucola", "Energie: Niacin und Vitamin B6 aus Hähnchen", "Darm: Ballaststoffe aus Vollkornbrot und Spargel"]
+micros: [{ name: Vitamin K, amount: 220 }, { name: Niacin, amount: 15 }, { name: Vitamin B6, amount: 0.8 }]
 source: Jamie Oliver – 5 Zutaten Küche
 added: 2026-10-17
 ---

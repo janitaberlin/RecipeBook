@@ -5,6 +5,8 @@ tags: [Dinner, Veggie Love, Protein Power]
 duration: 20
 servings: 2
 nutrition: { kcal: 980, protein: 35, carbs: 100, fat: 49 }
+health: ["Knochen: Vitamin K aus Spinat und Calcium aus Parmesan", "Augen: Vitamin A aus Spinat und Butter"]
+micros: [{ name: Vitamin K, amount: 240 }, { name: Vitamin A, amount: 470 }, { name: Calcium, amount: 450 }]
 added: 2026-10-17
 ---
 

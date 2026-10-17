@@ -6,6 +6,8 @@ keywords: [Periode]
 duration: 40
 servings: 2
 nutrition: { kcal: 780, protein: 58, carbs: 48, fat: 37 }
+health: ["Immunsystem: Zink aus Rindfleisch", "Blutbildung: Eisen und Vitamin B12 aus Rindfleisch", "Knochen: Vitamin K aus grünem Spargel"]
+micros: [{ name: Vitamin K, amount: 100 }, { name: Zink, amount: 9 }, { name: Niacin, amount: 13 }]
 added: 2026-10-17
 ---
 

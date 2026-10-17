@@ -5,6 +5,8 @@ tags: [Dinner, Veggie Love]
 duration: 30
 servings: 4
 nutrition: { kcal: 480, protein: 10, carbs: 57, fat: 24 }
+health: ["Immunsystem: Vitamin C aus Tomaten und Chili", "Herz: Lycopin und Kalium aus Tomaten"]
+micros: [{ name: Vitamin K, amount: 55 }, { name: Vitamin C, amount: 60 }, { name: Vitamin E, amount: 4 }]
 source: Jamies 30-Minuten-Menüs, S. 78
 added: 2026-10-17
 ---

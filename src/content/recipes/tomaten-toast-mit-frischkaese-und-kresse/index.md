@@ -6,6 +6,8 @@ duration: 10
 servings: 2
 servingsLabel: Stück
 nutrition: { kcal: 270, protein: 12, carbs: 34, fat: 7 }
+health: ["Immunsystem: Vitamin C aus Tomaten und Kresse", "Knochen: Vitamin K aus Kresse"]
+micros: [{ name: Vitamin K, amount: 45 }, { name: Vitamin C, amount: 40 }, { name: Folat, amount: 65 }]
 added: 2026-10-17
 ---
 

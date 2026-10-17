@@ -5,6 +5,8 @@ tags: [Dinner, Healthy, Protein Power]
 duration: 50
 servings: 2
 nutrition: { kcal: 840, protein: 54, carbs: 53, fat: 46 }
+health: ["Knochen: Vitamin K aus Spinat", "Immunsystem: Selen aus der Dorade und Vitamin C aus Zitrone", "Augen: Beta-Carotin aus Spinat"]
+micros: [{ name: Vitamin K, amount: 600 }, { name: Vitamin A, amount: 700 }, { name: Selen, amount: 60 }]
 added: 2026-10-17
 ---
 

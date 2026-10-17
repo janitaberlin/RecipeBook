@@ -5,6 +5,8 @@ tags: [Healthy, Veggie Love]
 duration: 5
 servings: 1
 nutrition: { kcal: 550, protein: 21, carbs: 30, fat: 38 }
+health: ["Immunsystem: viel Vitamin C aus Kiwi und Erdbeeren", "Stress & Nerven: Magnesium aus Kakaonibs und Nüssen", "Knochen: Calcium aus griechischem Joghurt"]
+micros: [{ name: Vitamin C, amount: 115 }, { name: Vitamin K, amount: 30 }, { name: Vitamin B2, amount: 0.4 }]
 added: 2026-10-17
 ---
 

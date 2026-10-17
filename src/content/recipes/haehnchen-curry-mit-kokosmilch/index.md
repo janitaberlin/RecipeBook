@@ -5,6 +5,8 @@ tags: [Healthy, Dinner, Meat Lover, Protein Power]
 duration: 30
 servings: 4
 nutrition: { kcal: 655, protein: 44, carbs: 60, fat: 26 }
+health: ["Energie: Niacin aus Hähnchen", "Immunsystem: Vitamin C aus Paprika, Zuckerschoten und Limette", "Muskeln: Eiweiß aus Hähnchenbrust"]
+micros: [{ name: Niacin, amount: 18 }, { name: Vitamin B6, amount: 0.9 }, { name: Vitamin C, amount: 60 }]
 added: 2026-10-17
 ---
 

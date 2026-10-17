@@ -5,6 +5,8 @@ tags: [Healthy, Dinner, Veggie Love]
 duration: 35
 servings: 4
 nutrition: { kcal: 365, protein: 13, carbs: 18, fat: 27 }
+health: ["Immunsystem: Vitamin C aus Paprika, Zuckerschoten und Limette", "Augen: Beta-Carotin aus Kürbis", "Blutbildung: Eisen aus Tofu und Kokosmilch"]
+micros: [{ name: Vitamin C, amount: 75 }, { name: Vitamin A, amount: 400 }, { name: Vitamin B6, amount: 0.5 }]
 added: 2026-10-17
 ---
 

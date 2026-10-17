@@ -5,6 +5,8 @@ tags: [Lunch, Healthy, Veggie Love, Protein Power]
 duration: 20
 servings: 2
 nutrition: { kcal: 965, protein: 42, carbs: 52, fat: 64 }
+health: ["Knochen: Calcium aus Halloumi und Tahini", "Muskeln: Magnesium aus Bulgur und Tahini", "Herz: ungesättigte Fette aus Avocado"]
+micros: [{ name: Calcium, amount: 1000 }, { name: Magnesium, amount: 190 }, { name: Zink, amount: 5 }]
 source: Instagram @grigory_arsentev
 added: 2026-10-17
 ---

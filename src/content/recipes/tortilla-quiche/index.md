@@ -5,6 +5,8 @@ tags: [Healthy, Lunch, Veggie Love, Protein Power]
 duration: 35
 servings: 2
 nutrition: { kcal: 535, protein: 34, carbs: 22, fat: 33 }
+health: ["Haut & Haare: Biotin und Vitamin B2 aus Eiern", "Knochen: Calcium aus Ricotta und Parmesan", "Muskeln: Eiweiß aus Eiern und Ricotta"]
+micros: [{ name: Vitamin B2, amount: 0.9 }, { name: Biotin, amount: 25 }, { name: Vitamin A, amount: 330 }]
 source: Instagram @jshealth
 added: 2026-10-17
 ---

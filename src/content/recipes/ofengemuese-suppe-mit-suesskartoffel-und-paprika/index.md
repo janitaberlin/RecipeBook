@@ -5,6 +5,8 @@ tags: [Healthy, Dinner, Veggie Love]
 duration: 45
 servings: 4
 nutrition: { kcal: 315, protein: 5, carbs: 46, fat: 10 }
+health: ["Augen: Beta-Carotin aus Süßkartoffel, Möhren und Paprika", "Immunsystem: viel Vitamin C aus Spitzpaprika und Zitrone"]
+micros: [{ name: Vitamin A, amount: 1500 }, { name: Vitamin C, amount: 120 }, { name: Vitamin B6, amount: 0.6 }]
 source: Instagram @diana_delo
 added: 2026-10-17
 ---

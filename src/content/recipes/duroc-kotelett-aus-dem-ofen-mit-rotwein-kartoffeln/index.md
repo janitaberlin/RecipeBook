@@ -5,6 +5,8 @@ tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
 duration: 60
 servings: 2
 nutrition: { kcal: 920, protein: 46, carbs: 48, fat: 52 }
+health: ["Energie: Vitamin B1 und Niacin aus dem Schweinefleisch", "Stress & Nerven: Vitamin B6 aus Kotelett und Kartoffeln", "Muskeln: Eiweiß aus dem Kotelett und Kalium aus Kartoffeln"]
+micros: [{ name: Vitamin B1, amount: 1.6 }, { name: Niacin, amount: 14 }, { name: Vitamin B6, amount: 1.1 }]
 added: 2026-10-17
 ---
 

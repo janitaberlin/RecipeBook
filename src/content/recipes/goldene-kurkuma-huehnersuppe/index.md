@@ -6,6 +6,8 @@ keywords: [Periode]
 duration: 435
 servings: 6
 nutrition: { kcal: 440, protein: 55, carbs: 36, fat: 8 }
+health: ["Energie: Niacin und Vitamin B6 aus Hähnchen", "Augen: Beta-Carotin aus Kürbis", "Darm: Ballaststoffe aus Bohnen und Quinoa"]
+micros: [{ name: Niacin, amount: 20 }, { name: Vitamin A, amount: 600 }, { name: Vitamin B6, amount: 1 }]
 source: TikTok
 added: 2026-10-17
 ---

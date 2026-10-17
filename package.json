@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "test": "vitest run --passWithNoTests",
-    "image": "node scripts/prepare-image.mjs"
+    "image": "node scripts/prepare-image.mjs",
+    "illustration": "node scripts/illustration.mjs"
   },
   "dependencies": {
     "astro": "5.18.2",

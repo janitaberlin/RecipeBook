@@ -6,6 +6,8 @@ keywords: [Periode]
 duration: 15
 servings: 2
 nutrition: { kcal: 475, protein: 22, carbs: 40, fat: 22 }
+health: ["Blutbildung: Folat und Eisen aus Roter Bete und Kichererbsen", "Darm: Ballaststoffe aus Kichererbsen", "Muskeln: Eiweiß aus gekörntem Frischkäse"]
+micros: [{ name: Vitamin K, amount: 250 }, { name: Folat, amount: 280 }, { name: Vitamin C, amount: 40 }]
 added: 2026-10-17
 ---
 

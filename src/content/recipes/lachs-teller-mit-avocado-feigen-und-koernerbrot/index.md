@@ -6,6 +6,8 @@ keywords: [Periode]
 duration: 10
 servings: 1
 nutrition: { kcal: 780, protein: 41, carbs: 35, fat: 50 }
+health: ["Herz: Omega-3-Fettsäuren aus Lachs", "Knochen: Vitamin D aus Lachs und Calcium aus Mozzarella", "Blutbildung: Vitamin B12 aus Lachs"]
+micros: [{ name: Omega-3, amount: 2 }, { name: Vitamin B12, amount: 3 }, { name: Vitamin D, amount: 8 }]
 added: 2026-10-17
 ---
 

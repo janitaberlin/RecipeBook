@@ -6,6 +6,8 @@ keywords: [Periode]
 duration: 20
 servings: 2
 nutrition: { kcal: 640, protein: 19, carbs: 36, fat: 45 }
+health: ["Blutbildung: Folat und Eisen aus Linsen, Vitamin C aus Zitrone und Petersilie", "Herz: ungesättigte Fette aus Avocado und Mandeln", "Darm: Ballaststoffe aus Linsen"]
+micros: [{ name: Vitamin K, amount: 500 }, { name: Vitamin C, amount: 90 }, { name: Folat, amount: 230 }]
 source: Instagram @julshealthyway
 added: 2026-10-17
 ---

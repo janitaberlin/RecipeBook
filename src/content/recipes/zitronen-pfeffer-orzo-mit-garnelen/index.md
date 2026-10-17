@@ -5,6 +5,8 @@ tags: [Healthy, Lunch, Dinner, Protein Power]
 duration: 30
 servings: 4
 nutrition: { kcal: 530, protein: 38, carbs: 60, fat: 13 }
+health: ["Immunsystem: Selen aus Garnelen", "Knochen: Vitamin K aus Spargel und Petersilie", "Blutbildung: Folat aus grünem Spargel"]
+micros: [{ name: Vitamin K, amount: 150 }, { name: Selen, amount: 65 }, { name: Vitamin B12, amount: 1.4 }]
 source: Instagram @dishingouthealth
 added: 2026-10-17
 ---

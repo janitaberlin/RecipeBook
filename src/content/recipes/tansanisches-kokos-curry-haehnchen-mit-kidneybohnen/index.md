@@ -5,6 +5,8 @@ keywords: [Lieblingsessen, Periode]
 duration: 45
 servings: 4
 nutrition: { kcal: 890, protein: 52, carbs: 76, fat: 42 }
+health: ["Immunsystem: Zink aus Hähnchenschenkeln", "Blutbildung: Eisen aus Kidneybohnen und Kokosmilch", "Energie: Niacin aus Hähnchen"]
+micros: [{ name: Niacin, amount: 13 }, { name: Vitamin B6, amount: 0.9 }, { name: Zink, amount: 5 }]
 added: 2026-10-17
 ---
 

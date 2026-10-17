@@ -5,6 +5,8 @@ tags: [Dinner, Lunch, Healthy, Protein Power]
 duration: 35
 servings: 2
 nutrition: { kcal: 930, protein: 48, carbs: 49, fat: 55 }
+health: ["Herz: Omega-3-Fettsäuren aus Lachs", "Augen: Beta-Carotin aus Süßkartoffel", "Immunsystem: viel Vitamin C aus Brokkoli"]
+micros: [{ name: Omega-3, amount: 2.5 }, { name: Vitamin K, amount: 200 }, { name: Vitamin A, amount: 1550 }]
 added: 2026-10-17
 ---
 

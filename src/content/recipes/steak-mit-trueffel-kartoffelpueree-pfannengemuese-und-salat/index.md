@@ -5,6 +5,8 @@ tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
 duration: 50
 servings: 4
 nutrition: { kcal: 990, protein: 57, carbs: 60, fat: 56 }
+health: ["Immunsystem: Zink aus Rindfleisch und Vitamin C aus Paprika und Kartoffeln", "Blutbildung: Eisen und Vitamin B12 aus Rindfleisch", "Energie: Niacin aus Steak und Champignons"]
+micros: [{ name: Vitamin K, amount: 85 }, { name: Niacin, amount: 15 }, { name: Zink, amount: 9 }]
 added: 2026-10-17
 ---
 

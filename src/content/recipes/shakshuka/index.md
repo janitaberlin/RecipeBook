@@ -5,6 +5,8 @@ tags: [Lunch, Healthy, Veggie Love]
 duration: 30
 servings: 2
 nutrition: { kcal: 550, protein: 26, carbs: 47, fat: 26 }
+health: ["Immunsystem: viel Vitamin C aus Paprika und Tomaten", "Muskeln: Eiweiß aus Eiern und gekörntem Frischkäse", "Augen: Vitamin A aus Paprika und Eiern"]
+micros: [{ name: Vitamin C, amount: 110 }, { name: Vitamin K, amount: 45 }, { name: Vitamin A, amount: 400 }]
 added: 2026-10-17
 ---
 

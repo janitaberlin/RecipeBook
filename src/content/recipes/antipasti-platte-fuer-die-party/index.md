@@ -6,6 +6,8 @@ keywords: [Party]
 duration: 60
 servings: 8
 nutrition: { kcal: 820, protein: 35, carbs: 59, fat: 49 }
+health: ["Immunsystem: viel Vitamin C aus Paprika und Tomaten", "Haut & Haare: Vitamin E aus Nüssen und Olivenöl", "Herz: ungesättigte Fette aus Nüssen und Olivenöl"]
+micros: [{ name: Vitamin C, amount: 110 }, { name: Vitamin E, amount: 5 }, { name: Magnesium, amount: 70 }]
 added: 2026-10-17
 ---
 

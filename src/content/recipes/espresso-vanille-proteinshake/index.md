@@ -6,6 +6,8 @@ duration: 5
 servings: 1
 servingsLabel: Glas
 nutrition: { kcal: 250, protein: 30, carbs: 21, fat: 5 }
+health: ["Muskeln: Eiweiß aus dem Proteinisolat", "Knochen: Calcium aus angereicherter Hafermilch und Proteinpulver"]
+micros: [{ name: Vitamin B2, amount: 0.7 }, { name: Calcium, amount: 500 }, { name: Vitamin B12, amount: 1.2 }]
 added: 2026-10-17
 ---
 

@@ -5,6 +5,8 @@ tags: [Healthy, Lunch]
 duration: 25
 servings: 2
 nutrition: { kcal: 560, protein: 28, carbs: 33, fat: 35 }
+health: ["Augen: Beta-Carotin aus Möhre", "Immunsystem: Selen aus Garnelen", "Herz: ungesättigte Fette aus Avocado und Olivenöl"]
+micros: [{ name: Vitamin K, amount: 90 }, { name: Selen, amount: 40 }, { name: Vitamin A, amount: 450 }]
 added: 2026-10-17
 ---
 

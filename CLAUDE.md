@@ -33,7 +33,7 @@ Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. 
 
 Löschen und Teilen in der App: Karte in der Übersicht lange drücken (Computer: Rechtsklick) öffnet ein Menü. Löschen macht über die GitHub-API einen Commit „Rezept gelöscht: …“ auf `main` (Schlüssel = Fine-grained Token, liegt nur in Janitas Browser). Deshalb vor jeder Arbeit `git pull`. Gelöschte Rezepte lassen sich aus der Git-Historie wiederherstellen.
 
-**Keine gemalten Bilder:** Janita will nur echt aussehende Fotos. Keine Illustrationen oder gezeichneten Cover erstellen; ohne echtes Foto bleibt das Rezept ohne Cover, bis sie eins schickt.
+**Bilder:** Janita will kein Rezept ohne Bild. Echte Fotos haben immer Vorrang. Solange keins da ist, bekommt das Rezept ein gezeichnetes Cover (`npm run illustration`, siehe `scripts/illustration.mjs`, Janitas Entscheidung 17.10.2026); sobald sie ein Foto schickt, ersetzt es das gezeichnete Cover. Fotos mit erkennbaren Personen nur, wenn Janita es ausdrücklich will.
 
 **Geschmack:** Janita will wenige Zutaten und schnelle Rezepte; sie kocht gern mit Kokosöl, Olivenöl, Salz, Pfeffer, Zitrone und gekörntem Frischkäse (bei geschätzten Rezepten bevorzugen). Janita mag keinen Dill – in ihren Rezepten nie Dill verwenden (weglassen oder durch ein anderes Kraut ersetzen). Janita hasst Ziegenkäse und Schafskäse – nie verwenden; bei Vorlagen damit durch Mozzarella, Burrata oder gekörnten Frischkäse ersetzen und den Ersatz nicht kommentieren.
 

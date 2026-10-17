@@ -7,6 +7,8 @@ duration: 15
 servings: 2
 servingsLabel: Stück
 nutrition: { kcal: 230, protein: 3, carbs: 39, fat: 7 }
+health: ["Stress & Nerven: Vitamin B6 aus Banane", "Muskeln: Kalium aus Banane"]
+micros: [{ name: Vitamin B6, amount: 0.4 }, { name: Magnesium, amount: 32 }, { name: Vitamin C, amount: 10 }]
 added: 2026-10-17
 ---
 

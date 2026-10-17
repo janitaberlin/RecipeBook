@@ -6,6 +6,8 @@ keywords: [Periode]
 duration: 35
 servings: 2
 nutrition: { kcal: 835, protein: 45, carbs: 62, fat: 45 }
+health: ["Herz: Omega-3-Fettsäuren aus Lachs", "Immunsystem: viel Vitamin C aus Brokkoli und Kartoffeln", "Knochen: Vitamin K aus Brokkoli und Vitamin D aus Lachs"]
+micros: [{ name: Omega-3, amount: 3 }, { name: Vitamin K, amount: 200 }, { name: Vitamin C, amount: 240 }]
 added: 2026-10-17
 ---
 
