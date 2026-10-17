@@ -34,6 +34,8 @@ added: 2026-10-17
    ![Spargel und Süßkartoffeln auf den Blechen](./schritt-3-2.jpg)
 4. **Zitronen-Frischkäse anrühren:** Gekörnten Frischkäse mit Zitronenabrieb, Zitronensaft, restlichem Olivenöl, restlichem Rosmarin, Salz und Pfeffer verrühren.
 5. **Servieren:** Spargel und Süßkartoffeln mit dem Zitronen-Frischkäse anrichten.
+   ![Variante mit Kartoffeln, Zucchini und Zitrone](./schritt-5.jpg)
 
 ## Tipps
 - Mengen geschätzt.
+- Variante: statt Süßkartoffeln Kartoffelwürfel und Zucchini mitrösten und mit einem Stück Zitrone servieren.
