@@ -22,6 +22,7 @@ function init({ recipes: allRecipes, tags }: Data): void {
   const sort = document.querySelector<HTMLSelectElement>('.sort')!;
   const folders = [...document.querySelectorAll<HTMLElement>('.folder')];
   const keywordChips = [...document.querySelectorAll<HTMLButtonElement>('.keyword-chip')];
+  const ideasLink = document.querySelector<HTMLElement>('.ideas-link');
   const folderGrid = document.querySelector<HTMLElement>('.folder-grid')!;
   const listView = document.querySelector<HTMLElement>('.list-view')!;
   const listTitle = document.querySelector<HTMLElement>('.list-title')!;
@@ -51,6 +52,7 @@ function init({ recipes: allRecipes, tags }: Data): void {
       const n = bookRecipes.filter((r) => !tag || r.tags.includes(tag)).length;
       folder.querySelector('.folder-count')!.textContent = countText(n);
     }
+    if (ideasLink) ideasLink.hidden = state.book !== 'janita';
     for (const chip of keywordChips) {
       chip.hidden = chip.dataset.book !== state.book;
       chip.setAttribute('aria-pressed', String(state.q.trim() === chip.dataset.keyword));

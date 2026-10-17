@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { Content } from '../data/ideen.md';
+---
+<Base title="Optimale Ernährung" description="Meine Ideen, damit ich mich gut fühle">
+  <article class="ideas">
+    <h1>Optimale Ernährung</h1>
+    <p class="ideas-intro">Damit ich mich gut fühle. Verlinkte Einträge gibt es schon als Rezept.</p>
+    <Content />
+  </article>
+</Base>
+<style>
+  .ideas { max-width: 42rem; }
+  .ideas-intro { color: var(--muted); }
+  .ideas :global(h2) { margin-top: 1.75rem; }
+  .ideas :global(ul) { padding-left: 1.2rem; }
+  .ideas :global(li) { margin: 0.3rem 0; }
+</style>

@@ -55,6 +55,7 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
     </div>
     {keywordChips.length > 0 && (
       <div class="keyword-chips" aria-label="Stichwörter">
+        <a class="tag ideas-link" data-book="janita" href={url('ideen/')}>Ernährungsideen</a>
         {keywordChips.map((k) => <button type="button" class="tag tag-chip keyword-chip" data-book={k.book} data-keyword={k.keyword} hidden={k.book !== 'janita'}>{k.keyword}</button>)}
       </div>
     )}
