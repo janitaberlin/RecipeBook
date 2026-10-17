@@ -12,7 +12,7 @@ import '../styles/overview.css';
 
 const recipes = await getRecipes();
 // Janitas feste Kategorien erscheinen immer, auch solange noch kein Rezept dazu existiert.
-const JANITA_TAGS = ['Healthy', 'Lunch', 'Dinner', 'Dessert', 'Comfort Food', 'Fleisch', 'Fisch', 'Vegetarisch', 'Protein Power', 'Platten'];
+const JANITA_TAGS = ['Healthy', 'Lunch', 'Dinner', 'Dessert', 'Comfort Food', 'Fleisch', 'Fisch', 'Vegetarisch', 'Protein Power', 'Grillen', 'Platten'];
 const tags = allTags([...recipes.map((r) => r.data.tags), JANITA_TAGS]);
 const summaries: RecipeSummary[] = recipes.map((r) => ({
   id: r.id,

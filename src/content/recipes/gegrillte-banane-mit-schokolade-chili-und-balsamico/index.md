@@ -1,7 +1,7 @@
 ---
 title: Gegrillte Banane mit Schokolade, Chili und Balsamico
 cover: ./cover.jpg
-tags: [Dessert, Vegetarisch]
+tags: [Dessert, Vegetarisch, Grillen]
 keywords: [Zyklus]
 zyklus: { phase: Lutealphase, grund: "Vitamin B6 aus Banane hebt die Stimmung, Zartbitterschokolade liefert Magnesium." }
 duration: 15
