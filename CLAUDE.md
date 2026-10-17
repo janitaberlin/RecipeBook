@@ -1,6 +1,6 @@
 # Janitas RecipeBook
 
-Statische Rezept-Website (Astro 5, GitHub Pages). Live: https://janitaberlin.github.io/recipebook/
+Statische Rezept-Website (Astro 5, GitHub Pages). Live: https://janitaberlin.github.io/RecipeBook/
 Sprache mit dem Nutzer: Deutsch. Jeder Push auf `main` geht sofort live – Commits und Pushes macht Claude selbstständig, aber erst wenn `npm test` und `npm run build` lokal grün sind.
 
 **Git-Workflow (gilt überall, auch in Cloud-/Handy-Sitzungen):** Immer direkt auf `main` committen und pushen – keine eigenen Branches, keine Pull Requests. Startet die Sitzung auf einem anderen Branch (z. B. `claude/…`), die Änderungen nach `main` übernehmen (`git checkout main && git pull`, dann committen bzw. den Branch fast-forward mergen) und `main` pushen. Schlägt der Push auf `main` fehl (z. B. fehlende Berechtigung), dem Nutzer das sofort sagen statt still einen PR anzulegen.
@@ -9,7 +9,7 @@ Sprache mit dem Nutzer: Deutsch. Jeder Push auf `main` geht sofort live – Comm
 
 ## Befehle
 
-- `npm run dev` – lokale Vorschau unter http://localhost:4321/recipebook/
+- `npm run dev` – lokale Vorschau unter http://localhost:4321/RecipeBook/
 - `npm test` – Unit-Tests (Vitest)
 - `npm run build` – baut die Seite; prüft dabei Schema, Mengenmarkierungen und Tags
 - `npm run image -- <eingabe> <ausgabe.jpg>` – Foto (JPG/PNG/WebP/HEIC) auf max. 2000 px verkleinern und als JPG speichern
@@ -25,7 +25,7 @@ Eingaben können sein: URL, PDF, Screenshot/Foto eines Rezepts, kopierter Text, 
 5. `index.md` nach Format und Stilrichtlinie unten schreiben. `added` = heutiges Datum.
 6. Nährwerte pro Portion (bzw. pro Stück) schätzen und als `nutrition` eintragen: aus den Zutatenmengen kcal, Eiweiß, Kohlenhydrate, Fett (ganze Zahlen, Gramm) überschlagen; Beilagen, die im Rezept stehen, zählen mit, optionale Toppings nicht. Fehlende Dauer schätzen und dem Nutzer sagen. Inhaltliche Unklarheiten (fehlende Zutaten, widersprüchliche Mengen, fehlende Portionszahl) nachfragen, nicht raten.
 7. **Plausi-Check** (bei jedem neuen oder geänderten Rezept): Mengen pro Portion realistisch? Fehlen Mengen, die man zum Kochen braucht (z. B. Wasser für Reis, Nudelmenge)? Wird jede Zutat verwendet und jede verwendete Zutat aufgeführt? Garzeiten, Temperaturen und Reihenfolge stimmig? Passen Tags, Dauer und Nährwerte (auch nach Mengenänderungen neu schätzen)? Reine Stilfehler direkt korrigieren; inhaltliche Verbesserungsvorschläge dem Nutzer kurz auflisten und erst nach seinem OK umsetzen.
-8. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://janitaberlin.github.io/recipebook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
+8. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://janitaberlin.github.io/RecipeBook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
 
 Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. Ein Rezept gilt als gekocht, sobald es Sterne hat (Filter „Noch nicht gekocht“). Ohne Sternangabe nachfragen.
 

@@ -4,7 +4,7 @@ import { rehypeSections } from './src/lib/rehype-sections.ts';
 
 export default defineConfig({
   site: 'https://janitaberlin.github.io',
-  base: '/recipebook',
+  base: '/RecipeBook',
   image: { layout: 'constrained' },
   markdown: {
     remarkPlugins: [remarkQuantities],
