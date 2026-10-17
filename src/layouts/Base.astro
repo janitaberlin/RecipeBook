@@ -49,7 +49,10 @@ const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).hre
   </head>
   <body>
     <header class="site-header">
-      <a class="site-title" href={url('')}>Janitas RecipeBook</a>
+      <a class="site-title" href={url('')} aria-label="Startseite: Janitas RecipeBook">
+        <svg class="home-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5" /><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5" /></svg>
+        <span>Janitas RecipeBook</span>
+      </a>
       <button class="theme-toggle" type="button" aria-label="Dunkles Design" aria-pressed="false">◐</button>
     </header>
     <nav class="book-switch" aria-label="Rezeptbuch">
