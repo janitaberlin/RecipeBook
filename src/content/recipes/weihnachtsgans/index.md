@@ -1,7 +1,8 @@
 ---
 title: Weihnachtsgans
 cover: ./cover.jpg
-tags: [Dinner, Comfort Food, Meat Lover, Protein Power]
+tags: [Dinner, Comfort Food, Hosting, Meat Lover, Protein Power]
+keywords: [Weihnachten]
 duration: 300
 servings: 6
 nutrition: { kcal: 830, protein: 63, carbs: 12, fat: 57 }

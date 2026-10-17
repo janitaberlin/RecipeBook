@@ -20,6 +20,8 @@ export interface RecipeSummary {
   duration: number | null;
   added: string;
   ingredients: string;
+  /** Weiterer Suchtext: Kategorien, Stichwörter und Tipps. */
+  extra?: string;
   cooked: boolean;
   book: Book;
 }
@@ -65,7 +67,7 @@ export function filterAndSort(items: RecipeSummary[], state: FilterState): strin
     .filter((r) => !state.uncooked || !r.cooked)
     .filter((r) => state.tags.every((t) => r.tags.includes(t)))
     .filter((r) => {
-      const haystack = normalize(`${r.title} ${r.ingredients}`);
+      const haystack = normalize(`${r.title} ${r.ingredients} ${r.extra ?? ''}`);
       return words.every((w) => haystack.includes(w));
     })
     .sort((a, b) => compare(a, b) || byName(a, b))

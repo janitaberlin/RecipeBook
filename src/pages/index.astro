@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import RecipeCard from '../components/RecipeCard.astro';
 import type { RecipeSummary } from '../lib/filter';
-import { ingredientText } from '../lib/recipe-text';
+import { ingredientText, tipsText } from '../lib/recipe-text';
 import { tagUrl, url } from '../lib/url';
 import { getRecipes } from '../lib/recipes';
 import { allTags } from '../lib/tags';
@@ -11,7 +11,7 @@ import '../styles/overview.css';
 
 const recipes = await getRecipes();
 // Janitas feste Kategorien erscheinen immer, auch solange noch kein Rezept dazu existiert.
-const JANITA_TAGS = ['Healthy', 'Lunch', 'Dinner', 'Dessert', 'Comfort Food', 'Meat Lover', 'Veggie Love', 'Protein Power'];
+const JANITA_TAGS = ['Healthy', 'Lunch', 'Dinner', 'Dessert', 'Comfort Food', 'Meat Lover', 'Veggie Love', 'Protein Power', 'Hosting'];
 const tags = allTags([...recipes.map((r) => r.data.tags), JANITA_TAGS]);
 const summaries: RecipeSummary[] = recipes.map((r) => ({
   id: r.id,
@@ -21,6 +21,7 @@ const summaries: RecipeSummary[] = recipes.map((r) => ({
   duration: r.data.duration ?? null,
   added: r.data.added.toISOString().slice(0, 10),
   ingredients: ingredientText(r.body ?? ''),
+  extra: [...r.data.tags, ...r.data.keywords, tipsText(r.body ?? '')].join(' '),
   cooked: r.data.rating !== undefined,
   book: r.data.book,
 }));
@@ -39,6 +40,10 @@ const folders = (['janita', 'mirco'] as const).flatMap((book) =>
     return { book, tag, name: tag || 'Alle', count: inFolder.length, covers: inFolder.flatMap((r) => (r.data.cover ? [r.data.cover] : [])).slice(0, 4) };
   }),
 );
+// Stichwörter je Buch als Schnellsuche unter dem Suchfeld.
+const keywordsOf = (book: 'janita' | 'mirco') =>
+  allTags(recipes.filter((r) => r.data.book === book).map((r) => r.data.keywords)).map((keyword) => ({ book, keyword }));
+const keywordChips = [...keywordsOf('janita'), ...keywordsOf('mirco')];
 const countText = (n: number) => `${n} ${n === 1 ? 'Rezept' : 'Rezepte'}`;
 const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c');
 ---
@@ -46,8 +51,13 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
   <h1 class="visually-hidden">Rezepte</h1>
   <section class="controls">
     <div class="controls-row">
-      <input type="search" class="search" placeholder="Rezept oder Zutat suchen …" aria-label="Suche" />
+      <input type="search" class="search" placeholder="Rezept, Zutat oder Stichwort …" aria-label="Suche" />
     </div>
+    {keywordChips.length > 0 && (
+      <div class="keyword-chips" aria-label="Stichwörter">
+        {keywordChips.map((k) => <button type="button" class="tag tag-chip keyword-chip" data-book={k.book} data-keyword={k.keyword} hidden={k.book !== 'janita'}>{k.keyword}</button>)}
+      </div>
+    )}
   </section>
   <ul class="folder-grid">
     {folders.map((f) => (

@@ -18,7 +18,7 @@ const items = [
   r('orzo', 'Mediterrane Hähnchen-Orzo', { tags: ['Hähnchen', 'Hauptspeise'], rating: 4, duration: 60, ingredients: 'Orzo · Babyspinat', cooked: true }),
   r('gnocchi', 'Gnocchi in Spinat-Frischkäse-Soße', { tags: ['Hauptspeise', 'Vegetarisch'], duration: 20, added: '2026-10-09', ingredients: 'Gnocchi · Babyspinat' }),
   r('steak', 'Steak braten', { tags: ['Hauptspeise', 'Rind'], rating: 5, duration: 15, cooked: true }),
-  r('mochis', 'Potato Mochis', { tags: ['Snack'] }),
+  r('mochis', 'Potato Mochis', { tags: ['Snack'], extra: 'Snack Periode Mit Kürbiskernen super zur Periode.' }),
 ];
 const withMirco = [...items, r('gulasch', 'Biergulasch', { book: 'mirco', ingredients: 'Rindergulasch · Babyspinat' })];
 const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added'; uncooked: boolean; book: 'janita' | 'mirco'; all: boolean }> = {}) => ({
@@ -66,6 +66,7 @@ describe('filterAndSort', () => {
     expect(filterAndSort(items, state({ q: 'haehnchen' }))).toEqual(['orzo']);
     expect(filterAndSort(items, state({ q: 'babyspinat gnocchi' }))).toEqual(['gnocchi']);
     expect(filterAndSort(items, state({ q: 'pizza' }))).toEqual([]);
+    expect(filterAndSort(items, state({ q: 'periode' }))).toEqual(['mochis']);
   });
 
   it('sorts by rating desc with missing values last and name as tie-breaker', () => {

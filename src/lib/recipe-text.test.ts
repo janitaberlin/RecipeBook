@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { ingredientLines, ingredientText, stepTexts } from './recipe-text';
+import { ingredientLines, ingredientText, stepTexts, tipsText } from './recipe-text';
 
 const body = [
   '## Zutaten',
@@ -47,5 +47,12 @@ describe('stepTexts', () => {
 
   it('appends continuation lines to the current step', () => {
     expect(stepTexts('## Zubereitung\n1. **A:** Eins\n   - Unterpunkt\n2. **B:** Zwei')).toEqual(['A: Eins Unterpunkt', 'B: Zwei']);
+  });
+});
+
+describe('tipsText', () => {
+  it('joins the tips as plain text', () => {
+    expect(tipsText('## Zutaten\n- {{1}} Ei\n\n## Tipps\n- Mengen geschätzt.\n- Mit *Kürbiskernen* super.')).toBe('Mengen geschätzt. Mit Kürbiskernen super.');
+    expect(tipsText('## Zutaten\n- Ei')).toBe('');
   });
 });

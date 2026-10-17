@@ -2,6 +2,7 @@
 title: Curry-Ofengemüse auf Burrata
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Dinner, Veggie Love, Protein Power]
+keywords: [Periode]
 duration: 45
 servings: 2
 nutrition: { kcal: 840, protein: 30, carbs: 79, fat: 46 }

@@ -20,6 +20,8 @@ const recipes = defineCollection({
         servings: z.number().int().min(1),
         servingsLabel: z.string().min(1).default('Personen'),
         tags: z.array(tag),
+        /** Stichwörter für die Suche, z. B. Periode oder Weihnachten. */
+        keywords: z.array(tag).default([]),
         added: z.coerce.date(),
         cover: image().optional(),
         duration: z.number().int().positive().optional(),

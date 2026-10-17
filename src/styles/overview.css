@@ -10,6 +10,7 @@
 }
 .search { flex: 1 1 12rem; min-width: 0; }
 .tag-chip { cursor: pointer; }
+.keyword-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .tag-chip[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 .result-count { margin: 0 0 0.75rem; color: var(--muted); font-size: 0.9rem; }
 

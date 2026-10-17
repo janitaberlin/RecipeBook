@@ -21,6 +21,7 @@ function init({ recipes: allRecipes, tags }: Data): void {
   const search = document.querySelector<HTMLInputElement>('.search')!;
   const sort = document.querySelector<HTMLSelectElement>('.sort')!;
   const folders = [...document.querySelectorAll<HTMLElement>('.folder')];
+  const keywordChips = [...document.querySelectorAll<HTMLButtonElement>('.keyword-chip')];
   const folderGrid = document.querySelector<HTMLElement>('.folder-grid')!;
   const listView = document.querySelector<HTMLElement>('.list-view')!;
   const listTitle = document.querySelector<HTMLElement>('.list-title')!;
@@ -49,6 +50,10 @@ function init({ recipes: allRecipes, tags }: Data): void {
       folder.hidden = folder.dataset.book !== state.book;
       const n = bookRecipes.filter((r) => !tag || r.tags.includes(tag)).length;
       folder.querySelector('.folder-count')!.textContent = countText(n);
+    }
+    for (const chip of keywordChips) {
+      chip.hidden = chip.dataset.book !== state.book;
+      chip.setAttribute('aria-pressed', String(state.q.trim() === chip.dataset.keyword));
     }
     const ids = filterAndSort(recipes, state);
     const visible = new Set(ids);
@@ -82,6 +87,15 @@ function init({ recipes: allRecipes, tags }: Data): void {
       event.preventDefault();
       const tag = folder.dataset.tag ?? '';
       open({ ...state, tags: tag ? [tag] : [], all: !tag, q: '', uncooked: false });
+    });
+  }
+  for (const chip of keywordChips) {
+    chip.addEventListener('click', () => {
+      const keyword = chip.dataset.keyword!;
+      if (state.q.trim() === keyword) {
+        state = { ...state, q: '' };
+        render();
+      } else open({ ...state, q: keyword, tags: [], all: false, uncooked: false });
     });
   }
   backButton.addEventListener('click', () => {

@@ -27,6 +27,10 @@ export function ingredientText(body: string): string {
     .join(' · ');
 }
 
+export function tipsText(body: string): string {
+  return listItems(body, 'Tipps').map(plain).join(' ');
+}
+
 export function ingredientLines(body: string): string[] {
   return listItems(body, 'Zutaten').map(plain);
 }

@@ -1,7 +1,8 @@
 ---
 title: Antipasti-Platte für die Party
 cover: ./cover.jpg
-tags: [Comfort Food, Meat Lover, Protein Power]
+tags: [Hosting, Meat Lover]
+keywords: [Party, Geburtstag]
 duration: 60
 servings: 8
 nutrition: { kcal: 820, protein: 35, carbs: 59, fat: 49 }
