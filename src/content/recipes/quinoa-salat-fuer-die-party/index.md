@@ -24,7 +24,7 @@ added: 2026-10-17
 - {{6 EL}} Olivenöl
 - {{1 TL}} Agavendicksaft
 - {{1 TL}} Senf
-- {{250 g}} Mini-Mozzarella
+- {{250 g}} Hirtenkäse, zerbröselt (oder Mini-Mozzarella)
 - {{1/2}} Granatapfel
 - Salz, Pfeffer
 
@@ -38,8 +38,9 @@ added: 2026-10-17
 2. **Gemüse schneiden:** Kichererbsen abgießen und abspülen. Gurke, Tomaten und Paprika schneiden, Kräuter hacken.
 3. **Dressing anrühren:** Zitronensaft, Olivenöl, Agavendicksaft und Senf verrühren und kräftig mit Salz und Pfeffer abschmecken.
 4. **Mischen:** Quinoa mit Kichererbsen, Gemüse, Kräutern und Dressing mischen.
-5. **Servieren:** Mozzarella halbieren, Granatapfelkerne herauslösen und beides über den Salat streuen.
+5. **Servieren:** Granatapfelkerne herauslösen und mit dem Hirtenkäse über den Salat streuen.
 
 ## Tipps
 - Mengen geschätzt.
-- Lässt sich am Vortag vorbereiten; Kräuter, Mozzarella und Granatapfel erst kurz vor dem Servieren untermischen.
+- Mit {{2 Dosen}} Thunfisch wird daraus eine sättigende Hauptmahlzeit.
+- Lässt sich am Vortag vorbereiten; Kräuter, Käse und Granatapfel erst kurz vor dem Servieren untermischen.

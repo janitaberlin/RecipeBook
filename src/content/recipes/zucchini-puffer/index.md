@@ -27,7 +27,8 @@ added: 2026-10-17
 2. **Teig mischen:** Zucchini, Eier und Frühlingszwiebeln verquirlen, mit Salz, Pfeffer und Paprikapulver würzen. Mehl dazugeben und alles gut vermischen.
    ![Teig in der Schüssel](./schritt-2.jpg)
 3. **Ausbacken:** Öl in der Pfanne erhitzen, kleine Puffer formen und von jeder Seite ca. 3–4 Min. goldbraun braten. Auf Küchenpapier abtropfen lassen.
-4. **Servieren:** Warm servieren, z. B. mit gekörntem Frischkäse mit Zitrone.
+4. **Servieren:** Warm servieren, z. B. mit Feldsalat und Paprika-Dip oder gekörntem Frischkäse mit Zitrone.
+   ![Zucchini-Puffer mit Feldsalat und Paprika-Dip](./schritt-4.jpg)
 
 ## Tipps
 - Portionen geschätzt.
