@@ -125,6 +125,18 @@
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
 }
 .card-heart[hidden] { display: none; }
+.card-light {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.9);
+  color: #111;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+}
 .cook-count { color: var(--accent); font-weight: 600; }
 .cook-count[hidden] { display: none; }
 .card-heart svg { width: 1.1rem; height: 1.1rem; fill: #d6455d; }
@@ -140,6 +152,7 @@
   .card-meta .cooked { display: none; }
   .card-keywords { margin: 0; font-size: 0.72rem; }
   .card-heart { width: 1.6rem; height: 1.6rem; }
+  .card-light { font-size: 0.68rem; padding: 0.15rem 0.45rem; }
   .card-heart svg { width: 0.95rem; height: 0.95rem; }
   .folder-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 0.9rem; }
   .folder-name { font-size: 1rem; }
