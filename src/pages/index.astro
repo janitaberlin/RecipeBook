@@ -26,10 +26,6 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
 ---
 <Base title="Janitas RecipeBook" image={new URL(url('icon-512.png'), Astro.site).href} smallCard>
   <h1 class="visually-hidden">Rezepte</h1>
-  <nav class="book-switch" aria-label="Rezeptbuch">
-    <button type="button" class="book-btn" data-book="janita" aria-pressed="true">Janitas Rezepte</button>
-    <button type="button" class="book-btn" data-book="mirco" aria-pressed="false">Mircos Rezepte</button>
-  </nav>
   <section class="controls">
     <div class="controls-row">
       <input type="search" class="search" placeholder="Rezept oder Zutat suchen …" aria-label="Suche" />

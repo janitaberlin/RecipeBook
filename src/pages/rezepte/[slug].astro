@@ -51,7 +51,7 @@ const jsonLd = {
   datePublished: d.added.toISOString().slice(0, 10),
 };
 ---
-<Base title={d.title} description={description} image={ogImageUrl}>
+<Base title={d.title} description={description} image={ogImageUrl} book={d.book}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings} data-servings-label={d.servingsLabel}>
     <div class="recipe-hero">

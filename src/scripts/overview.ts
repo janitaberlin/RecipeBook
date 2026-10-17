@@ -14,7 +14,7 @@ function init({ recipes, tags }: Data): void {
   const uncookedChip = document.querySelector<HTMLButtonElement>('.uncooked-chip')!;
   const empty = document.querySelector<HTMLElement>('.empty:not(.empty-own)')!;
   const emptyOwn = document.querySelector<HTMLElement>('.empty-own')!;
-  const bookButtons = [...document.querySelectorAll<HTMLButtonElement>('.book-btn')];
+  const bookButtons = [...document.querySelectorAll<HTMLAnchorElement>('.book-btn')];
   const count = document.querySelector<HTMLElement>('.result-count')!;
   let state: FilterState = parseState(location.search, tags);
 
@@ -27,7 +27,10 @@ function init({ recipes, tags }: Data): void {
     uncookedChip.setAttribute('aria-pressed', String(state.uncooked));
     if (search.value !== state.q) search.value = state.q;
     sort.value = state.sort;
-    for (const button of bookButtons) button.setAttribute('aria-pressed', String(button.dataset.book === state.book));
+    for (const button of bookButtons) {
+      if (button.dataset.book === state.book) button.setAttribute('aria-current', 'page');
+      else button.removeAttribute('aria-current');
+    }
     // Gesamtzahl: bei einer Suche beide Bücher, sonst nur das gewählte.
     const total = state.q.trim() ? recipes.length : recipes.filter((r) => r.book === state.book).length;
     const ownEmpty = total === 0 && state.book === 'janita' && !state.q.trim();
@@ -54,8 +57,10 @@ function init({ recipes, tags }: Data): void {
     });
   }
   for (const button of bookButtons) {
-    button.addEventListener('click', () => {
-      state = { ...state, book: button.dataset.book === 'mirco' ? 'mirco' : 'janita' };
+    button.addEventListener('click', (event) => {
+      // Auf der Übersicht ohne Neuladen umschalten; Suche und Filter zurücksetzen.
+      event.preventDefault();
+      state = { tags: [], q: '', sort: state.sort, uncooked: false, book: button.dataset.book === 'mirco' ? 'mirco' : 'janita' };
       render();
     });
   }

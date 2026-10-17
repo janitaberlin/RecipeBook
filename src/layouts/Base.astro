@@ -8,8 +8,10 @@ interface Props {
   image?: string;
   /** Kleines Vorschaubild, z. B. für das quadratische App-Icon. */
   smallCard?: boolean;
+  /** Aktives Rezeptbuch im Umschalter oben. */
+  book?: 'janita' | 'mirco';
 }
-const { title, description = 'Meine Rezeptsammlung', image, smallCard = false } = Astro.props;
+const { title, description = 'Meine Rezeptsammlung', image, smallCard = false, book = 'janita' } = Astro.props;
 const pageTitle = title === 'Janitas RecipeBook' ? title : `${title} · Janitas RecipeBook`;
 const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).href;
 ---
@@ -50,6 +52,10 @@ const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).hre
       <a class="site-title" href={url('')}>Janitas RecipeBook</a>
       <button class="theme-toggle" type="button" aria-label="Dunkles Design" aria-pressed="false">◐</button>
     </header>
+    <nav class="book-switch" aria-label="Rezeptbuch">
+      <a class="book-btn" data-book="janita" href={url('')} aria-current={book === 'janita' ? 'page' : undefined}>Janitas Rezepte</a>
+      <a class="book-btn" data-book="mirco" href={url('?buch=mirco')} aria-current={book === 'mirco' ? 'page' : undefined}>Mircos Rezepte</a>
+    </nav>
     <main class="page">
       <slot />
     </main>
