@@ -1,10 +1,12 @@
 import { deletedIds, initCardMenu } from './card-menu';
-import { filterAndSort, parseState, toSearch, type FilterState, type RecipeSummary, type SortKey } from '../lib/filter';
+import { filterAndSort, isHome, parseState, toSearch, type FilterState, type RecipeSummary, type SortKey } from '../lib/filter';
 
 interface Data {
   recipes: RecipeSummary[];
   tags: string[];
 }
+
+const countText = (n: number) => `${n} ${n === 1 ? 'Rezept' : 'Rezepte'}`;
 
 function init({ recipes: allRecipes, tags }: Data): void {
   const grid = document.querySelector<HTMLElement>('.card-grid')!;
@@ -18,7 +20,11 @@ function init({ recipes: allRecipes, tags }: Data): void {
   }
   const search = document.querySelector<HTMLInputElement>('.search')!;
   const sort = document.querySelector<HTMLSelectElement>('.sort')!;
-  const chips = [...document.querySelectorAll<HTMLButtonElement>('.tag-chip[data-tag]')];
+  const folders = [...document.querySelectorAll<HTMLElement>('.folder')];
+  const folderGrid = document.querySelector<HTMLElement>('.folder-grid')!;
+  const listView = document.querySelector<HTMLElement>('.list-view')!;
+  const listTitle = document.querySelector<HTMLElement>('.list-title')!;
+  const backButton = document.querySelector<HTMLButtonElement>('.back-btn')!;
   const uncookedChip = document.querySelector<HTMLButtonElement>('.uncooked-chip')!;
   const empty = document.querySelector<HTMLElement>('.empty:not(.empty-own)')!;
   const emptyOwn = document.querySelector<HTMLElement>('.empty-own')!;
@@ -26,17 +32,29 @@ function init({ recipes: allRecipes, tags }: Data): void {
   const count = document.querySelector<HTMLElement>('.result-count')!;
   let state: FilterState = parseState(location.search, tags);
 
+  function title(): string {
+    if (state.q.trim()) return 'Suche';
+    if (state.tags.length > 0) return state.tags.join(' + ');
+    if (state.uncooked && !state.all) return 'Noch nicht gekocht';
+    return 'Alle Rezepte';
+  }
+
   function render(): void {
+    const home = isHome(state);
+    folderGrid.hidden = !home;
+    listView.hidden = home;
+    const bookRecipes = recipes.filter((r) => r.book === state.book);
+    for (const folder of folders) {
+      const tag = folder.dataset.tag ?? '';
+      folder.hidden = folder.dataset.book !== state.book;
+      const n = bookRecipes.filter((r) => !tag || r.tags.includes(tag)).length;
+      folder.querySelector('.folder-count')!.textContent = countText(n);
+    }
     const ids = filterAndSort(recipes, state);
     const visible = new Set(ids);
-    for (const [id, card] of cards) card.hidden = !visible.has(id);
+    for (const [id, card] of cards) card.hidden = home || !visible.has(id);
     for (const id of ids) grid.appendChild(cards.get(id)!);
-    for (const chip of chips) {
-      chip.setAttribute('aria-pressed', String(state.tags.includes(chip.dataset.tag!)));
-      // Nur Kategorien des gewählten Buchs zeigen (bei einer Suche alle); ausgewählte bleiben sichtbar.
-      const inBook = (chip.dataset.books ?? '').split(' ').includes(state.book);
-      chip.hidden = !inBook && !state.q.trim() && !state.tags.includes(chip.dataset.tag!);
-    }
+    listTitle.textContent = title();
     uncookedChip.setAttribute('aria-pressed', String(state.uncooked));
     if (search.value !== state.q) search.value = state.q;
     sort.value = state.sort;
@@ -44,15 +62,36 @@ function init({ recipes: allRecipes, tags }: Data): void {
       if (button.dataset.book === state.book) button.setAttribute('aria-current', 'page');
       else button.removeAttribute('aria-current');
     }
-    // Gesamtzahl: bei einer Suche beide Bücher, sonst nur das gewählte.
-    const total = state.q.trim() ? recipes.length : recipes.filter((r) => r.book === state.book).length;
-    const ownEmpty = total === 0 && state.book === 'janita' && !state.q.trim();
-    empty.hidden = ids.length > 0 || ownEmpty;
+    const ownEmpty = bookRecipes.length === 0 && state.book === 'janita' && !state.q.trim();
+    empty.hidden = home || ids.length > 0 || ownEmpty;
     emptyOwn.hidden = !ownEmpty;
-    count.textContent = ids.length === total ? `${ids.length} ${ids.length === 1 ? 'Rezept' : 'Rezepte'}` : `${ids.length} von ${total} Rezepten`;
-    history.replaceState(null, '', toSearch(state) || location.pathname);
+    count.textContent = countText(ids.length);
+    history.replaceState(history.state, '', toSearch(state) || location.pathname);
   }
 
+  // Einen Ordner öffnen legt einen Verlaufseintrag an, damit „Zurück“ (auch per Wischgeste) zur Startseite führt.
+  function open(next: FilterState): void {
+    history.pushState({ folder: true }, '', toSearch(next) || location.pathname);
+    state = next;
+    render();
+    window.scrollTo(0, 0);
+  }
+
+  for (const folder of folders) {
+    folder.querySelector('a')!.addEventListener('click', (event) => {
+      event.preventDefault();
+      const tag = folder.dataset.tag ?? '';
+      open({ ...state, tags: tag ? [tag] : [], all: !tag, q: '', uncooked: false });
+    });
+  }
+  backButton.addEventListener('click', () => {
+    if (history.state?.folder) {
+      history.back();
+      return;
+    }
+    state = { ...state, tags: [], q: '', uncooked: false, all: false };
+    render();
+  });
   search.addEventListener('input', () => {
     state = { ...state, q: search.value };
     render();
@@ -61,19 +100,11 @@ function init({ recipes: allRecipes, tags }: Data): void {
     state = { ...state, sort: sort.value as SortKey };
     render();
   });
-  for (const chip of chips) {
-    chip.addEventListener('click', () => {
-      const tag = chip.dataset.tag!;
-      const tagsNow = state.tags.includes(tag) ? state.tags.filter((t) => t !== tag) : [...state.tags, tag];
-      state = { ...state, tags: tagsNow };
-      render();
-    });
-  }
   for (const button of bookButtons) {
     button.addEventListener('click', (event) => {
-      // Auf der Übersicht ohne Neuladen umschalten; Suche und Filter zurücksetzen.
+      // Auf der Übersicht ohne Neuladen umschalten; zurück zu den Kategorien des Buchs.
       event.preventDefault();
-      state = { tags: [], q: '', sort: state.sort, uncooked: false, book: button.dataset.book === 'mirco' ? 'mirco' : 'janita' };
+      state = { tags: [], q: '', sort: state.sort, uncooked: false, all: false, book: button.dataset.book === 'mirco' ? 'mirco' : 'janita' };
       render();
     });
   }

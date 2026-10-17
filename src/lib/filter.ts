@@ -8,6 +8,8 @@ export interface FilterState {
   sort: SortKey;
   uncooked: boolean;
   book: Book;
+  /** Ordner „Alle“ geöffnet (sonst zeigt die Startseite die Kategorie-Ordner). */
+  all: boolean;
 }
 
 export interface RecipeSummary {
@@ -83,6 +85,7 @@ export function parseState(search: string, knownTags: string[]): FilterState {
     sort: SORT_KEYS.includes(sort as SortKey) ? (sort as SortKey) : 'name',
     uncooked: params.get('gekocht') === 'nein',
     book: params.get('buch') === 'mirco' ? 'mirco' : 'janita',
+    all: params.get('alle') === '1',
   };
 }
 
@@ -93,6 +96,12 @@ export function toSearch(state: FilterState): string {
   if (state.sort !== 'name') params.set('sort', state.sort);
   if (state.uncooked) params.set('gekocht', 'nein');
   if (state.book !== 'janita') params.set('buch', state.book);
+  if (state.all) params.set('alle', '1');
   const query = params.toString();
   return query ? `?${query}` : '';
+}
+
+/** Startseite mit Kategorie-Ordnern statt Rezeptliste: nichts gewählt, gesucht oder gefiltert. */
+export function isHome(state: FilterState): boolean {
+  return !state.all && state.tags.length === 0 && !state.q.trim() && !state.uncooked;
 }

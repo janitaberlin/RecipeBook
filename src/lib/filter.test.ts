@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { filterAndSort, normalize, parseState, toSearch, type RecipeSummary } from './filter';
+import { filterAndSort, isHome, normalize, parseState, toSearch, type RecipeSummary } from './filter';
 
 const r = (id: string, title: string, extra: Partial<RecipeSummary> = {}): RecipeSummary => ({
   id,
@@ -21,12 +21,13 @@ const items = [
   r('mochis', 'Potato Mochis', { tags: ['Snack'] }),
 ];
 const withMirco = [...items, r('gulasch', 'Biergulasch', { book: 'mirco', ingredients: 'Rindergulasch · Babyspinat' })];
-const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added'; uncooked: boolean; book: 'janita' | 'mirco' }> = {}) => ({
+const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added'; uncooked: boolean; book: 'janita' | 'mirco'; all: boolean }> = {}) => ({
   tags: [],
   q: '',
   sort: 'name' as const,
   uncooked: false,
   book: 'janita' as const,
+  all: false,
   ...over,
 });
 
@@ -84,7 +85,8 @@ describe('URL state', () => {
   const known = ['Hähnchen', 'Hauptspeise', 'Rind'];
 
   it('round-trips state through the query string', () => {
-    const s = { tags: ['Hähnchen', 'Rind'], q: 'orzo', sort: 'rating' as const, uncooked: true, book: 'mirco' as const };
+    const s = { tags: ['Hähnchen', 'Rind'], q: 'orzo', sort: 'rating' as const, uncooked: true, book: 'mirco' as const, all: true };
+    expect(toSearch(s)).toContain('alle=1');
     expect(toSearch(s)).toContain('buch=mirco');
     expect(toSearch(s)).toContain('gekocht=nein');
     expect(parseState(toSearch(s), known)).toEqual(s);
@@ -95,6 +97,17 @@ describe('URL state', () => {
   });
 
   it('ignores unknown tags and invalid sort values', () => {
-    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name', uncooked: false, book: 'janita' });
+    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name', uncooked: false, book: 'janita', all: false });
+  });
+});
+
+describe('isHome', () => {
+  it('shows the folders only when nothing is selected', () => {
+    expect(isHome(state())).toBe(true);
+    expect(isHome(state({ all: true }))).toBe(false);
+    expect(isHome(state({ tags: ['Rind'] }))).toBe(false);
+    expect(isHome(state({ q: 'orzo' }))).toBe(false);
+    expect(isHome(state({ q: '  ' }))).toBe(true);
+    expect(isHome(state({ uncooked: true }))).toBe(false);
   });
 });

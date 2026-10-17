@@ -9,10 +9,64 @@
   font: inherit;
 }
 .search { flex: 1 1 12rem; min-width: 0; }
-.tag-filter { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .tag-chip { cursor: pointer; }
 .tag-chip[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 .result-count { margin: 0 0 0.75rem; color: var(--muted); font-size: 0.9rem; }
+
+/* Startseite: Kategorie-Ordner wie auf dem iPhone-Homebildschirm */
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 1.25rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.folder a { display: grid; gap: 0.15rem; justify-items: center; text-decoration: none; color: var(--text); }
+.folder-art {
+  display: grid;
+  grid-template: repeat(2, minmax(0, 1fr)) / repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+  margin-bottom: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: var(--surface-2);
+  transition: transform 0.15s ease;
+}
+.folder a:hover .folder-art { transform: scale(1.03); }
+.folder a:active .folder-art { transform: scale(0.97); }
+@media (prefers-reduced-motion: reduce) {
+  .folder-art, .folder a:hover .folder-art, .folder a:active .folder-art { transition: none; transform: none; }
+}
+.folder-art img, .folder-empty {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+.folder-name { font-family: var(--font-head); font-size: 1.05rem; font-weight: 600; text-align: center; }
+.folder-count { color: var(--muted); font-size: 0.85rem; }
+
+/* Rezeptliste eines Ordners */
+.list-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+.back-btn {
+  flex: none;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+}
+.list-title { margin: 0; font-size: 1.4rem; overflow-wrap: anywhere; }
+.list-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+.list-tools .sort { margin-left: auto; padding: 0.35rem 0.6rem; font-size: 0.9rem; }
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
@@ -43,6 +97,16 @@
 .card-title { margin: 0; font-size: 1.1rem; }
 .card-meta { display: flex; gap: 0.75rem; color: var(--muted); font-size: 0.9rem; }
 .empty { padding: 2rem 0; color: var(--muted); text-align: center; }
+
+/* Handy: zwei Karten nebeneinander, damit etwa vier Rezepte auf einen Bildschirm passen */
+@media (max-width: 600px) {
+  .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .card-body { gap: 0.25rem; padding: 0.5rem 0.6rem 0.65rem; }
+  .card-title { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font-size: 0.95rem; line-height: 1.25; }
+  .card-meta { flex-wrap: wrap; gap: 0.15rem 0.5rem; font-size: 0.78rem; }
+  .card-meta .cooked { display: none; }
+  .folder-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 .uncooked-chip { border-style: dashed; }
 
 .book-badge {

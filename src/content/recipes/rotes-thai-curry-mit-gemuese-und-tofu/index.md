@@ -4,7 +4,7 @@ cover: ./cover.jpg
 tags: [Healthy, Dinner, Veggie Love]
 duration: 35
 servings: 4
-nutrition: { kcal: 395, protein: 14, carbs: 25, fat: 27 }
+nutrition: { kcal: 365, protein: 13, carbs: 18, fat: 27 }
 added: 2026-10-17
 ---
 

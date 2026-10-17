@@ -14,7 +14,7 @@ const d = recipe.data;
 <li class="card" data-id={recipe.id} hidden={d.book !== 'janita'}>
   <a href={recipeUrl(recipe.id)}>
     <div class="card-image">
-      {d.cover ? <Image src={d.cover} alt="" widths={[400, 800]} sizes="(max-width: 600px) 100vw, 400px" /> : <Placeholder />}
+      {d.cover ? <Image src={d.cover} alt="" widths={[400, 800]} sizes="(max-width: 600px) 50vw, 400px" /> : <Placeholder />}
     </div>
     <div class="card-body">
       <h2 class="card-title">{d.title}</h2>

@@ -1,9 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import RecipeCard from '../components/RecipeCard.astro';
 import type { RecipeSummary } from '../lib/filter';
 import { ingredientText } from '../lib/recipe-text';
-import { url } from '../lib/url';
+import { tagUrl, url } from '../lib/url';
 import { getRecipes } from '../lib/recipes';
 import { allTags } from '../lib/tags';
 import '../styles/overview.css';
@@ -23,9 +24,22 @@ const summaries: RecipeSummary[] = recipes.map((r) => ({
   cooked: r.data.rating !== undefined,
   book: r.data.book,
 }));
-const tagBooks = (tag: string) =>
-  [...new Set([...recipes.filter((r) => r.data.tags.includes(tag)).map((r) => r.data.book), ...(JANITA_TAGS.includes(tag) ? ['janita'] : [])])].join(' ');
 const ownCount = recipes.filter((r) => r.data.book === 'janita').length;
+
+// Kategorie-Ordner der Startseite: zuerst „Alle“, dann die Kategorien des jeweiligen Buchs.
+// Das Ordnerbild zeigt die Fotos der bis zu vier neuesten Rezepte.
+const newestFirst = [...recipes].sort((a, b) => b.data.added.getTime() - a.data.added.getTime() || a.data.title.localeCompare(b.data.title, 'de'));
+const folderTags = {
+  janita: JANITA_TAGS,
+  mirco: allTags(recipes.filter((r) => r.data.book === 'mirco').map((r) => r.data.tags)),
+};
+const folders = (['janita', 'mirco'] as const).flatMap((book) =>
+  ['', ...folderTags[book]].map((tag) => {
+    const inFolder = newestFirst.filter((r) => r.data.book === book && (tag === '' || r.data.tags.includes(tag)));
+    return { book, tag, name: tag || 'Alle', count: inFolder.length, covers: inFolder.flatMap((r) => (r.data.cover ? [r.data.cover] : [])).slice(0, 4) };
+  }),
+);
+const countText = (n: number) => `${n} ${n === 1 ? 'Rezept' : 'Rezepte'}`;
 const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c');
 ---
 <Base title="Janitas RecipeBook" image={new URL(url('icon-512.png'), Astro.site).href} smallCard>
@@ -33,6 +47,28 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
   <section class="controls">
     <div class="controls-row">
       <input type="search" class="search" placeholder="Rezept oder Zutat suchen …" aria-label="Suche" />
+    </div>
+  </section>
+  <ul class="folder-grid">
+    {folders.map((f) => (
+      <li class="folder" data-book={f.book} data-tag={f.tag} hidden={f.book !== 'janita'}>
+        <a href={f.tag ? tagUrl(f.tag, f.book) : url(`?alle=1${f.book === 'mirco' ? '&buch=mirco' : ''}`)}>
+          <div class="folder-art">
+            {[0, 1, 2, 3].map((i) => (f.covers[i] ? <Image src={f.covers[i]} alt="" widths={[160, 320]} sizes="(max-width: 600px) 22vw, 120px" /> : <span class="folder-empty" />))}
+          </div>
+          <span class="folder-name">{f.name}</span>
+          <span class="folder-count">{countText(f.count)}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <section class="list-view" hidden>
+    <div class="list-head">
+      <button type="button" class="back-btn">‹ Kategorien</button>
+      <h2 class="list-title">Alle</h2>
+    </div>
+    <div class="list-tools">
+      <button type="button" class="tag tag-chip uncooked-chip" aria-pressed="false">Noch nicht gekocht</button>
       <select class="sort" aria-label="Sortierung">
         <option value="name">Name (A–Z)</option>
         <option value="rating">Bewertung</option>
@@ -40,16 +76,12 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
         <option value="added">Zuletzt hinzugefügt</option>
       </select>
     </div>
-    <div class="tag-filter">
-      <button type="button" class="tag tag-chip uncooked-chip" aria-pressed="false">Noch nicht gekocht</button>
-      {tags.map((t) => <button type="button" class="tag tag-chip" data-tag={t} data-books={tagBooks(t)} aria-pressed="false" hidden={!tagBooks(t).split(' ').includes('janita')}>{t}</button>)}
-    </div>
+    <p class="result-count" aria-live="polite">{countText(ownCount)}</p>
+    <ul class="card-grid">
+      {recipes.map((r) => <RecipeCard recipe={r} />)}
+    </ul>
+    <p class="empty" hidden>Keine Rezepte gefunden.</p>
   </section>
-  <p class="result-count" aria-live="polite">{ownCount} {ownCount === 1 ? 'Rezept' : 'Rezepte'}</p>
-  <ul class="card-grid">
-    {recipes.map((r) => <RecipeCard recipe={r} />)}
-  </ul>
-  <p class="empty" hidden>Keine Rezepte gefunden.</p>
   <p class="empty empty-own" hidden>Noch keine eigenen Rezepte. Schick Claude einfach ein Rezept als Link, Foto oder Text.</p>
   <dialog class="card-menu" aria-labelledby="card-menu-title">
     <form method="dialog" class="card-menu-inner">
