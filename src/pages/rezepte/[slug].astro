@@ -22,7 +22,7 @@ const { recipe } = Astro.props as { recipe: Recipe };
 const { Content } = await render(recipe);
 const d = recipe.data;
 const favorite = d.keywords.includes(FAVORITE);
-const subtitle = d.keywords.filter((k) => k !== FAVORITE).join(' · ');
+const subtitle = d.keywords.filter((k) => k !== FAVORITE && !(k === 'Zyklus' && d.zyklus)).join(' · ');
 const cookedDays = d.cooked.map((day) => day.toISOString().slice(0, 10));
 const sourceIsLink = d.source?.startsWith('http') ?? false;
 const ogImage = d.cover ? await getImage({ src: d.cover, width: 1200, format: 'jpeg' }) : null;
@@ -71,6 +71,9 @@ const jsonLd = {
         </button>
       </div>
       {subtitle && <p class="recipe-keywords">{subtitle}</p>}
+      {d.zyklus && (
+        <p class="recipe-zyklus"><strong>Zyklus · {d.zyklus.phase}:</strong> {d.zyklus.grund}</p>
+      )}
       <ul class="recipe-meta">
         {d.duration && <li>⏱ {d.duration} Min.</li>}
         {d.rating && <li><Stars rating={d.rating} /></li>}

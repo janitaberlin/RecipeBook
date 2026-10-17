@@ -48,7 +48,8 @@ Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Reze
 title: Mediterrane Hähnchen-Orzo
 cover: ./cover.jpg            # optional
 tags: [Hähnchen, Hauptspeise, OnePot]
-keywords: [Weihnachten]       # optional; Stichwörter für die Suche (z. B. Periode, Party), erscheinen als Schnellsuche auf der Startseite und als Untertitel unter dem Rezepttitel (Rezeptseite und Karte); „Lieblingsessen“ setzt nur Janita per Herz, nie Claude
+keywords: [Weihnachten]       # optional; Stichwörter für die Suche (z. B. Zyklus, Party), erscheinen als Schnellsuche auf der Startseite und als Untertitel unter dem Rezepttitel (Rezeptseite und Karte); „Lieblingsessen“ setzt nur Janita per Herz, nie Claude
+zyklus: { phase: Lutealphase, grund: "Magnesium gegen PMS" }  # bei Stichwort Zyklus immer; Phase Periode|Follikelphase|Eisprung|Lutealphase und kurzer Grund, steht oben unter dem Titel
 duration: 60                  # Minuten, optional aber immer setzen
 rating: 4                     # 1–5, optional (nur der Nutzer vergibt Sterne; Rezept mit Sternen = schon gekocht)
 cooked: [2026-10-17]          # optional; Koch-Tage, setzt nur der Button „Heute gekocht“ (nie Claude)

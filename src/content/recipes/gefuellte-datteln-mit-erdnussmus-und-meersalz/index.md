@@ -2,7 +2,8 @@
 title: Gefüllte Datteln mit Erdnussmus und Meersalz
 cover: ./cover.jpg
 tags: [Dessert, Healthy, Vegetarisch]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Lutealphase, grund: "Stillt Lust auf Süßes natürlich, Magnesium aus Datteln und Erdnussmus beruhigt." }
 duration: 5
 servings: 6
 servingsLabel: Stück

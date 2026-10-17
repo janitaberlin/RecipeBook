@@ -2,7 +2,8 @@
 title: Lachs-Teller mit Avocado, Feigen und Körnerbrot
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Protein Power, Fisch]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Periode, grund: "Omega-3 aus Lachs wirkt entzündungshemmend und kann Krämpfe lindern." }
 duration: 10
 servings: 1
 nutrition: { kcal: 780, protein: 41, carbs: 35, fat: 50 }

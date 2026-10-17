@@ -2,11 +2,12 @@
 title: Quinoa-Bowl mit Lachs, Avocado, Sesam und Limette
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Dinner, Protein Power, Fisch]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Lutealphase, grund: "Komplexe Kohlenhydrate aus Quinoa halten den Blutzucker stabil, Vitamin B6 und Magnesium gegen PMS." }
 duration: 25
 servings: 2
 nutrition: { kcal: 690, protein: 38, carbs: 41, fat: 39 }
-health: ["Herz: Omega-3-Fettsäuren aus Lachs", "Periode: Magnesium aus Quinoa und Sesam", "Knochen: Vitamin D aus Lachs"]
+health: ["Herz: Omega-3-Fettsäuren aus Lachs", "Zyklus: Magnesium aus Quinoa und Sesam", "Knochen: Vitamin D aus Lachs"]
 micros: [{ name: Omega-3, amount: 2.7 }, { name: Vitamin B12, amount: 4 }, { name: Vitamin B6, amount: 1.3 }]
 added: 2026-10-17
 ---

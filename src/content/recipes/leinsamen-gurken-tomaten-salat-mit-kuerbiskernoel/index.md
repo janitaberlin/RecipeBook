@@ -2,11 +2,12 @@
 title: Leinsamen-Gurken-Tomaten-Salat mit Kürbiskernöl
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Vegetarisch]
-keywords: [Periode, Detox]
+keywords: [Zyklus, Detox]
+zyklus: { phase: Follikelphase, grund: "Leinsamen und Kürbiskerne liefern Lignane, Zink und Omega-3 für den Hormonaufbau." }
 duration: 10
 servings: 2
 nutrition: { kcal: 260, protein: 8, carbs: 11, fat: 19 }
-health: ["Periode: Magnesium aus Kürbiskernen und Leinsamen", "Herz: pflanzliche Omega-3-Fettsäuren aus Leinsamen", "Darm: Ballaststoffe aus Leinsamen"]
+health: ["Zyklus: Magnesium aus Kürbiskernen und Leinsamen", "Herz: pflanzliche Omega-3-Fettsäuren aus Leinsamen", "Darm: Ballaststoffe aus Leinsamen"]
 micros: [{ name: Omega-3, amount: 2.3 }, { name: Vitamin K, amount: 37 }, { name: Magnesium, amount: 125 }]
 added: 2026-10-17
 ---

@@ -2,11 +2,12 @@
 title: Kichererbsen-Curry mit Reis
 cover: ./cover.jpg
 tags: [Dinner, Comfort Food, Vegetarisch]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Periode, grund: "Eisen aus Kichererbsen und Spinat füllt Verluste auf." }
 duration: 25
 servings: 2
 nutrition: { kcal: 710, protein: 20, carbs: 89, fat: 27 }
-health: ["Periode: Eisen aus Kichererbsen und Spinat", "Blutbildung: Folat aus Kichererbsen und Spinat", "Darm: Ballaststoffe aus Kichererbsen"]
+health: ["Zyklus: Eisen aus Kichererbsen und Spinat", "Blutbildung: Folat aus Kichererbsen und Spinat", "Darm: Ballaststoffe aus Kichererbsen"]
 micros: [{ name: Vitamin K, amount: 240 }, { name: Folat, amount: 320 }, { name: Magnesium, amount: 175 }]
 added: 2026-10-17
 ---

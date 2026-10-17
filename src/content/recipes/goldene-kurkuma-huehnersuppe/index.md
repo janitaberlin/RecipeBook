@@ -2,7 +2,8 @@
 title: Goldene Kurkuma-Hühnersuppe
 cover: ./cover.jpg
 tags: [Healthy, Dinner, Comfort Food, Fleisch, Protein Power]
-keywords: [Periode, Detox]
+keywords: [Zyklus, Detox]
+zyklus: { phase: Periode, grund: "Wärmt, Kurkuma und Ingwer wirken entzündungshemmend gegen Krämpfe." }
 duration: 435
 servings: 6
 nutrition: { kcal: 440, protein: 55, carbs: 36, fat: 8 }

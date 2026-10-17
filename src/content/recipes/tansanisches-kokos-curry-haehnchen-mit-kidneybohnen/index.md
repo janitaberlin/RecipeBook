@@ -2,7 +2,8 @@
 title: Tansanisches Kokos-Curry-Hähnchen mit Kidneybohnen
 cover: ./cover.jpg
 tags: [Dinner, Comfort Food, Fleisch, Protein Power]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Periode, grund: "Eisen aus Kidneybohnen und Zink aus Hähnchen, wärmend bei Krämpfen." }
 duration: 45
 servings: 4
 nutrition: { kcal: 890, protein: 52, carbs: 76, fat: 42 }

@@ -21,8 +21,13 @@ const recipes = defineCollection({
         servings: z.number().int().min(1),
         servingsLabel: z.string().min(1).default('Personen'),
         tags: z.array(tag),
-        /** Stichwörter für die Suche, z. B. Periode oder Weihnachten. */
+        /** Stichwörter für die Suche, z. B. Zyklus oder Weihnachten. */
         keywords: z.array(tag).default([]),
+        /** Bei Zyklus-Rezepten: passende Phase und warum, steht als Untertitel oben auf der Rezeptseite. */
+        zyklus: z
+          .object({ phase: z.enum(['Periode', 'Follikelphase', 'Eisprung', 'Lutealphase']), grund: z.string().min(1) })
+          .strict()
+          .optional(),
         /** Tage, an denen das Rezept gekocht wurde („Heute gekocht“ auf der Rezeptseite), z. B. [2026-10-17]. */
         cooked: z.array(z.coerce.date()).default([]),
         added: z.coerce.date(),

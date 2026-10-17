@@ -2,7 +2,8 @@
 title: Rote-Bete-Kichererbsen-Salat mit gekörntem Frischkäse
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Vegetarisch]
-keywords: [Periode, Detox]
+keywords: [Zyklus, Detox]
+zyklus: { phase: Periode, grund: "Eisen aus Roter Bete und Kichererbsen füllt Verluste auf." }
 duration: 15
 servings: 2
 nutrition: { kcal: 475, protein: 22, carbs: 40, fat: 22 }

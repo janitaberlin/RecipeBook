@@ -13,7 +13,7 @@ const { recipe } = Astro.props;
 const d = recipe.data;
 const favorite = d.keywords.includes(FAVORITE);
 const cookedDays = d.cooked.map((day) => day.toISOString().slice(0, 10));
-const subtitle = d.keywords.filter((k) => k !== FAVORITE).join(' · ');
+const subtitle = d.keywords.filter((k) => k !== FAVORITE).map((k) => (k === 'Zyklus' && d.zyklus ? `Zyklus: ${d.zyklus.phase}` : k)).join(' · ');
 ---
 <li class="card" data-id={recipe.id} data-favorite={String(favorite)} data-cooked={JSON.stringify(cookedDays)} hidden={d.book !== 'janita'}>
   <a href={recipeUrl(recipe.id)}>

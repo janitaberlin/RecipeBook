@@ -2,7 +2,8 @@
 title: Steak mit Ofenspargel und Kartoffeln
 cover: ./cover.jpg
 tags: [Dinner, Healthy, Fleisch, Protein Power]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Periode, grund: "Rindfleisch liefert gut verfügbares Eisen und Vitamin B12." }
 duration: 40
 servings: 2
 nutrition: { kcal: 780, protein: 58, carbs: 48, fat: 37 }

@@ -2,7 +2,8 @@
 title: Beerenkuchen ohne Backen
 cover: ./cover.jpg
 tags: [Healthy, Dessert, Vegetarisch]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Lutealphase, grund: "Magnesium aus Cashews und Rohkakao gegen Heißhunger und Krämpfe, ohne Zucker." }
 duration: 25
 servings: 12
 servingsLabel: Stück

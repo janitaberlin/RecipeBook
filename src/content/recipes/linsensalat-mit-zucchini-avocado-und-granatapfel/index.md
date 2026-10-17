@@ -2,7 +2,8 @@
 title: Linsensalat mit Zucchini, Avocado und Granatapfel
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Vegetarisch]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Periode, grund: "Eisen aus Linsen mit Vitamin C aus Zitrone wird besonders gut aufgenommen." }
 duration: 20
 servings: 2
 nutrition: { kcal: 640, protein: 19, carbs: 36, fat: 45 }

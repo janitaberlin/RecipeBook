@@ -2,12 +2,13 @@
 title: Olivenöl-Meersalz-Cookies mit Schokostücken
 cover: ./cover.jpg
 tags: [Dessert, Vegetarisch]
-keywords: [Periode]
+keywords: [Zyklus]
+zyklus: { phase: Lutealphase, grund: "Zartbitterschokolade liefert Magnesium gegen PMS und Heißhunger." }
 duration: 25
 servings: 12
 servingsLabel: Stück
 nutrition: { kcal: 365, protein: 4, carbs: 28, fat: 26 }
-health: ["Periode: Magnesium und Eisen aus Zartbitterschokolade", "Zellschutz: Vitamin E aus Olivenöl und Mandelmehl", "Herz: einfach ungesättigte Fettsäuren aus Olivenöl"]
+health: ["Zyklus: Magnesium und Eisen aus Zartbitterschokolade", "Zellschutz: Vitamin E aus Olivenöl und Mandelmehl", "Herz: einfach ungesättigte Fettsäuren aus Olivenöl"]
 micros: [{ name: Magnesium, amount: 68 }, { name: Vitamin E, amount: 2.9 }, { name: Eisen, amount: 2.8 }]
 source: Instagram @ashmeredith11
 added: 2026-10-17
