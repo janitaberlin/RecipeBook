@@ -24,6 +24,7 @@ const recipes = defineCollection({
         cover: image().optional(),
         duration: z.number().int().positive().optional(),
         rating: z.number().int().min(1).max(5).optional(),
+        book: z.enum(['janita', 'mirco']).default('janita'),
         nutrition: z
           .object({
             kcal: z.number().int().positive(),

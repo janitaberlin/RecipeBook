@@ -1,7 +1,8 @@
 ---
 title: Gyros-Suppe
 cover: ./cover.jpg
-tags: [Schwein, Suppe, Mircos Rezepte]
+book: mirco
+tags: [Schwein, Suppe]
 duration: 90
 servings: 8
 nutrition: { kcal: 555, protein: 29, carbs: 24, fat: 37 }  # pro Portion, geschätzt

@@ -1,7 +1,8 @@
 ---
 title: Mariniertes Ofengemüse
 cover: ./cover.jpg
-tags: [Beilage, Vegetarisch, Mircos Rezepte]
+book: mirco
+tags: [Beilage, Vegetarisch]
 duration: 100
 servings: 4
 nutrition: { kcal: 205, protein: 5, carbs: 14, fat: 13 }  # pro Portion, geschätzt

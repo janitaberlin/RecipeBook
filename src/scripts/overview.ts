@@ -12,7 +12,9 @@ function init({ recipes, tags }: Data): void {
   const sort = document.querySelector<HTMLSelectElement>('.sort')!;
   const chips = [...document.querySelectorAll<HTMLButtonElement>('.tag-chip[data-tag]')];
   const uncookedChip = document.querySelector<HTMLButtonElement>('.uncooked-chip')!;
-  const empty = document.querySelector<HTMLElement>('.empty')!;
+  const empty = document.querySelector<HTMLElement>('.empty:not(.empty-own)')!;
+  const emptyOwn = document.querySelector<HTMLElement>('.empty-own')!;
+  const bookButtons = [...document.querySelectorAll<HTMLButtonElement>('.book-btn')];
   const count = document.querySelector<HTMLElement>('.result-count')!;
   let state: FilterState = parseState(location.search, tags);
 
@@ -25,8 +27,13 @@ function init({ recipes, tags }: Data): void {
     uncookedChip.setAttribute('aria-pressed', String(state.uncooked));
     if (search.value !== state.q) search.value = state.q;
     sort.value = state.sort;
-    empty.hidden = ids.length > 0;
-    count.textContent = ids.length === recipes.length ? `${ids.length} ${ids.length === 1 ? 'Rezept' : 'Rezepte'}` : `${ids.length} von ${recipes.length} Rezepten`;
+    for (const button of bookButtons) button.setAttribute('aria-pressed', String(button.dataset.book === state.book));
+    // Gesamtzahl: bei einer Suche beide Bücher, sonst nur das gewählte.
+    const total = state.q.trim() ? recipes.length : recipes.filter((r) => r.book === state.book).length;
+    const ownEmpty = total === 0 && state.book === 'janita' && !state.q.trim();
+    empty.hidden = ids.length > 0 || ownEmpty;
+    emptyOwn.hidden = !ownEmpty;
+    count.textContent = ids.length === total ? `${ids.length} ${ids.length === 1 ? 'Rezept' : 'Rezepte'}` : `${ids.length} von ${total} Rezepten`;
     history.replaceState(null, '', toSearch(state) || location.pathname);
   }
 
@@ -43,6 +50,12 @@ function init({ recipes, tags }: Data): void {
       const tag = chip.dataset.tag!;
       const tagsNow = state.tags.includes(tag) ? state.tags.filter((t) => t !== tag) : [...state.tags, tag];
       state = { ...state, tags: tagsNow };
+      render();
+    });
+  }
+  for (const button of bookButtons) {
+    button.addEventListener('click', () => {
+      state = { ...state, book: button.dataset.book === 'mirco' ? 'mirco' : 'janita' };
       render();
     });
   }

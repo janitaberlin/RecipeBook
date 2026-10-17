@@ -1,7 +1,8 @@
 ---
 title: Spaghetti Bolognese Mirco
 cover: ./cover.jpg
-tags: [Hauptspeise, Nudeln, Rind, Schwein, Mircos Rezepte]
+book: mirco
+tags: [Hauptspeise, Nudeln, Rind, Schwein]
 duration: 90
 servings: 8
 nutrition: { kcal: 880, protein: 44, carbs: 101, fat: 32 }  # pro Portion, geschätzt

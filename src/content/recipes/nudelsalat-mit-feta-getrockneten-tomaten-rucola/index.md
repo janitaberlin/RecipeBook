@@ -1,7 +1,8 @@
 ---
 title: Nudelsalat mit Feta, getrockneten Tomaten & Rucola
 cover: ./cover.jpg
-tags: [Beilage, Nudeln, Salat, Vegetarisch, Mircos Rezepte]
+book: mirco
+tags: [Beilage, Nudeln, Salat, Vegetarisch]
 duration: 30
 servings: 8
 nutrition: { kcal: 465, protein: 18, carbs: 52, fat: 20 }  # pro Portion, geschätzt

@@ -1,7 +1,8 @@
 ---
 title: Steak braten
 cover: ./cover.jpg
-tags: [Hauptspeise, Rind, Mircos Rezepte]
+book: mirco
+tags: [Hauptspeise, Rind]
 duration: 15
 servings: 1
 nutrition: { kcal: 800, protein: 73, carbs: 1, fat: 55 }  # pro Portion, geschätzt

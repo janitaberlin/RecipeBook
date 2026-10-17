@@ -10,6 +10,7 @@ const r = (id: string, title: string, extra: Partial<RecipeSummary> = {}): Recip
   added: '2026-10-08',
   ingredients: '',
   cooked: false,
+  book: 'janita',
   ...extra,
 });
 
@@ -19,11 +20,13 @@ const items = [
   r('steak', 'Steak braten', { tags: ['Hauptspeise', 'Rind'], rating: 5, duration: 15, cooked: true }),
   r('mochis', 'Potato Mochis', { tags: ['Snack'] }),
 ];
-const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added'; uncooked: boolean }> = {}) => ({
+const withMirco = [...items, r('gulasch', 'Biergulasch', { book: 'mirco', ingredients: 'Rindergulasch · Babyspinat' })];
+const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added'; uncooked: boolean; book: 'janita' | 'mirco' }> = {}) => ({
   tags: [],
   q: '',
   sort: 'name' as const,
   uncooked: false,
+  book: 'janita' as const,
   ...over,
 });
 
@@ -36,6 +39,15 @@ describe('normalize', () => {
 });
 
 describe('filterAndSort', () => {
+  it('shows only the chosen book without a search', () => {
+    expect(filterAndSort(withMirco, state())).toEqual(['gnocchi', 'orzo', 'mochis', 'steak']);
+    expect(filterAndSort(withMirco, state({ book: 'mirco' }))).toEqual(['gulasch']);
+  });
+
+  it('searches both books', () => {
+    expect(filterAndSort(withMirco, state({ q: 'babyspinat' }))).toEqual(['gulasch', 'gnocchi', 'orzo']);
+  });
+
   it('sorts by name by default', () => {
     expect(filterAndSort(items, state())).toEqual(['gnocchi', 'orzo', 'mochis', 'steak']);
   });
@@ -72,7 +84,8 @@ describe('URL state', () => {
   const known = ['Hähnchen', 'Hauptspeise', 'Rind'];
 
   it('round-trips state through the query string', () => {
-    const s = { tags: ['Hähnchen', 'Rind'], q: 'orzo', sort: 'rating' as const, uncooked: true };
+    const s = { tags: ['Hähnchen', 'Rind'], q: 'orzo', sort: 'rating' as const, uncooked: true, book: 'mirco' as const };
+    expect(toSearch(s)).toContain('buch=mirco');
     expect(toSearch(s)).toContain('gekocht=nein');
     expect(parseState(toSearch(s), known)).toEqual(s);
   });
@@ -82,6 +95,6 @@ describe('URL state', () => {
   });
 
   it('ignores unknown tags and invalid sort values', () => {
-    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name', uncooked: false });
+    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name', uncooked: false, book: 'janita' });
   });
 });

@@ -1,7 +1,8 @@
 ---
 title: Nudelauflauf
 cover: ./cover.jpg
-tags: [Auflauf, Hauptspeise, Nudeln, Schwein, Mircos Rezepte]
+book: mirco
+tags: [Auflauf, Hauptspeise, Nudeln, Schwein]
 duration: 50
 servings: 2
 nutrition: { kcal: 1110, protein: 50, carbs: 106, fat: 54 }  # pro Portion, geschätzt

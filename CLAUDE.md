@@ -27,6 +27,8 @@ Eingaben können sein: URL, PDF, Screenshot/Foto eines Rezepts, kopierter Text, 
 7. **Plausi-Check** (bei jedem neuen oder geänderten Rezept): Mengen pro Portion realistisch? Fehlen Mengen, die man zum Kochen braucht (z. B. Wasser für Reis, Nudelmenge)? Wird jede Zutat verwendet und jede verwendete Zutat aufgeführt? Garzeiten, Temperaturen und Reihenfolge stimmig? Passen Tags, Dauer und Nährwerte (auch nach Mengenänderungen neu schätzen)? Reine Stilfehler direkt korrigieren; inhaltliche Verbesserungsvorschläge dem Nutzer kurz auflisten und erst nach seinem OK umsetzen.
 8. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://janitaberlin.github.io/RecipeBook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
 
+**Zwei Rezeptbücher:** Startseite zeigt nur Janitas Rezepte; Umschalter „Mircos Rezepte“ zeigt seine (`book: mirco`); die Suche durchsucht beide. Neue Rezepte von Janita bekommen kein `book`-Feld.
+
 Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. Ein Rezept gilt als gekocht, sobald es Sterne hat (Filter „Noch nicht gekocht“). Ohne Sternangabe nachfragen.
 
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.
@@ -42,6 +44,7 @@ duration: 60                  # Minuten, optional aber immer setzen
 rating: 4                     # 1–5, optional (nur der Nutzer vergibt Sterne; Rezept mit Sternen = schon gekocht)
 servings: 4
 servingsLabel: Stück          # optional, Standard „Personen“
+book: mirco                   # nur bei Mircos Rezepten (aus esstobst/RecipeBook); Standard „janita“
 nutrition: { kcal: 650, protein: 40, carbs: 70, fat: 22 }  # Pflicht; pro Portion bzw. Stück, von Claude geschätzt
 source: TikTok                # optional; URLs vollständig
 added: 2026-10-08

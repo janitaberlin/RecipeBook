@@ -1,7 +1,8 @@
 ---
 title: Speckbohnen
 cover: ./cover.jpg
-tags: [Beilage, Schwein, Mircos Rezepte]
+book: mirco
+tags: [Beilage, Schwein]
 duration: 25
 servings: 3
 nutrition: { kcal: 220, protein: 11, carbs: 13, fat: 12 }  # pro Portion, geschätzt

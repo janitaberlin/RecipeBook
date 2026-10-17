@@ -63,6 +63,7 @@ const jsonLd = {
         {d.duration && <li>⏱ {d.duration} Min.</li>}
         {d.rating && <li><Stars rating={d.rating} /></li>}
         {d.rating && <li class="cooked">✓ Gekocht</li>}
+        {d.book === 'mirco' && <li>Aus Mircos Rezepten</li>}
         {d.source && (
           <li>
             Quelle:{' '}
@@ -71,7 +72,7 @@ const jsonLd = {
         )}
       </ul>
       <ul class="tag-list">
-        {d.tags.map((t) => <li><a class="tag" href={tagUrl(t)}>{t}</a></li>)}
+        {d.tags.map((t) => <li><a class="tag" href={tagUrl(t, d.book)}>{t}</a></li>)}
       </ul>
       <section class="nutrition" aria-label="Nährwerte">
         <p class="nutrition-title">Nährwerte pro {perServingLabel(d.servingsLabel)} <span class="nutrition-hint">(ca., geschätzt)</span></p>

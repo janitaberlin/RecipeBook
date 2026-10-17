@@ -1,11 +1,13 @@
 export type SortKey = 'name' | 'rating' | 'duration' | 'added';
 export const SORT_KEYS: SortKey[] = ['name', 'rating', 'duration', 'added'];
+export type Book = 'janita' | 'mirco';
 
 export interface FilterState {
   tags: string[];
   q: string;
   sort: SortKey;
   uncooked: boolean;
+  book: Book;
 }
 
 export interface RecipeSummary {
@@ -17,6 +19,7 @@ export interface RecipeSummary {
   added: string;
   ingredients: string;
   cooked: boolean;
+  book: Book;
 }
 
 export function normalize(text: string): string {
@@ -55,6 +58,8 @@ export function filterAndSort(items: RecipeSummary[], state: FilterState): strin
   const byName: Compare = (a, b) => a.title.localeCompare(b.title, 'de');
   const compare = COMPARE[state.sort];
   return items
+    // Ohne Suchbegriff nur das gewählte Rezeptbuch, mit Suchbegriff beide.
+    .filter((r) => words.length > 0 || r.book === state.book)
     .filter((r) => !state.uncooked || !r.cooked)
     .filter((r) => state.tags.every((t) => r.tags.includes(t)))
     .filter((r) => {
@@ -77,6 +82,7 @@ export function parseState(search: string, knownTags: string[]): FilterState {
     q: params.get('q') ?? '',
     sort: SORT_KEYS.includes(sort as SortKey) ? (sort as SortKey) : 'name',
     uncooked: params.get('gekocht') === 'nein',
+    book: params.get('buch') === 'mirco' ? 'mirco' : 'janita',
   };
 }
 
@@ -86,6 +92,7 @@ export function toSearch(state: FilterState): string {
   if (state.q.trim()) params.set('q', state.q.trim());
   if (state.sort !== 'name') params.set('sort', state.sort);
   if (state.uncooked) params.set('gekocht', 'nein');
+  if (state.book !== 'janita') params.set('buch', state.book);
   const query = params.toString();
   return query ? `?${query}` : '';
 }

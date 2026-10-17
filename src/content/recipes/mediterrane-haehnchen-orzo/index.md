@@ -1,7 +1,8 @@
 ---
 title: Mediterrane Hähnchen-Orzo
 cover: ./cover.jpg
-tags: [Hähnchen, Hauptspeise, Nudeln, OnePot, Mircos Rezepte]
+book: mirco
+tags: [Hähnchen, Hauptspeise, Nudeln, OnePot]
 duration: 60
 servings: 4
 nutrition: { kcal: 1200, protein: 60, carbs: 105, fat: 58 }  # pro Portion, geschätzt

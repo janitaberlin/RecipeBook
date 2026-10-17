@@ -1,7 +1,8 @@
 ---
 title: Erdnusseintopf mit Borlottibohnen
 cover: ./cover.jpg
-tags: [HelloFresh, Hauptspeise, Vegetarisch, Mircos Rezepte]
+book: mirco
+tags: [HelloFresh, Hauptspeise, Vegetarisch]
 duration: 35
 servings: 3
 nutrition: { kcal: 790, protein: 27, carbs: 103, fat: 28 }  # pro Portion, geschätzt

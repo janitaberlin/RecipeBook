@@ -1,7 +1,8 @@
 ---
 title: Rockos White Cream Stew
 cover: ./cover.jpg
-tags: [Hähnchen, Hauptspeise, Mircos Rezepte]
+book: mirco
+tags: [Hähnchen, Hauptspeise]
 duration: 45
 servings: 2
 servingsLabel: Portionen

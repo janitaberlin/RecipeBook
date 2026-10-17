@@ -1,7 +1,8 @@
 ---
 title: Butternut-Kürbissuppe
 cover: ./cover.jpg
-tags: [Suppe, Vegetarisch, Mircos Rezepte]
+book: mirco
+tags: [Suppe, Vegetarisch]
 duration: 40
 servings: 4
 nutrition: { kcal: 400, protein: 6, carbs: 36, fat: 26 }  # pro Portion, geschätzt

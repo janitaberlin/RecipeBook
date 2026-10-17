@@ -1,7 +1,8 @@
 ---
 title: Gnocchi in Spinat-Frischkäse-Soße
 cover: ./cover.jpg
-tags: [HelloFresh, Hauptspeise, Vegetarisch, Mircos Rezepte]
+book: mirco
+tags: [HelloFresh, Hauptspeise, Vegetarisch]
 duration: 30
 servings: 3
 nutrition: { kcal: 710, protein: 21, carbs: 85, fat: 30 }  # pro Portion, geschätzt

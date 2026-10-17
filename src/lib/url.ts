@@ -8,6 +8,6 @@ export function recipeUrl(id: string): string {
   return url(`rezepte/${id}/`);
 }
 
-export function tagUrl(tag: string): string {
-  return url(`?tags=${encodeURIComponent(tag)}`);
+export function tagUrl(tag: string, book: 'janita' | 'mirco' = 'janita'): string {
+  return url(`?tags=${encodeURIComponent(tag)}${book === 'mirco' ? '&buch=mirco' : ''}`);
 }

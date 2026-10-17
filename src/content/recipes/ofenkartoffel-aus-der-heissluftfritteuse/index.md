@@ -1,7 +1,8 @@
 ---
 title: Ofenkartoffel aus der Heißluftfritteuse
 cover: ./cover.jpg
-tags: [Hauptspeise, Kartoffel, Vegetarisch, Mircos Rezepte]
+book: mirco
+tags: [Hauptspeise, Kartoffel, Vegetarisch]
 duration: 45
 servings: 2
 nutrition: { kcal: 260, protein: 6, carbs: 48, fat: 5 }  # pro Portion, geschätzt

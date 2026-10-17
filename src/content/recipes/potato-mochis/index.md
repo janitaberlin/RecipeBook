@@ -1,7 +1,8 @@
 ---
 title: Potato Mochis
 cover: ./cover.jpg
-tags: [Kartoffel, Snack, Mircos Rezepte]
+book: mirco
+tags: [Kartoffel, Snack]
 duration: 180
 servings: 12
 servingsLabel: Stück
