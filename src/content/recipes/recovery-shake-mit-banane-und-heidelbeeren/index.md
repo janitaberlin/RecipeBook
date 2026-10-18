@@ -1,7 +1,7 @@
 ---
 title: Recovery-Shake mit Banane und Heidelbeeren
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch, Protein Power, Shakes]
+tags: [Healthy, Vegetarisch, Shakes]
 keywords: [Shake, Nach dem Training, Leicht]
 duration: 5
 servings: 1
