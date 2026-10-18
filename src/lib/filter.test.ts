@@ -24,7 +24,7 @@ const withMirco = [...items, r('gulasch', 'Biergulasch', { book: 'mirco', ingred
 const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added' | 'cooked'; uncooked: boolean; book: 'janita' | 'mirco'; all: boolean; zyklus: boolean; phase: 'Periode' | 'Follikelphase' | 'Eisprung' | 'Lutealphase' | null }> = {}) => ({
   tags: [],
   q: '',
-  sort: 'name' as const,
+  sort: 'cooked' as const,
   uncooked: false,
   book: 'janita' as const,
   all: false,
@@ -79,9 +79,9 @@ describe('filterAndSort', () => {
     expect(filterAndSort(items, state({ sort: 'duration' }))).toEqual(['steak', 'gnocchi', 'orzo', 'mochis']);
   });
 
-  it('sorts by cooked count desc with name as tie-breaker', () => {
+  it('sorts by cooked count desc, then stars, then name', () => {
     const counted = items.map((r) => ({ ...r, cookedCount: { steak: 2, mochis: 5 }[r.id] ?? 0 }));
-    expect(filterAndSort(counted, state({ sort: 'cooked' }))).toEqual(['mochis', 'steak', 'gnocchi', 'orzo']);
+    expect(filterAndSort(counted, state({ sort: 'cooked' }))).toEqual(['mochis', 'steak', 'orzo', 'gnocchi']);
   });
 
   it('sorts by added desc with name as tie-breaker', () => {
@@ -105,7 +105,7 @@ describe('URL state', () => {
   });
 
   it('ignores unknown tags and invalid sort values', () => {
-    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name', uncooked: false, book: 'janita', all: false, zyklus: false, phase: null });
+    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'cooked', uncooked: false, book: 'janita', all: false, zyklus: false, phase: null });
   });
 });
 

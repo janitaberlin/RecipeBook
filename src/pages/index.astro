@@ -135,11 +135,11 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
     <div class="list-tools">
       <button type="button" class="tag tag-chip uncooked-chip" aria-pressed="false">Noch nicht gekocht</button>
       <select class="sort" aria-label="Sortierung">
+        <option value="cooked">Am häufigsten gekocht</option>
         <option value="name">Name (A–Z)</option>
         <option value="rating">Bewertung</option>
         <option value="duration">Dauer</option>
         <option value="added">Zuletzt hinzugefügt</option>
-        <option value="cooked">Am häufigsten gekocht</option>
       </select>
     </div>
     <p class="result-count" aria-live="polite">{countText(ownCount)}</p>

@@ -67,7 +67,8 @@ const COMPARE: Record<SortKey, Compare> = {
   rating: missingLast((r) => r.rating, -1),
   duration: missingLast((r) => r.duration, 1),
   added: (a, b) => b.added.localeCompare(a.added),
-  cooked: (a, b) => (b.cookedCount ?? 0) - (a.cookedCount ?? 0),
+  // Am häufigsten gekocht zuerst; bei Gleichstand entscheiden die Sterne.
+  cooked: (a, b) => (b.cookedCount ?? 0) - (a.cookedCount ?? 0) || (b.rating ?? 0) - (a.rating ?? 0),
 };
 
 export function filterAndSort(items: RecipeSummary[], state: FilterState): string[] {
@@ -99,7 +100,7 @@ export function parseState(search: string, knownTags: string[]): FilterState {
   return {
     tags: [...new Set(tags)],
     q: params.get('q') ?? '',
-    sort: SORT_KEYS.includes(sort as SortKey) ? (sort as SortKey) : 'name',
+    sort: SORT_KEYS.includes(sort as SortKey) ? (sort as SortKey) : 'cooked',
     uncooked: params.get('gekocht') === 'nein',
     book: params.get('buch') === 'mirco' ? 'mirco' : 'janita',
     all: params.get('alle') === '1',
@@ -112,7 +113,7 @@ export function toSearch(state: FilterState): string {
   const params = new URLSearchParams();
   if (state.tags.length > 0) params.set('tags', state.tags.join(','));
   if (state.q.trim()) params.set('q', state.q.trim());
-  if (state.sort !== 'name') params.set('sort', state.sort);
+  if (state.sort !== 'cooked') params.set('sort', state.sort);
   if (state.uncooked) params.set('gekocht', 'nein');
   if (state.book !== 'janita') params.set('buch', state.book);
   if (state.all) params.set('alle', '1');
