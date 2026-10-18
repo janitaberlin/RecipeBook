@@ -25,6 +25,7 @@ added: 2026-10-18
 
 ## Zubereitung
 1. **Mixen:** Proteinpulver, Mandeldrink, Banane, Kakao und nach Wunsch Espresso in den Mixer geben und ca. 30 Sek. cremig mixen.
+   ![Shake-Bar-Tafel im Casa Corpo](./schritt-1.jpg)
 2. **Servieren:** In ein großes Glas gießen und sofort trinken.
 
 ## Tipps

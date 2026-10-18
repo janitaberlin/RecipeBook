@@ -26,6 +26,7 @@ added: 2026-10-18
 
 ## Zubereitung
 1. **Glas vorbereiten:** {{2 EL}} Joghurt mit einem Löffel an der Innenseite des Glases verstreichen.
+   ![Shake-Bar-Tafel im Casa Corpo](./schritt-1.jpg)
 2. **Mixen:** Restlichen Joghurt, Proteinpulver, Kokosdrink, Ananas, Mango und Spirulina in den Mixer geben und ca. 45 Sek. cremig mixen.
 3. **Servieren:** Shake ins vorbereitete Glas gießen, sodass blau-weiße Schlieren entstehen, und sofort trinken.
 
