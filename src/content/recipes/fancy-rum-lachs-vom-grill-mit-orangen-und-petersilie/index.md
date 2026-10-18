@@ -8,7 +8,7 @@ servings: 2
 nutrition: { kcal: 560, protein: 37, carbs: 20, fat: 34 }
 health: ["Herz und Gehirn: Omega-3-Fettsäuren aus Lachs", "Immunsystem: viel Vitamin C aus Brokkoli, Orange und Petersilie", "Knochen: Vitamin D aus Lachs, Vitamin K aus Brokkoli"]
 micros: [{ name: Vitamin C, amount: 150 }, { name: Vitamin D, amount: 8 }, { name: Vitamin B12, amount: 4.5 }]
-source: Janita
+source: Ilona
 added: 2026-10-17
 ---
 

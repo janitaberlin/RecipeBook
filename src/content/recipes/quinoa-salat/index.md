@@ -1,5 +1,5 @@
 ---
-title: Quinoa-Salat für die Party
+title: Quinoa-Salat
 cover: ./cover.jpg
 tags: [Healthy, Lunch, Vegetarisch]
 keywords: [Party]
