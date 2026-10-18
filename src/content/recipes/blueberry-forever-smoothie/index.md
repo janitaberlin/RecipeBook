@@ -5,9 +5,9 @@ tags: [Shakes]
 keywords: [Shake]
 duration: 5
 servings: 2
-nutrition: { kcal: 510, protein: 21, carbs: 72, fat: 15 }
+nutrition: { kcal: 385, protein: 18, carbs: 56, fat: 10 }
 health: ["Zellschutz: Antioxidantien aus Heidelbeeren", "Darm: Joghurtkulturen und Ballaststoffe aus Granola", "Knochen: Calcium aus Joghurt und Hafermilch"]
-micros: [{ name: Calcium, amount: 280 }, { name: Vitamin B12, amount: 1.1 }, { name: Magnesium, amount: 80 }]
+micros: [{ name: Calcium, amount: 280 }, { name: Vitamin B12, amount: 1.1 }, { name: Magnesium, amount: 60 }]
 source: nutribullet
 added: 2026-10-18
 ---
@@ -16,7 +16,7 @@ added: 2026-10-18
 - {{1 Tasse}} Heidelbeeren (frisch oder TK)
 - {{1 Tasse}} Banane, in Scheiben
 - {{1 Tasse}} griechischer Joghurt
-- {{1 Tasse}} Granola
+- {{1/2 Tasse}} Granola
 - {{1 Tasse}} Hafermilch
 - {{4}} Eiswürfel
 
@@ -30,4 +30,5 @@ added: 2026-10-18
 3. **Servieren:** In Gläser füllen und sofort servieren.
 
 ## Tipps
+- Granola bewusst auf eine halbe Tasse reduziert (das Original nimmt eine ganze), das spart ca. 125 kcal pro Glas.
 - Ein Teil des Granola eignet sich auch als Topping obendrauf.
