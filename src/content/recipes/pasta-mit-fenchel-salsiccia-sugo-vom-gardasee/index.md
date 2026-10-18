@@ -1,5 +1,5 @@
 ---
-title: Pasta mit Fenchel-Salsiccia-Sugo
+title: Pasta mit Fenchel-Salsiccia-Sugo vom Gardasee
 cover: ./cover.jpg
 tags: [Dinner, Comfort Food, Fleisch, Protein Power]
 duration: 30
