@@ -47,6 +47,14 @@ const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).hre
         const t = localStorage.getItem('theme');
         if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
       } catch {}
+      // Parameter vom Aktualisieren-Knopf wieder aus der Adresse entfernen.
+      try {
+        const u = new URL(location.href);
+        if (u.searchParams.has('neu')) {
+          u.searchParams.delete('neu');
+          history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+        }
+      } catch {}
     </script>
     <slot name="head" />
   </head>
@@ -56,7 +64,10 @@ const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).hre
         <svg class="home-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5" /><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5" /></svg>
         <span>Janitas RecipeBook</span>
       </a>
-      <button class="theme-toggle" type="button" aria-label="Dunkles Design" aria-pressed="false">◐</button>
+      <div class="header-actions">
+        <button class="refresh-btn" type="button" aria-label="Aktualisieren" title="Aktualisieren">↻</button>
+        <button class="theme-toggle" type="button" aria-label="Dunkles Design" aria-pressed="false">◐</button>
+      </div>
     </header>
     <nav class="book-switch" aria-label="Rezeptbuch">
       <a class="book-btn" data-book="janita" href={url('')} aria-current={book === 'janita' ? 'page' : undefined}>Janitas Rezepte</a>
@@ -67,6 +78,7 @@ const pageUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).hre
     </main>
     <script>
       import '../scripts/theme';
+      import '../scripts/refresh';
     </script>
   </body>
 </html>
