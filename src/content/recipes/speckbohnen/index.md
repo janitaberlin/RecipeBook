@@ -3,6 +3,7 @@ title: Speckbohnen
 cover: ./cover.jpg
 book: mirco
 tags: [Beilage, Schwein]
+keywords: [Papa]
 duration: 25
 servings: 3
 nutrition: { kcal: 220, protein: 11, carbs: 13, fat: 12 }  # pro Portion, geschätzt
