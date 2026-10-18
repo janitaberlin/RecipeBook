@@ -1,7 +1,7 @@
 ---
 title: Apfelessig-Minz-Spritz
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch]
+tags: [Healthy, Vegetarisch, Shakes]
 keywords: [Detox]
 duration: 5
 servings: 1
