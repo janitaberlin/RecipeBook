@@ -66,6 +66,7 @@ const jsonLd = {
 <Base title={d.title} description={description} image={ogImageUrl} book={d.book}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings} data-servings-label={d.servingsLabel}>
+    <a class="recipe-back" href={url(d.book === 'mirco' ? '?buch=mirco' : '')}>‹ Zurück</a>
     <div class="recipe-hero">
       {d.cover ? <Image src={d.cover} alt="" widths={[480, 960, 1600]} sizes="(min-width: 1232px) 1232px, 100vw" priority /> : <Placeholder />}
     </div>

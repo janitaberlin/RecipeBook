@@ -179,3 +179,19 @@ if (article) {
   initLightbox(article);
   initRecipeActions(article);
 }
+
+// „Zurück“ führt in die Liste, aus der das Rezept geöffnet wurde (mit Ordner und Scrollposition);
+// ohne solche Vorgängerseite (z. B. geteilter Link) folgt der Link zur Startseite.
+const back = document.querySelector<HTMLAnchorElement>('.recipe-back');
+back?.addEventListener('click', (event) => {
+  let fromSite = false;
+  try {
+    fromSite = new URL(document.referrer).origin === location.origin;
+  } catch {
+    // kein oder ungültiger Referrer
+  }
+  if (fromSite && history.length > 1) {
+    event.preventDefault();
+    history.back();
+  }
+});

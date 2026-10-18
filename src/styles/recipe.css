@@ -200,3 +200,18 @@
 .lightbox { padding: 0; border: none; background: transparent; max-width: 95vw; max-height: 95vh; }
 .lightbox::backdrop { background: rgb(0 0 0 / 0.85); }
 .lightbox img { max-width: 95vw; max-height: 95vh; object-fit: contain; }
+
+/* Zurück-Knopf oben auf der Rezeptseite (gleiche Optik wie in der Rezeptliste) */
+.recipe-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.recipe-back:active { background: var(--text); color: var(--bg); }
+.recipe-back + .recipe-hero { margin-top: 0; }
