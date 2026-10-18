@@ -1,7 +1,7 @@
 ---
 title: Recovery-Shake mit Banane und Heidelbeeren
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch, Protein Power]
+tags: [Healthy, Vegetarisch, Protein Power, Shakes]
 keywords: [Shake, Nach dem Training, Leicht]
 duration: 5
 servings: 1
@@ -20,7 +20,7 @@ added: 2026-10-17
 - {{1}} Stück Ingwer (ca. 1 cm), geschält
 
 ## Equipment
-- Standmixer
+- Kenwood Smoothie-to-go-Aufsatz oder Glasmixaufsatz
 
 ## Zubereitung
 1. **Mixen:** Alle Zutaten in den Mixer geben und ca. 30 Sek. cremig mixen.

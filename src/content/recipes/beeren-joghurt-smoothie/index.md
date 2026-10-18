@@ -1,7 +1,7 @@
 ---
 title: Beeren-Joghurt-Smoothie
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch]
+tags: [Healthy, Vegetarisch, Shakes]
 keywords: [Shake]
 duration: 5
 servings: 2
@@ -18,10 +18,11 @@ added: 2026-10-17
 - {{200 ml}} Milch
 
 ## Equipment
-- Standmixer
+- Kenwood Smoothie-to-go-Aufsatz oder Glasmixaufsatz
 
 ## Zubereitung
 1. **Mixen:** Alle Zutaten in den Mixer geben und ca. 1 Min. cremig mixen.
+   ![Zutaten im Mixbecher](./schritt-1.jpg)
 2. **Servieren:** Smoothie in Gläser füllen und sofort servieren.
 
 ## Tipps

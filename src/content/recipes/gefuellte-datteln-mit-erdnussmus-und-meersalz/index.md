@@ -27,4 +27,5 @@ added: 2026-10-17
 ## Tipps
 - Die Walnuss ist optional, die Datteln schmecken auch ohne.
 - Gekühlt aus dem Kühlschrank sind sie besonders gut.
+- Variante: Mandelmus und ein Stück Zartbitterschokolade statt Erdnussmus.
 - Mengen geschätzt.

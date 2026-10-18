@@ -1,7 +1,7 @@
 ---
 title: Espresso-Vanille-Proteinshake
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch, Protein Power]
+tags: [Healthy, Vegetarisch, Protein Power, Shakes]
 keywords: [Shake, Nach dem Training, Leicht]
 duration: 5
 servings: 1
@@ -19,7 +19,7 @@ added: 2026-10-17
 - {{1}} Handvoll Eiswürfel
 
 ## Equipment
-- Mixer oder Shaker
+- Kenwood Smoothie-to-go-Aufsatz oder Shaker
 
 ## Zubereitung
 1. **Espresso abkühlen:** Doppelten Espresso ziehen und kurz abkühlen lassen.

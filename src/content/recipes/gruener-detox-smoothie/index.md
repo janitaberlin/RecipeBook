@@ -1,7 +1,7 @@
 ---
 title: Grüner Detox-Smoothie
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch]
+tags: [Healthy, Vegetarisch, Shakes]
 keywords: [Detox]
 duration: 5
 servings: 2
@@ -20,7 +20,7 @@ added: 2026-10-17
 - {{200 ml}} kaltes Wasser
 
 ## Equipment
-- Standmixer
+- Kenwood Smoothie-to-go-Aufsatz oder Glasmixaufsatz
 
 ## Zubereitung
 1. **Vorbereiten:** Spinat waschen. Gurke und Apfel grob würfeln (Kerngehäuse entfernen), Ingwer schälen und Zitrone auspressen.
