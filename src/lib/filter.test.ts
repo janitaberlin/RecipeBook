@@ -24,7 +24,7 @@ const withMirco = [...items, r('gulasch', 'Biergulasch', { book: 'mirco', ingred
 const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added' | 'cooked'; uncooked: boolean; book: 'janita' | 'mirco'; all: boolean; zyklus: boolean; phase: 'Periode' | 'Follikelphase' | 'Eisprung' | 'Lutealphase' | null }> = {}) => ({
   tags: [],
   q: '',
-  sort: 'cooked' as const,
+  sort: 'name' as const,
   uncooked: false,
   book: 'janita' as const,
   all: false,
@@ -101,7 +101,7 @@ describe('URL state', () => {
   });
 
   it('omits defaults', () => {
-    expect(toSearch(state())).toBe('');
+    expect(toSearch(state({ sort: 'cooked' }))).toBe('');
   });
 
   it('ignores unknown tags and invalid sort values', () => {
@@ -133,7 +133,7 @@ describe('Zyklus', () => {
   it('parses phase and zyklus params, ignoring unknown phases', () => {
     expect(parseState('?zyklus=1&phase=Lutealphase', [])).toMatchObject({ zyklus: true, phase: 'Lutealphase' });
     expect(parseState('?phase=Winter', [])).toMatchObject({ zyklus: false, phase: null });
-    expect(toSearch(state({ zyklus: true }))).toBe('?zyklus=1');
+    expect(toSearch(state({ zyklus: true, sort: 'cooked' }))).toBe('?zyklus=1');
   });
   it('picks the view', () => {
     expect(view(state())).toBe('home');
