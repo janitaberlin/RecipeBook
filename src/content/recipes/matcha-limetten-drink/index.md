@@ -1,7 +1,7 @@
 ---
 title: Matcha-Limetten-Drink
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch, Shakes]
+tags: [Shakes]
 duration: 5
 servings: 2
 servingsLabel: Gläser

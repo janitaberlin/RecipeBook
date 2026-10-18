@@ -1,7 +1,7 @@
 ---
 title: Schoko-Proteinshake
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch, Shakes]
+tags: [Shakes]
 keywords: [Shake, Nach dem Training, Leicht]
 duration: 5
 servings: 1

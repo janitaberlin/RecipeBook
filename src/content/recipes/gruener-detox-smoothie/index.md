@@ -1,7 +1,7 @@
 ---
 title: Grüner Detox-Smoothie
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch, Shakes]
+tags: [Shakes]
 keywords: [Detox]
 duration: 5
 servings: 2

@@ -1,7 +1,7 @@
 ---
 title: Blaubeer-Maracuja-Smoothie
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch, Shakes]
+tags: [Shakes]
 keywords: [Shake]
 duration: 10
 servings: 5
