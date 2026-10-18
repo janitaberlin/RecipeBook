@@ -7,6 +7,7 @@ servings: 2
 nutrition: { kcal: 560, protein: 36, carbs: 3, fat: 45 }
 health: ["Herz & Gehirn: Omega-3 aus Thunfisch", "Muskeln: viel Eiweiß aus Thunfisch und Ei", "Schilddrüse: Selen aus Thunfisch"]
 micros: [{ name: Vitamin B12, amount: 9 }, { name: Selen, amount: 95 }, { name: Vitamin D, amount: 6 }]
+source: Ilona
 added: 2026-10-18
 ---
 
