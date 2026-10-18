@@ -2,7 +2,7 @@
 title: Bananen in Kokosmilch
 cover: ./cover.jpg
 tags: [Dessert, Vegetarisch]
-keywords: [Thailand]
+keywords: [Thai]
 duration: 15
 servings: 2
 nutrition: { kcal: 380, protein: 4, carbs: 40, fat: 24 }

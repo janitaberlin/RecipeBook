@@ -2,6 +2,7 @@
 title: Fancy Rum-Lachs vom Grill mit Orangen und Petersilie
 cover: ./cover.jpg
 tags: [Healthy, Dinner, Protein Power, Fisch, Grillen]
+keywords: [Grillen]
 duration: 45
 servings: 2
 nutrition: { kcal: 560, protein: 37, carbs: 20, fat: 34 }

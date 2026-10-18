@@ -42,7 +42,7 @@ function init({ recipes: allRecipes, tags }: Data): void {
   const folderGrid = document.querySelector<HTMLElement>('.home-grid')!;
   const listView = document.querySelector<HTMLElement>('.list-view')!;
   const listTitle = document.querySelector<HTMLElement>('.list-title')!;
-  const backButton = document.querySelector<HTMLButtonElement>('.back-btn')!;
+  const backButton = document.querySelector<HTMLButtonElement>('.list-view .back-btn')!;
   const uncookedChip = document.querySelector<HTMLButtonElement>('.uncooked-chip')!;
   const empty = document.querySelector<HTMLElement>('.empty:not(.empty-own)')!;
   const emptyOwn = document.querySelector<HTMLElement>('.empty-own')!;
@@ -128,13 +128,12 @@ function init({ recipes: allRecipes, tags }: Data): void {
     });
   }
   // Aus den Phasen-Ordnern zurück zur Startseite.
+  // Die Zurück-Knöpfe schalten direkt um statt history.back(): Nach der Rückkehr von einer Rezeptseite
+  // (Seite aus dem Cache wiederhergestellt) lief history.back() sonst ins Leere.
   phaseBack.addEventListener('click', () => {
-    if (history.state?.folder) {
-      history.back();
-      return;
-    }
     state = { ...state, zyklus: false, phase: null };
     render();
+    window.scrollTo(0, 0);
   });
   for (const chip of keywordChips) {
     chip.addEventListener('click', () => {
@@ -146,13 +145,10 @@ function init({ recipes: allRecipes, tags }: Data): void {
     });
   }
   backButton.addEventListener('click', () => {
-    if (history.state?.folder) {
-      history.back();
-      return;
-    }
     // Direkt geöffnete Phase (ohne Verlauf): zurück zu den Phasen-Ordnern, sonst zur Startseite.
     state = { ...state, tags: [], q: '', uncooked: false, all: false, zyklus: Boolean(state.phase), phase: null };
     render();
+    window.scrollTo(0, 0);
   });
   search.addEventListener('input', () => {
     state = { ...state, q: search.value };

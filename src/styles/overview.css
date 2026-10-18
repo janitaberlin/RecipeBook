@@ -72,14 +72,16 @@
 .list-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
 .back-btn {
   flex: none;
-  padding: 0.45rem 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--accent);
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
   font: inherit;
+  font-weight: 600;
   cursor: pointer;
 }
+.back-btn:active { background: var(--text); color: var(--bg); }
 .list-title { margin: 0; font-size: 1.4rem; overflow-wrap: anywhere; }
 .list-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
 .list-tools .sort { margin-left: auto; padding: 0.35rem 0.6rem; font-size: 0.9rem; }

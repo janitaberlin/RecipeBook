@@ -2,7 +2,7 @@
 title: Grünes Thai-Curry mit Hähnchen
 cover: ./cover.jpg
 tags: [Dinner, Fleisch, Protein Power]
-keywords: [Thailand]
+keywords: [Thai]
 duration: 30
 servings: 2
 nutrition: { kcal: 770, protein: 40, carbs: 56, fat: 42 }

@@ -1,8 +1,8 @@
 ---
 title: Papas Kartoffelsalat
 cover: ./cover.jpg
-tags: [Comfort Food, Lunch, Fleisch]
-keywords: [Party]
+tags: [Comfort Food, Lunch, Fleisch, Grillen]
+keywords: [Party, Grillen]
 duration: 60
 servings: 6
 nutrition: { kcal: 340, protein: 16, carbs: 44, fat: 9 }

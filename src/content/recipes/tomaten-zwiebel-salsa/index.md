@@ -1,8 +1,8 @@
 ---
 title: Tomaten-Zwiebel-Salsa
 cover: ./cover.jpg
-tags: [Healthy, Vegetarisch]
-keywords: [Party]
+tags: [Healthy, Vegetarisch, Grillen]
+keywords: [Party, Grillen]
 duration: 10
 servings: 4
 nutrition: { kcal: 80, protein: 1, carbs: 6, fat: 5 }

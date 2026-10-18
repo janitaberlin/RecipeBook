@@ -2,7 +2,7 @@
 title: Pad Thai mit Tofu und Ei
 cover: ./cover.jpg
 tags: [Dinner, Vegetarisch]
-keywords: [Thailand]
+keywords: [Thai]
 duration: 30
 servings: 2
 nutrition: { kcal: 640, protein: 27, carbs: 78, fat: 24 }

@@ -1,7 +1,8 @@
 ---
 title: Nudelsalat mit Hirtenkäse, getrockneten Tomaten und Rucola
 cover: ./cover.jpg
-tags: [Lunch, Vegetarisch]
+tags: [Lunch, Vegetarisch, Grillen]
+keywords: [Grillen]
 duration: 30
 servings: 8
 nutrition: { kcal: 465, protein: 18, carbs: 52, fat: 20 }
