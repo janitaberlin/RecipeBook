@@ -38,6 +38,7 @@ added: 2026-10-17
 2. **Gemüse schneiden:** Kichererbsen abgießen und abspülen. Gurke, Tomaten und Paprika schneiden, Kräuter hacken.
 3. **Dressing anrühren:** Zitronensaft, Olivenöl, Agavendicksaft und Senf verrühren und kräftig mit Salz und Pfeffer abschmecken.
 4. **Mischen:** Quinoa mit Kichererbsen, Gemüse, Kräutern und Dressing mischen.
+   ![Quinoa-Salat an der Theke](./schritt-4.jpg)
 5. **Servieren:** Granatapfelkerne herauslösen und mit dem Hirtenkäse über den Salat streuen.
 
 ## Tipps
