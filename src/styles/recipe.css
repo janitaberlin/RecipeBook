@@ -166,10 +166,10 @@
 .recipe-section--zubereitung ol > li { margin: 0.9rem 0; }
 .recipe-body li img {
   display: block;
-  width: 100%;
-  max-width: 28rem;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  width: auto;
+  max-width: min(100%, 28rem);
+  height: auto;
+  max-height: 80vh;
   margin: 0.75rem 0 0.25rem;
   border-radius: var(--radius);
   cursor: zoom-in;
