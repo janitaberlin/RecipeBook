@@ -28,12 +28,15 @@ added: 2026-10-18
    ![Zutaten im Mixbecher](./schritt-1.jpg)
    ![Tafel mit dem Rezept](./schritt-1-2.jpg)
    ![Zutaten in kleinen Bechern](./schritt-1-3.jpg)
+   ![Zutaten im Mixbecher von oben](./schritt-1-4.jpg)
 2. **Mixen:** Ca. 1 Min. cremig mixen.
    ![Mixbecher vor dem Mixen](./schritt-2.jpg)
    ![Mixbecher mit Joghurt und Granola](./schritt-2-2.jpg)
    ![Mixbecher mit Eiswürfeln](./schritt-2-3.jpg)
+   ![Mixbecher am Stand](./schritt-2-4.jpg)
 3. **Servieren:** In Gläser füllen und sofort servieren.
 
 ## Tipps
 - Granola bewusst auf eine halbe Tasse reduziert (das Original nimmt eine ganze), das spart ca. 125 kcal pro Glas.
 - Ein Teil des Granola eignet sich auch als Topping obendrauf.
+- Variante: statt Heidelbeeren gemischte TK-Beeren nehmen, dann wird der Smoothie auch ohne Eis schön kalt und dickflüssig.
