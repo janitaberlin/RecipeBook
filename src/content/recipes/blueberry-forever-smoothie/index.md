@@ -26,7 +26,12 @@ added: 2026-10-18
 ## Zubereitung
 1. **Einfüllen:** Joghurt, Hafermilch, Banane, Heidelbeeren, Granola und Eiswürfel in den Mixaufsatz geben.
    ![Zutaten im Mixbecher](./schritt-1.jpg)
+   ![Tafel mit dem Rezept](./schritt-1-2.jpg)
+   ![Zutaten in kleinen Bechern](./schritt-1-3.jpg)
 2. **Mixen:** Ca. 1 Min. cremig mixen.
+   ![Mixbecher vor dem Mixen](./schritt-2.jpg)
+   ![Mixbecher mit Joghurt und Granola](./schritt-2-2.jpg)
+   ![Mixbecher mit Eiswürfeln](./schritt-2-3.jpg)
 3. **Servieren:** In Gläser füllen und sofort servieren.
 
 ## Tipps
