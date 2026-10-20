@@ -1,5 +1,5 @@
 ---
-title: Linseneintopf
+title: "Papas Linsensuppe ♥️"
 cover: ./cover.jpg
 tags: [Dinner, Fleisch, Comfort Food, Protein Power]
 keywords: [Papa]
