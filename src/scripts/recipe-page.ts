@@ -195,3 +195,22 @@ back?.addEventListener('click', (event) => {
     history.back();
   }
 });
+
+// Teilen-Knopf: schickt den Link zu genau diesem Rezept (oder kopiert ihn).
+const shareButton = document.querySelector<HTMLButtonElement>('.share-btn');
+shareButton?.addEventListener('click', async () => {
+  const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href ?? location.href.split(/[?#]/)[0];
+  const title = shareButton.dataset.title ?? document.title;
+  const label = shareButton.querySelector('.share-label')!;
+  try {
+    if (navigator.share) {
+      await navigator.share({ title, url: canonical });
+    } else {
+      await navigator.clipboard.writeText(canonical);
+      label.textContent = 'Link kopiert';
+      window.setTimeout(() => (label.textContent = 'Rezept teilen'), 1500);
+    }
+  } catch {
+    // Teilen abgebrochen.
+  }
+});

@@ -71,6 +71,8 @@
 .cooked-btn[aria-pressed='true'] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-soft); cursor: default; }
 .cooked-undo { padding: 0.25rem; border: none; background: none; color: var(--accent); font: inherit; font-size: 0.9rem; text-decoration: underline; cursor: pointer; }
 .cooked-count { color: var(--muted); font-size: 0.95rem; }
+.share-btn { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: auto; padding: 0.5rem 1rem; border: 1px solid var(--text); border-radius: 999px; background: var(--surface-2); color: var(--text); font: inherit; font-weight: 600; cursor: pointer; }
+.share-btn:active { background: var(--text); color: var(--bg); }
 .recipe-meta {
   display: flex;
   flex-wrap: wrap;
