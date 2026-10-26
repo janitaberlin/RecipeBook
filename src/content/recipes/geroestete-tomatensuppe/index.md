@@ -13,8 +13,8 @@ cooked: [2026-10-17]
 ---
 
 ## Zutaten
-- {{1 kg}} reife Tomaten (große Tomaten oder Kirschtomaten)
-- {{2}} Zwiebeln
+- {{1 kg}} reife Tomaten
+- {{2}} Zwiebeln (egal welche, z. B. Gemüsezwiebeln)
 - {{4}} Knoblauchzehen
 - {{1}} rote Chilischote (optional)
 - {{4 EL}} Balsamico-Essig
