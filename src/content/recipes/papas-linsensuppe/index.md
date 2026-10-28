@@ -1,7 +1,7 @@
 ---
 title: "Papas Linsensuppe ♥️"
 cover: ./cover.jpg
-tags: [Dinner, Fleisch, Comfort Food, Protein Power]
+tags: [Dinner, Fleisch, Comfort Food, Protein Power, Suppen]
 keywords: [Papa]
 duration: 105
 servings: 4

@@ -1,7 +1,7 @@
 ---
 title: Rindfleischbrühe mit Reis
 cover: ./cover.jpg
-tags: [Dinner, Fleisch, Comfort Food, Protein Power]
+tags: [Dinner, Fleisch, Comfort Food, Protein Power, Suppen]
 keywords: [Papa]
 duration: 165
 servings: 4

@@ -1,7 +1,7 @@
 ---
 title: Ofengemüse-Suppe mit Süßkartoffel und Paprika
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Vegetarisch]
+tags: [Healthy, Dinner, Vegetarisch, Suppen]
 keywords: [Detox]
 duration: 45
 servings: 4

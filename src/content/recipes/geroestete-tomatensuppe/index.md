@@ -1,7 +1,7 @@
 ---
 title: Geröstete Tomatensuppe
 cover: ./cover.jpg
-tags: [Healthy, Dinner, Vegetarisch]
+tags: [Healthy, Dinner, Vegetarisch, Suppen]
 duration: 40
 servings: 4
 nutrition: { kcal: 230, protein: 4, carbs: 22, fat: 14 }

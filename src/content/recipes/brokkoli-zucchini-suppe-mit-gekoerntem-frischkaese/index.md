@@ -1,7 +1,7 @@
 ---
 title: Brokkoli-Zucchini-Suppe mit gekörntem Frischkäse
 cover: ./cover.jpg
-tags: [Healthy, Lunch, Dinner, Vegetarisch]
+tags: [Healthy, Lunch, Dinner, Vegetarisch, Suppen]
 keywords: [Detox, Leicht]
 duration: 25
 servings: 2
